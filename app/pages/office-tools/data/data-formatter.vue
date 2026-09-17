@@ -100,10 +100,10 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink>
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale>
       /
-      <NuxtLink to="/office-tools/data" class="hover:text-accent-dark">Data</NuxtLink>
+      <NuxtLinkLocale to="/office-tools/data" class="hover:text-accent-dark">Data</NuxtLinkLocale>
       / Data Formatter
     </p>
 
@@ -118,14 +118,14 @@ useHead({
     <div class="mt-7 flex flex-wrap items-center justify-between gap-3">
       <div class="flex flex-wrap gap-2">
         <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors" :class="mode === 'json'
-            ? 'border-accent bg-accent text-white'
-            : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
+          ? 'border-accent bg-accent text-white'
+          : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
           " @click="mode = 'json'">
           JSON
         </button>
         <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors" :class="mode === 'xml'
-            ? 'border-accent bg-accent text-white'
-            : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
+          ? 'border-accent bg-accent text-white'
+          : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
           " @click="mode = 'xml'">
           XML
         </button>
@@ -134,14 +134,14 @@ useHead({
       <div class="flex items-center gap-2 text-sm text-ink-soft">
         <span>Indentasi:</span>
         <button class="rounded-md border px-2.5 py-1 text-xs font-medium" :class="indentSize === 2
-            ? 'border-accent bg-accent-tint text-accent-dark'
-            : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
+          ? 'border-accent bg-accent-tint text-accent-dark'
+          : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
           " @click="indentSize = 2">
           2 spasi
         </button>
         <button class="rounded-md border px-2.5 py-1 text-xs font-medium" :class="indentSize === 4
-            ? 'border-accent bg-accent-tint text-accent-dark'
-            : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
+          ? 'border-accent bg-accent-tint text-accent-dark'
+          : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
           " @click="indentSize = 4">
           4 spasi
         </button>

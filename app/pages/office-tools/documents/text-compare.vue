@@ -76,8 +76,8 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLinkLocale> /
       Text Compare
     </p>
 
@@ -91,28 +91,22 @@ useHead({
     <div class="mt-7 grid gap-4 sm:grid-cols-2">
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">Teks pertama</p>
-        <textarea
-          v-model="textA"
-          rows="8"
-          placeholder="Tempel versi pertama…"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+        <textarea v-model="textA" rows="8" placeholder="Tempel versi pertama…"
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">Teks kedua</p>
-        <textarea
-          v-model="textB"
-          rows="8"
-          placeholder="Tempel versi kedua…"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+        <textarea v-model="textB" rows="8" placeholder="Tempel versi kedua…"
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
     </div>
 
     <div class="mt-5 rounded-md border border-slate-200 bg-white">
       <div class="flex flex-wrap gap-x-5 gap-y-1.5 border-b border-slate-200 px-4 py-2.5 text-xs text-ink-soft">
-        <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-red-200 align-middle" />{{ stats.removed }} baris dihapus</span>
-        <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-accent-tint align-middle" />{{ stats.added }} baris ditambahkan</span>
+        <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-red-200 align-middle" />{{ stats.removed }} baris
+          dihapus</span>
+        <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-accent-tint align-middle" />{{ stats.added }} baris
+          ditambahkan</span>
       </div>
       <DiffView :rows="rows" />
     </div>
@@ -120,8 +114,7 @@ useHead({
     <div class="mt-4">
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearAll"
-      >
+        @click="clearAll">
         Clear semua
       </button>
     </div>
@@ -154,7 +147,8 @@ useHead({
       <ol class="mt-4 grid list-decimal gap-2.5 pl-5 marker:font-mono marker:text-accent-dark">
         <li class="text-sm text-ink-soft">Tempel versi pertama di kolom kiri.</li>
         <li class="text-sm text-ink-soft">Tempel versi kedua di kolom kanan.</li>
-        <li class="text-sm text-ink-soft">Perbedaan otomatis muncul di panel bawah — merah untuk baris yang dihapus, hijau untuk baris yang ditambahkan.</li>
+        <li class="text-sm text-ink-soft">Perbedaan otomatis muncul di panel bawah — merah untuk baris yang dihapus,
+          hijau untuk baris yang ditambahkan.</li>
       </ol>
     </section>
 

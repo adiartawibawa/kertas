@@ -127,9 +127,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLinkLocale> /
       Percentage
     </p>
 
@@ -141,17 +141,11 @@ useHead({
     </p>
 
     <div class="mt-7 flex flex-wrap gap-2">
-      <button
-        v-for="opt in percentageModes"
-        :key="opt.value"
-        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
-        :class="
-          mode === opt.value
+      <button v-for="opt in percentageModes" :key="opt.value"
+        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors" :class="mode === opt.value
             ? 'border-accent bg-accent text-white'
             : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
-        "
-        @click="mode = opt.value"
-      >
+          " @click="mode = opt.value">
         {{ opt.label }}
       </button>
     </div>
@@ -160,19 +154,13 @@ useHead({
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
           <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">{{ labelA }}</label>
-          <input
-            v-model.number="valueA"
-            type="number"
-            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <input v-model.number="valueA" type="number"
+            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         </div>
         <div>
           <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">{{ labelB }}</label>
-          <input
-            v-model.number="valueB"
-            type="number"
-            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <input v-model.number="valueB" type="number"
+            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         </div>
       </div>
 
@@ -191,7 +179,8 @@ useHead({
         <p class="text-xs font-medium uppercase tracking-wide text-ink-soft">{{ resultLabel }}</p>
         <p class="mt-1 font-mono text-3xl font-medium text-accent-dark">
           {{ resultDisplay }}
-          <span v-if="changeDirection && changeDirection !== 'tetap'" class="text-base text-ink-soft">({{ changeDirection }})</span>
+          <span v-if="changeDirection && changeDirection !== 'tetap'" class="text-base text-ink-soft">({{
+            changeDirection }})</span>
         </p>
       </div>
     </div>

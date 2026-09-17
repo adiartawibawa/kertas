@@ -74,9 +74,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLinkLocale> /
       Working Hours
     </p>
 
@@ -88,42 +88,26 @@ useHead({
     </p>
 
     <div class="mt-7 overflow-hidden rounded-md border border-slate-200 bg-white">
-      <div class="grid grid-cols-[1fr_1fr_1fr_auto] gap-3 border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-xs font-medium uppercase tracking-wide text-ink-soft">
+      <div
+        class="grid grid-cols-[1fr_1fr_1fr_auto] gap-3 border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-xs font-medium uppercase tracking-wide text-ink-soft">
         <span>Mulai</span>
         <span>Selesai</span>
         <span>Istirahat (menit)</span>
         <span />
       </div>
 
-      <div
-        v-for="(shift, i) in shifts"
-        :key="shift.id"
-        class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-3 border-b border-slate-100 px-4 py-3 last:border-b-0"
-      >
-        <input
-          v-model="shift.start"
-          type="time"
-          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
-        <input
-          v-model="shift.end"
-          type="time"
-          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
-        <input
-          v-model.number="shift.breakMinutes"
-          type="number"
-          min="0"
-          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
+      <div v-for="(shift, i) in shifts" :key="shift.id"
+        class="grid grid-cols-[1fr_1fr_1fr_auto] items-center gap-3 border-b border-slate-100 px-4 py-3 last:border-b-0">
+        <input v-model="shift.start" type="time"
+          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+        <input v-model="shift.end" type="time"
+          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
+        <input v-model.number="shift.breakMinutes" type="number" min="0"
+          class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         <div class="flex items-center justify-end gap-2">
           <span class="font-mono text-xs text-ink-soft">{{ formatShiftMinutes(shiftMinutes[i]) }}</span>
-          <button
-            v-if="shifts.length > 1"
-            class="text-ink-soft hover:text-red-600"
-            aria-label="Hapus shift"
-            @click="removeShift(shift.id)"
-          >
+          <button v-if="shifts.length > 1" class="text-ink-soft hover:text-red-600" aria-label="Hapus shift"
+            @click="removeShift(shift.id)">
             ✕
           </button>
         </div>
@@ -133,8 +117,7 @@ useHead({
     <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="addShift"
-      >
+        @click="addShift">
         + Tambah shift
       </button>
       <div class="text-right">

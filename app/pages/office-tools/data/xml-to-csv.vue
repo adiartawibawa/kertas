@@ -4,7 +4,7 @@ const { csv, error, rowCount } = useXmlToCsv(text)
 
 function copyResult() {
   if (import.meta.client && navigator.clipboard && csv.value) {
-    navigator.clipboard.writeText(csv.value).catch(() => {})
+    navigator.clipboard.writeText(csv.value).catch(() => { })
   }
 }
 
@@ -83,9 +83,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/data" class="hover:text-accent-dark">Data</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/data" class="hover:text-accent-dark">Data</NuxtLinkLocale> /
       XML → CSV
     </p>
 
@@ -99,21 +99,14 @@ useHead({
     <div class="mt-7 grid gap-4 sm:grid-cols-2">
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">XML</p>
-        <textarea
-          v-model="text"
-          rows="12"
+        <textarea v-model="text" rows="12"
           placeholder="<items>&#10;  <item><nama>Kopi</nama><harga>25000</harga></item>&#10;  <item><nama>Teh</nama><harga>15000</harga></item>&#10;</items>"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">CSV</p>
-        <textarea
-          :value="csv"
-          readonly
-          rows="12"
-          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none"
-        />
+        <textarea :value="csv" readonly rows="12"
+          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none" />
       </div>
     </div>
 
@@ -122,22 +115,18 @@ useHead({
     </p>
 
     <div class="mt-4 flex flex-wrap items-center gap-3">
-      <button
-        class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
-        @click="copyResult"
-      >
+      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
+        @click="copyResult">
         Copy CSV
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="downloadResult"
-      >
+        @click="downloadResult">
         Download .csv
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearText"
-      >
+        @click="clearText">
         Clear
       </button>
       <span v-if="rowCount > 0" class="text-sm text-ink-soft">{{ rowCount }} baris</span>
@@ -171,7 +160,8 @@ useHead({
       <ol class="mt-4 grid list-decimal gap-2.5 pl-5 marker:font-mono marker:text-accent-dark">
         <li class="text-sm text-ink-soft">Tempel XML Anda di kolom kiri.</li>
         <li class="text-sm text-ink-soft">Hasil CSV muncul otomatis di kolom kanan.</li>
-        <li class="text-sm text-ink-soft">Klik Copy untuk menyalin, atau Download untuk menyimpan sebagai file .csv.</li>
+        <li class="text-sm text-ink-soft">Klik Copy untuk menyalin, atau Download untuk menyimpan sebagai file .csv.
+        </li>
       </ol>
     </section>
 

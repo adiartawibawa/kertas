@@ -67,9 +67,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLinkLocale> /
       Date Difference
     </p>
 
@@ -84,23 +84,18 @@ useHead({
       <div class="grid gap-4 sm:grid-cols-2">
         <div>
           <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">Tanggal awal</label>
-          <input
-            v-model="startDate"
-            type="date"
-            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <input v-model="startDate" type="date"
+            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         </div>
         <div>
           <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">Tanggal akhir</label>
-          <input
-            v-model="endDate"
-            type="date"
-            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          >
+          <input v-model="endDate" type="date"
+            class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         </div>
       </div>
 
-      <div v-if="breakdown" class="mt-6 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-5 sm:grid-cols-5 sm:divide-x">
+      <div v-if="breakdown"
+        class="mt-6 grid grid-cols-2 divide-x divide-slate-200 border-t border-slate-200 pt-5 sm:grid-cols-5 sm:divide-x">
         <div class="px-3 py-1 sm:px-4">
           <span class="block font-mono text-xl font-medium text-accent-dark">{{ breakdown.years }}</span>
           <span class="mt-0.5 block text-xs text-ink-soft">Tahun</span>

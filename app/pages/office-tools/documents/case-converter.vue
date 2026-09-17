@@ -4,7 +4,7 @@ const { activeCase, converted } = useCaseConverter(text)
 
 function copyResult() {
   if (import.meta.client && navigator.clipboard) {
-    navigator.clipboard.writeText(converted.value).catch(() => {})
+    navigator.clipboard.writeText(converted.value).catch(() => { })
   }
 }
 
@@ -80,8 +80,8 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLinkLocale> /
       Case Converter
     </p>
 
@@ -93,50 +93,33 @@ useHead({
     </p>
 
     <div class="mt-7 rounded-md border border-slate-200 bg-white">
-      <textarea
-        v-model="text"
-        rows="7"
-        placeholder="Ketik atau tempel teks Anda di sini…"
-        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink placeholder:text-ink-soft focus:outline-none"
-      />
+      <textarea v-model="text" rows="7" placeholder="Ketik atau tempel teks Anda di sini…"
+        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink placeholder:text-ink-soft focus:outline-none" />
     </div>
 
     <div class="mt-4 flex flex-wrap gap-2">
-      <button
-        v-for="option in caseOptions"
-        :key="option.value"
-        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
-        :class="
-          activeCase === option.value
+      <button v-for="option in caseOptions" :key="option.value"
+        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors" :class="activeCase === option.value
             ? 'border-accent bg-accent text-white'
             : 'border-slate-300 bg-white text-ink hover:bg-slate-50'
-        "
-        @click="activeCase = option.value"
-      >
+          " @click="activeCase = option.value">
         {{ option.label }}
       </button>
     </div>
 
     <div class="mt-5 rounded-md border border-slate-200 bg-slate-50">
-      <textarea
-        :value="converted"
-        readonly
-        rows="7"
-        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink focus:outline-none"
-      />
+      <textarea :value="converted" readonly rows="7"
+        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink focus:outline-none" />
     </div>
 
     <div class="mt-4 flex gap-2.5">
-      <button
-        class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
-        @click="copyResult"
-      >
+      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
+        @click="copyResult">
         Copy hasil
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearText"
-      >
+        @click="clearText">
         Clear
       </button>
     </div>

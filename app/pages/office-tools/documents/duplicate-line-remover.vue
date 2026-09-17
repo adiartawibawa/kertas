@@ -4,7 +4,7 @@ const { options, result, duplicatesRemoved } = useDuplicateLineRemover(text)
 
 function copyResult() {
   if (import.meta.client && navigator.clipboard) {
-    navigator.clipboard.writeText(result.value).catch(() => {})
+    navigator.clipboard.writeText(result.value).catch(() => { })
   }
 }
 
@@ -80,8 +80,8 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLinkLocale> /
       Duplicate Line Remover
     </p>
 
@@ -95,21 +95,13 @@ useHead({
     <div class="mt-7 grid gap-4 sm:grid-cols-2">
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">Daftar asli</p>
-        <textarea
-          v-model="text"
-          rows="10"
-          placeholder="Tempel daftar teks, satu item per baris…"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+        <textarea v-model="text" rows="10" placeholder="Tempel daftar teks, satu item per baris…"
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 text-sm text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">Tanpa duplikat</p>
-        <textarea
-          :value="result"
-          readonly
-          rows="10"
-          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 text-sm text-ink focus:outline-none"
-        />
+        <textarea :value="result" readonly rows="10"
+          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 text-sm text-ink focus:outline-none" />
       </div>
     </div>
 
@@ -120,16 +112,13 @@ useHead({
     </div>
 
     <div class="mt-4 flex flex-wrap items-center gap-3">
-      <button
-        class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
-        @click="copyResult"
-      >
+      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
+        @click="copyResult">
         Copy hasil
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearText"
-      >
+        @click="clearText">
         Clear
       </button>
       <span class="text-sm text-ink-soft">{{ duplicatesRemoved }} baris duplikat dihapus</span>

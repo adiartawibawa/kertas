@@ -40,7 +40,7 @@ const relatedTools = [
 function copyResult() {
   const summary = `Kata: ${stats.value.words} | Karakter: ${stats.value.characters} | Kalimat: ${stats.value.sentences} | Paragraf: ${stats.value.paragraphs}`
   if (import.meta.client && navigator.clipboard) {
-    navigator.clipboard.writeText(summary).catch(() => {})
+    navigator.clipboard.writeText(summary).catch(() => { })
   }
 }
 
@@ -104,9 +104,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLinkLocale> /
       Word Counter
     </p>
 
@@ -118,26 +118,20 @@ useHead({
     </p>
 
     <div class="mt-7 rounded-md border border-slate-200 bg-white">
-      <textarea
-        v-model="text"
-        rows="9"
-        placeholder="Mulai ketik atau tempel teks Anda di sini…"
-        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
-      />
+      <textarea v-model="text" rows="9" placeholder="Mulai ketik atau tempel teks Anda di sini…"
+        class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent" />
       <StatBar :stats="stats" />
     </div>
 
     <div class="mt-4 flex gap-2.5">
       <button
         class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-        @click="copyResult"
-      >
+        @click="copyResult">
         Copy hasil
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
-        @click="clearText"
-      >
+        @click="clearText">
         Clear
       </button>
     </div>
@@ -152,7 +146,8 @@ useHead({
       <ul class="mt-4 grid gap-3.5">
         <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
           <strong class="font-semibold text-ink">Privasi terjaga.</strong>
-          Semua perhitungan dilakukan langsung di browser Anda. Teks tidak pernah dikirim atau disimpan di server manapun.
+          Semua perhitungan dilakukan langsung di browser Anda. Teks tidak pernah dikirim atau disimpan di server
+          manapun.
         </li>
         <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
           <strong class="font-semibold text-ink">Tanpa batas karakter.</strong>

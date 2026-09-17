@@ -2,7 +2,7 @@
     "home": {
         "title": "Office tools yang bekerja di browser Anda, bukan di server kami",
         "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data — semua diproses lokal di perangkat Anda. Tanpa upload, tanpa daftar akun, dan tanpa biaya.",
-        "seoTitle": "Kertas — Office Tools Privasi-First, Tanpa Upload",
+        "seoTitle": "Kertas.tools — Office Tools Privasi-First, Tanpa Upload",
         "seoDescription": "Kumpulan tool dokumen, PDF, spreadsheet, dan data yang berjalan sepenuhnya di browser Anda. Tanpa upload, tanpa daftar akun, gratis dan cepat.",
         "ogDescription": "Tool office harian yang berjalan di browser Anda — tanpa upload, tanpa akun, gratis.",
         "jsonLdDescription": "Platform utilitas web privasi-first untuk kebutuhan dokumen, spreadsheet, teks, PDF, dan data harian.",
@@ -22,6 +22,18 @@
     },
     "footer": {
         "tagline": "office utilities yang berjalan sepenuhnya di browser Anda."
+    },
+    "diffView": {
+        "placeholder": "Tempel teks di kedua kolom di atas untuk melihat perbedaannya."
+    },
+    "statBar": {
+        "words": "Kata",
+        "characters": "Karakter",
+        "charactersNoSpaces": "Tanpa spasi",
+        "sentences": "Kalimat",
+        "paragraphs": "Paragraf",
+        "readTime": "Waktu baca",
+        "minuteAbbr": "mnt"
     },
     "categories": {
         "documents": {

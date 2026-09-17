@@ -22,14 +22,24 @@ function onLocaleChange(event: Event) {
   <div class="min-h-screen bg-[#F7F8F5] font-sans text-ink antialiased">
     <header class="border-b border-slate-200">
       <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <NuxtLink to="/" class="text-lg font-semibold">Kertas</NuxtLink>
+        <NuxtLinkLocale to="/" class="text-lg font-semibold">Kertas</NuxtLinkLocale>
 
         <nav class="hidden gap-6 text-sm text-ink-soft sm:flex">
-          <NuxtLink to="/office-tools/documents" class="hover:text-ink">{{ t('nav.documents') }}</NuxtLink>
-          <NuxtLink to="/office-tools/pdf" class="hover:text-ink">{{ t('nav.pdf') }}</NuxtLink>
-          <NuxtLink to="/office-tools/spreadsheet" class="hover:text-ink">{{ t('nav.spreadsheet') }}</NuxtLink>
-          <NuxtLink to="/office-tools/data" class="hover:text-ink">{{ t('nav.data') }}</NuxtLink>
-          <NuxtLink to="/office-tools/productivity" class="hover:text-ink">{{ t('nav.productivity') }}</NuxtLink>
+          <NuxtLinkLocale to="/office-tools/documents" class="hover:text-ink">
+            {{ t('nav.documents') }}
+          </NuxtLinkLocale>
+          <NuxtLinkLocale to="/office-tools/pdf" class="hover:text-ink">
+            {{ t('nav.pdf') }}
+          </NuxtLinkLocale>
+          <NuxtLinkLocale to="/office-tools/spreadsheet" class="hover:text-ink">
+            {{ t('nav.spreadsheet') }}
+          </NuxtLinkLocale>
+          <NuxtLinkLocale to="/office-tools/data" class="hover:text-ink">
+            {{ t('nav.data') }}
+          </NuxtLinkLocale>
+          <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-ink">
+            {{ t('nav.productivity') }}
+          </NuxtLinkLocale>
         </nav>
 
         <select :value="locale" class="rounded border border-slate-200 bg-white px-2 py-1 text-sm text-ink-soft"

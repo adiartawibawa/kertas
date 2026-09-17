@@ -132,24 +132,25 @@ useHead({
       <article v-for="category in categories" :key="category.slug"
         class="rounded-md border border-slate-200 bg-white p-6">
         <h2 class="text-lg font-semibold text-ink">
-          <NuxtLink :to="`/office-tools/${category.slug}`" class="hover:text-accent-dark">
+          <NuxtLinkLocale :to="`/office-tools/${category.slug}`" class="hover:text-accent-dark">
             {{ categoryName(category.slug) }}
-          </NuxtLink>
+          </NuxtLinkLocale>
         </h2>
         <p class="mt-1.5 text-sm text-ink-soft">{{ categoryDescription(category.slug) }}</p>
 
         <ul class="mt-4 grid gap-1.5">
           <li v-for="tool in category.tools" :key="tool.slug">
-            <NuxtLink :to="`/tools/${tool.slug}`" class="text-sm text-ink-soft hover:text-accent-dark hover:underline">
+            <NuxtLinkLocale :to="`/office-tools/${category.slug}/${tool.slug}`"
+              class="text-sm text-ink-soft hover:text-accent-dark hover:underline">
               {{ toolName(tool.slug) }}
-            </NuxtLink>
+            </NuxtLinkLocale>
           </li>
         </ul>
 
-        <NuxtLink :to="`/office-tools/${category.slug}`"
+        <NuxtLinkLocale :to="`/office-tools/${category.slug}`"
           class="mt-5 inline-block border-b border-slate-300 pb-0.5 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
           {{ t('home.viewAll', { category: categoryName(category.slug) }) }}
-        </NuxtLink>
+        </NuxtLinkLocale>
       </article>
     </section>
   </div>

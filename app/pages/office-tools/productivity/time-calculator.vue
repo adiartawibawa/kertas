@@ -77,9 +77,9 @@ useHead({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLink to="/" class="hover:text-accent-dark">Home</NuxtLink> /
-      <NuxtLink to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLink> /
-      <NuxtLink to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLink> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLinkLocale> /
       Time Calculator
     </p>
 
@@ -91,18 +91,14 @@ useHead({
     </p>
 
     <div class="mt-7 flex flex-wrap gap-2">
-      <button
-        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
+      <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
         :class="mode === 'sum' ? 'border-accent bg-accent text-white' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-        @click="mode = 'sum'"
-      >
+        @click="mode = 'sum'">
         Jumlahkan durasi
       </button>
-      <button
-        class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
+      <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
         :class="mode === 'addToClock' ? 'border-accent bg-accent text-white' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-        @click="mode = 'addToClock'"
-      >
+        @click="mode = 'addToClock'">
         Tambah ke jam
       </button>
     </div>
@@ -110,32 +106,15 @@ useHead({
     <div class="mt-5 rounded-md border border-slate-200 bg-white p-6">
       <template v-if="mode === 'sum'">
         <div class="grid gap-3">
-          <div
-            v-for="duration in durations"
-            :key="duration.id"
-            class="flex items-center gap-3"
-          >
-            <input
-              v-model.number="duration.hours"
-              type="number"
-              min="0"
-              class="w-20 rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+          <div v-for="duration in durations" :key="duration.id" class="flex items-center gap-3">
+            <input v-model.number="duration.hours" type="number" min="0"
+              class="w-20 rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
             <span class="text-sm text-ink-soft">jam</span>
-            <input
-              v-model.number="duration.minutes"
-              type="number"
-              min="0"
-              max="59"
-              class="w-20 rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+            <input v-model.number="duration.minutes" type="number" min="0" max="59"
+              class="w-20 rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
             <span class="text-sm text-ink-soft">menit</span>
-            <button
-              v-if="durations.length > 1"
-              class="ml-auto text-ink-soft hover:text-red-600"
-              aria-label="Hapus durasi"
-              @click="removeDuration(duration.id)"
-            >
+            <button v-if="durations.length > 1" class="ml-auto text-ink-soft hover:text-red-600"
+              aria-label="Hapus durasi" @click="removeDuration(duration.id)">
               ✕
             </button>
           </div>
@@ -143,8 +122,7 @@ useHead({
 
         <button
           class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-          @click="addDuration"
-        >
+          @click="addDuration">
           + Tambah durasi
         </button>
 
@@ -158,30 +136,18 @@ useHead({
         <div class="grid gap-4 sm:grid-cols-3">
           <div>
             <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">Jam awal</label>
-            <input
-              v-model="startTime"
-              type="time"
-              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+            <input v-model="startTime" type="time"
+              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
           </div>
           <div>
             <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">Tambah jam</label>
-            <input
-              v-model.number="durationHours"
-              type="number"
-              min="0"
-              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+            <input v-model.number="durationHours" type="number" min="0"
+              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
           </div>
           <div>
             <label class="mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft">Tambah menit</label>
-            <input
-              v-model.number="durationMinutes"
-              type="number"
-              min="0"
-              max="59"
-              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            >
+            <input v-model.number="durationMinutes" type="number" min="0" max="59"
+              class="w-full rounded-md border border-slate-300 px-3.5 py-2.5 text-base text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
           </div>
         </div>
 
