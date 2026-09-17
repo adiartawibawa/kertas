@@ -1,76 +1,76 @@
 {
-  "home": {
-    "title": "Office tools yang bekerja di browser Anda, bukan di server kami",
-    "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data — semua diproses lokal di perangkat Anda. Tanpa upload, tanpa daftar akun, dan tanpa biaya.",
-    "seoTitle": "Kertas — Office Tools Privasi-First, Tanpa Upload",
-    "seoDescription": "Kumpulan tool dokumen, PDF, spreadsheet, dan data yang berjalan sepenuhnya di browser Anda. Tanpa upload, tanpa daftar akun, gratis dan cepat.",
-    "ogDescription": "Tool office harian yang berjalan di browser Anda — tanpa upload, tanpa akun, gratis.",
-    "jsonLdDescription": "Platform utilitas web privasi-first untuk kebutuhan dokumen, spreadsheet, teks, PDF, dan data harian.",
-    "viewAll": "Lihat semua tool {category}",
-    "badges": {
-      "noUpload": "Tidak ada upload file",
-      "noSignup": "Tanpa daftar akun",
-      "free": "Gratis digunakan"
+    "home": {
+        "title": "Office tools yang bekerja di browser Anda, bukan di server kami",
+        "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data — semua diproses lokal di perangkat Anda. Tanpa upload, tanpa daftar akun, dan tanpa biaya.",
+        "seoTitle": "Kertas — Office Tools Privasi-First, Tanpa Upload",
+        "seoDescription": "Kumpulan tool dokumen, PDF, spreadsheet, dan data yang berjalan sepenuhnya di browser Anda. Tanpa upload, tanpa daftar akun, gratis dan cepat.",
+        "ogDescription": "Tool office harian yang berjalan di browser Anda — tanpa upload, tanpa akun, gratis.",
+        "jsonLdDescription": "Platform utilitas web privasi-first untuk kebutuhan dokumen, spreadsheet, teks, PDF, dan data harian.",
+        "viewAll": "Lihat semua tool {category}",
+        "badges": {
+            "noUpload": "Tidak ada upload file",
+            "noSignup": "Tanpa daftar akun",
+            "free": "Gratis digunakan"
+        }
+    },
+    "nav": {
+        "documents": "Documents",
+        "pdf": "PDF",
+        "spreadsheet": "Spreadsheet",
+        "data": "Data",
+        "productivity": "Productivity"
+    },
+    "footer": {
+        "tagline": "office utilities yang berjalan sepenuhnya di browser Anda."
+    },
+    "categories": {
+        "documents": {
+            "name": "Documents",
+            "description": "Bersihkan, hitung, dan bandingkan teks tanpa install apapun."
+        },
+        "pdf": {
+            "name": "PDF",
+            "description": "Gabung, pisah, kompres, dan olah PDF langsung di browser."
+        },
+        "spreadsheet": {
+            "name": "Spreadsheet",
+            "description": "Lihat, bersihkan, dan konversi file CSV maupun XLSX."
+        },
+        "data": {
+            "name": "Data",
+            "description": "Konversi antar format data untuk kebutuhan development."
+        },
+        "productivity": {
+            "name": "Productivity",
+            "description": "Kalkulator harian untuk kebutuhan kerja dan bisnis."
+        }
+    },
+    "tools": {
+        "word-counter": "Word Counter",
+        "text-cleaner": "Text Cleaner",
+        "case-converter": "Case Converter",
+        "text-compare": "Text Compare",
+        "duplicate-line-remover": "Duplicate Line Remover",
+        "pdf-merge": "Merge",
+        "pdf-split": "Split",
+        "pdf-compress": "Compress",
+        "pdf-rotate": "Rotate",
+        "pdf-extract-pages": "Extract Pages",
+        "pdf-to-text": "PDF → Text",
+        "csv-viewer": "CSV Viewer",
+        "csv-cleaner": "CSV Cleaner",
+        "csv-splitter": "CSV Splitter",
+        "csv-merger": "CSV Merger",
+        "csv-to-xlsx": "CSV → XLSX",
+        "xlsx-to-csv": "XLSX → CSV",
+        "json-to-csv": "JSON → CSV",
+        "csv-to-json": "CSV → JSON",
+        "xml-to-csv": "XML → CSV",
+        "data-formatter": "Data Formatter",
+        "percentage": "Percentage",
+        "business-days": "Business Days",
+        "date-difference": "Date Difference",
+        "working-hours": "Working Hours",
+        "time-calculator": "Time Calculator"
     }
-  },
-  "nav": {
-    "documents": "Documents",
-    "pdf": "PDF",
-    "spreadsheet": "Spreadsheet",
-    "data": "Data",
-    "productivity": "Productivity"
-  },
-  "footer": {
-    "tagline": "office utilities yang berjalan sepenuhnya di browser Anda."
-  },
-  "categories": {
-    "documents": {
-      "name": "Documents",
-      "description": "Bersihkan, hitung, dan bandingkan teks tanpa install apapun."
-    },
-    "pdf": {
-      "name": "PDF",
-      "description": "Gabung, pisah, kompres, dan olah PDF langsung di browser."
-    },
-    "spreadsheet": {
-      "name": "Spreadsheet",
-      "description": "Lihat, bersihkan, dan konversi file CSV maupun XLSX."
-    },
-    "data": {
-      "name": "Data",
-      "description": "Konversi antar format data untuk kebutuhan development."
-    },
-    "productivity": {
-      "name": "Productivity",
-      "description": "Kalkulator harian untuk kebutuhan kerja dan bisnis."
-    }
-  },
-  "tools": {
-    "word-counter": "Word Counter",
-    "text-cleaner": "Text Cleaner",
-    "case-converter": "Case Converter",
-    "text-compare": "Text Compare",
-    "duplicate-line-remover": "Duplicate Line Remover",
-    "pdf-merge": "Merge",
-    "pdf-split": "Split",
-    "pdf-compress": "Compress",
-    "pdf-rotate": "Rotate",
-    "pdf-extract-pages": "Extract Pages",
-    "pdf-to-text": "PDF → Text",
-    "csv-viewer": "CSV Viewer",
-    "csv-cleaner": "CSV Cleaner",
-    "csv-splitter": "CSV Splitter",
-    "csv-merger": "CSV Merger",
-    "csv-to-xlsx": "CSV → XLSX",
-    "xlsx-to-csv": "XLSX → CSV",
-    "json-to-csv": "JSON → CSV",
-    "csv-to-json": "CSV → JSON",
-    "xml-to-csv": "XML → CSV",
-    "data-formatter": "Data Formatter",
-    "percentage": "Percentage",
-    "business-days": "Business Days",
-    "date-difference": "Date Difference",
-    "working-hours": "Working Hours",
-    "time-calculator": "Time Calculator"
-  }
 }
