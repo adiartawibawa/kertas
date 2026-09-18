@@ -22,7 +22,9 @@ function onLocaleChange(event: Event) {
   <div class="min-h-screen bg-[#F7F8F5] font-sans text-ink antialiased">
     <header class="border-b border-slate-200">
       <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-        <NuxtLinkLocale to="/" class="text-lg font-semibold">Kertas</NuxtLinkLocale>
+        <NuxtLinkLocale to="/" class="text-lg font-semibold">
+          <img class="w-24" src="/kertas.png" alt="logo-kertas" srcset="">
+        </NuxtLinkLocale>
 
         <nav class="hidden gap-6 text-sm text-ink-soft sm:flex">
           <NuxtLinkLocale to="/office-tools/documents" class="hover:text-ink">
