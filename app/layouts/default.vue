@@ -3,6 +3,8 @@ const { t, locale, locales, setLocale } = useI18n()
 
 const i18nHead = useLocaleHead({ seo: true })
 
+const currentYear = new Date().getFullYear();
+
 useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs?.lang,
@@ -15,6 +17,15 @@ useHead({
 function onLocaleChange(event: Event) {
   const target = event.target as HTMLSelectElement
   setLocale(target.value as typeof locale.value)
+}
+
+// Fungsi untuk mengubah kode bahasa (misal: 'en', 'id') menjadi emoji bendera
+function getFlagEmoji(countryCode: string) {
+  const codeMap: Record<string, string> = {
+    en: '🇺🇸', // Atau '🇬🇧' untuk UK
+    id: '🇮🇩',
+  }
+  return codeMap[countryCode] || '🌐'
 }
 </script>
 
@@ -47,7 +58,7 @@ function onLocaleChange(event: Event) {
         <select :value="locale" class="rounded border border-slate-200 bg-white px-2 py-1 text-sm text-ink-soft"
           @change="onLocaleChange">
           <option v-for="l in locales" :key="l.code" :value="l.code">
-            {{ l.name }}
+            {{ getFlagEmoji(l.code) }} {{ l.name || l.code.toUpperCase() }}
           </option>
         </select>
       </div>
@@ -57,9 +68,9 @@ function onLocaleChange(event: Event) {
       <slot />
     </main>
 
-    <footer class="mt-16 border-t border-slate-200 py-8">
-      <div class="mx-auto max-w-3xl px-6 text-sm text-ink-soft">
-        Kertas — {{ t('footer.tagline') }}
+    <footer class="mx-auto mt-16 flex w-full max-w-3xl px-6 py-8">
+      <div class="text-sm text-ink-soft">
+        {{ t('brand.name') }} © {{ currentYear }} — {{ t('footer.tagline') }}
       </div>
     </footer>
   </div>

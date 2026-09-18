@@ -1,4 +1,7 @@
 {
+    "brand": {
+        "name": "Kertaas"
+    },
     "home": {
         "title": "Office tools yang bekerja di browser Anda, bukan di server kami",
         "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data — semua diproses lokal di perangkat Anda. Tanpa upload, tanpa daftar akun, dan tanpa biaya.",

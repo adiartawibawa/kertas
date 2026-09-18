@@ -1,4 +1,7 @@
 {
+    "brand": {
+        "name": "Kertaas"
+    },
     "home": {
         "title": "Office tools that run in your browser, not on our servers",
         "subtitle": "Count words, edit PDFs, clean CSVs, or convert data — everything is processed locally on your device. No uploads, no sign-up, no cost.",
