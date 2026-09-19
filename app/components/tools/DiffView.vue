@@ -19,10 +19,8 @@ function cellClass(cell: DiffCell | null) {
       {{ t('diffView.placeholder') }}
     </div>
     <div v-for="(row, i) in rows" :key="i" class="grid grid-cols-2 divide-x divide-slate-200">
-      <div class="whitespace-pre-wrap break-words px-4 py-1 font-mono text-xs" :class="cellClass(row.left)">{{
-        row.left?.text ?? '' }}</div>
-      <div class="whitespace-pre-wrap break-words px-4 py-1 font-mono text-xs" :class="cellClass(row.right)">{{
-        row.right?.text ?? '' }}</div>
+      <div class="whitespace-pre-wrap break-words px-4 py-1 font-mono text-xs" :class="cellClass(row.left)">{{ row.left?.text ?? '' }}</div>
+      <div class="whitespace-pre-wrap break-words px-4 py-1 font-mono text-xs" :class="cellClass(row.right)">{{ row.right?.text ?? '' }}</div>
     </div>
   </div>
 </template>

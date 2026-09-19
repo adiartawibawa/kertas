@@ -1,37 +1,11 @@
 <script setup lang="ts">
-interface ToolItem {
-  name: string
-  slug: string
-  description: string
-}
+const { t } = useI18n()
 
-const tools: ToolItem[] = [
-  {
-    name: 'JSON → CSV',
-    slug: 'json-to-csv',
-    description: 'Konversi data JSON ke format CSV, termasuk meratakan struktur bersarang jadi kolom.',
-  },
-  {
-    name: 'CSV → JSON',
-    slug: 'csv-to-json',
-    description: 'Konversi tabel CSV ke format JSON menggunakan baris pertama sebagai header.',
-  },
-  {
-    name: 'XML → CSV',
-    slug: 'xml-to-csv',
-    description: 'Konversi XML dengan elemen berulang ke format CSV, satu elemen jadi satu baris.',
-  },
-  {
-    name: 'Data Formatter',
-    slug: 'data-formatter',
-    description: 'Rapikan, validasi, dan minify data JSON atau XML secara instan.',
-  },
-]
+const toolSlugs = ['json-to-csv', 'csv-to-json', 'xml-to-csv', 'data-formatter']
 
 useSeoMeta({
-  title: 'Data — Tool Konversi Data Online Gratis',
-  description:
-    'Kumpulan tool konversi data: JSON ke CSV, CSV ke JSON, XML ke CSV, dan Data Formatter. Semua gratis, tanpa upload.',
+  title: t('hubTitle.data'),
+  description: t('categories.data.description'),
 })
 
 useHead({
@@ -41,13 +15,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Data — Office Tools',
-        description: 'Kumpulan tool konversi format data yang berjalan sepenuhnya di browser.',
-        hasPart: tools.map((tool) => ({
+        name: t('hubTitle.data'),
+        description: t('hubIntro.data'),
+        hasPart: toolSlugs.map((slug) => ({
           '@type': 'SoftwareApplication',
-          name: tool.name,
+          name: t(`tools.${slug}`),
           applicationCategory: 'UtilitiesApplication',
-          url: `https://domainanda.com/office-tools/data/${tool.slug}`,
+          url: `https://domainanda.com/office-tools/data/${slug}`,
         })),
       }),
     },
@@ -58,13 +32,13 @@ useHead({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://domainanda.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Office Tools', item: 'https://domainanda.com/office-tools' },
           {
             '@type': 'ListItem',
-            position: 2,
-            name: 'Office Tools',
-            item: 'https://domainanda.com/office-tools',
+            position: 3,
+            name: t('categories.data.name'),
+            item: 'https://domainanda.com/office-tools/data',
           },
-          { '@type': 'ListItem', position: 3, name: 'Data', item: 'https://domainanda.com/office-tools/data' },
         ],
       }),
     },
@@ -77,47 +51,46 @@ useHead({
     <p class="pt-7 text-sm text-ink-soft">
       <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
       <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
-      Data
+      {{ t('categories.data.name') }}
     </p>
 
     <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-      Data — tool konversi format data online
+      {{ t('hubTitle.data') }}
     </h1>
     <p class="mt-2 max-w-[56ch] text-base text-ink-soft">
-      Konversi antar format data untuk kebutuhan development. Tanpa upload, tanpa akun, gratis digunakan.
+      {{ t('categories.data.description') }}
     </p>
 
     <section class="mt-8">
-      <p class="max-w-[68ch] text-sm text-ink-soft">
-        Kategori Data berisi tool-tool untuk kebutuhan konversi dan pembersihan data yang sering dibutuhkan
-        developer maupun analis — mulai dari mengubah response API berformat JSON jadi tabel CSV yang bisa dibuka
-        di Excel, mengonversi data spreadsheet jadi JSON untuk dipakai di kode, mengolah data legacy berformat XML,
-        hingga merapikan dan memvalidasi struktur data sebelum dipakai lebih lanjut. Semua proses berjalan
-        sepenuhnya di browser Anda — cocok untuk data yang bersifat sensitif atau internal.
-      </p>
+      <p class="max-w-[68ch] text-sm text-ink-soft">{{ t('hubIntro.data') }}</p>
     </section>
 
     <section class="mt-10 grid gap-4 pb-16">
-      <article v-for="tool in tools" :key="tool.slug"
-        class="flex flex-col justify-between gap-4 rounded-md border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
+      <article
+        v-for="slug in toolSlugs"
+        :key="slug"
+        class="flex flex-col justify-between gap-4 rounded-md border border-slate-200 bg-white p-5 sm:flex-row sm:items-center"
+      >
         <div>
           <h2 class="text-base font-semibold text-ink">
-            <NuxtLinkLocale :to="`/office-tools/data/${tool.slug}`" class="hover:text-accent-dark">{{ tool.name }}
+            <NuxtLinkLocale :to="`/office-tools/data/${slug}`" class="hover:text-accent-dark">
+              {{ t(`tools.${slug}`) }}
             </NuxtLinkLocale>
           </h2>
-          <p class="mt-1 max-w-[52ch] text-sm text-ink-soft">{{ tool.description }}</p>
+          <p class="mt-1 max-w-[52ch] text-sm text-ink-soft">{{ t(`toolDescriptions.${slug}`) }}</p>
         </div>
-        <NuxtLinkLocale :to="`/office-tools/data/${tool.slug}`"
-          class="inline-block shrink-0 rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
-          Buka tool
+        <NuxtLinkLocale
+          :to="`/office-tools/data/${slug}`"
+          class="inline-block shrink-0 rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark"
+        >
+          {{ t('common.openTool') }}
         </NuxtLinkLocale>
       </article>
     </section>
 
     <section class="pb-16">
-      <NuxtLinkLocale to="/office-tools"
-        class="border-b border-slate-300 pb-0.5 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
-        Lihat semua kategori Office Tools
+      <NuxtLinkLocale to="/office-tools" class="border-b border-slate-300 pb-0.5 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
+        {{ t('common.backToCategories') }}
       </NuxtLinkLocale>
     </section>
   </div>

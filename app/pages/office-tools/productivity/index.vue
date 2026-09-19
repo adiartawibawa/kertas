@@ -1,42 +1,11 @@
 <script setup lang="ts">
-interface ToolItem {
-  name: string
-  slug: string
-  description: string
-}
+const { t } = useI18n()
 
-const tools: ToolItem[] = [
-  {
-    name: 'Percentage',
-    slug: 'percentage',
-    description: 'Hitung persentase dari suatu angka, persentase perubahan, atau tambah/kurang persentase.',
-  },
-  {
-    name: 'Business Days',
-    slug: 'business-days',
-    description: 'Hitung jumlah hari kerja antara dua tanggal, atau tambahkan hari kerja ke tanggal tertentu.',
-  },
-  {
-    name: 'Date Difference',
-    slug: 'date-difference',
-    description: 'Hitung selisih dua tanggal dalam tahun, bulan, hari, dan total hari.',
-  },
-  {
-    name: 'Working Hours',
-    slug: 'working-hours',
-    description: 'Hitung total jam kerja dari beberapa shift dengan waktu istirahat.',
-  },
-  {
-    name: 'Time Calculator',
-    slug: 'time-calculator',
-    description: 'Jumlahkan beberapa durasi waktu atau tambahkan durasi ke jam tertentu.',
-  },
-]
+const toolSlugs = ['percentage', 'business-days', 'date-difference', 'working-hours', 'time-calculator']
 
 useSeoMeta({
-  title: 'Productivity — Kalkulator Harian untuk Kerja & Bisnis',
-  description:
-    'Kumpulan kalkulator harian: persentase, hari kerja, selisih tanggal, jam kerja, dan durasi waktu. Semua gratis, tanpa upload.',
+  title: t('hubTitle.productivity'),
+  description: t('categories.productivity.description'),
 })
 
 useHead({
@@ -46,13 +15,13 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'CollectionPage',
-        name: 'Productivity — Office Tools',
-        description: 'Kumpulan kalkulator harian untuk kebutuhan kerja dan bisnis yang berjalan di browser.',
-        hasPart: tools.map((tool) => ({
+        name: t('hubTitle.productivity'),
+        description: t('hubIntro.productivity'),
+        hasPart: toolSlugs.map((slug) => ({
           '@type': 'SoftwareApplication',
-          name: tool.name,
+          name: t(`tools.${slug}`),
           applicationCategory: 'UtilitiesApplication',
-          url: `https://domainanda.com/office-tools/productivity/${tool.slug}`,
+          url: `https://domainanda.com/office-tools/productivity/${slug}`,
         })),
       }),
     },
@@ -63,16 +32,11 @@ useHead({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://domainanda.com/' },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Office Tools',
-            item: 'https://domainanda.com/office-tools',
-          },
+          { '@type': 'ListItem', position: 2, name: 'Office Tools', item: 'https://domainanda.com/office-tools' },
           {
             '@type': 'ListItem',
             position: 3,
-            name: 'Productivity',
+            name: t('categories.productivity.name'),
             item: 'https://domainanda.com/office-tools/productivity',
           },
         ],
@@ -87,47 +51,46 @@ useHead({
     <p class="pt-7 text-sm text-ink-soft">
       <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
       <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
-      Productivity
+      {{ t('categories.productivity.name') }}
     </p>
 
     <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-      Productivity — kalkulator harian untuk kerja dan bisnis
+      {{ t('hubTitle.productivity') }}
     </h1>
     <p class="mt-2 max-w-[56ch] text-base text-ink-soft">
-      Persentase, hari kerja, selisih tanggal, jam kerja, dan durasi waktu — semua dalam satu tempat.
+      {{ t('categories.productivity.description') }}
     </p>
 
     <section class="mt-8">
-      <p class="max-w-[68ch] text-sm text-ink-soft">
-        Kategori Productivity berisi kalkulator ringan untuk kebutuhan operasional sehari-hari — mulai dari
-        menghitung diskon dan margin bisnis, memproyeksikan deadline berdasarkan hari kerja, mengetahui selisih
-        tepat antara dua tanggal, merekap total jam kerja dari beberapa shift, hingga menjumlahkan durasi waktu.
-        Semua kalkulasi berjalan langsung di browser Anda tanpa perlu membuka aplikasi spreadsheet terpisah.
-      </p>
+      <p class="max-w-[68ch] text-sm text-ink-soft">{{ t('hubIntro.productivity') }}</p>
     </section>
 
     <section class="mt-10 grid gap-4 pb-16">
-      <article v-for="tool in tools" :key="tool.slug"
-        class="flex flex-col justify-between gap-4 rounded-md border border-slate-200 bg-white p-5 sm:flex-row sm:items-center">
+      <article
+        v-for="slug in toolSlugs"
+        :key="slug"
+        class="flex flex-col justify-between gap-4 rounded-md border border-slate-200 bg-white p-5 sm:flex-row sm:items-center"
+      >
         <div>
           <h2 class="text-base font-semibold text-ink">
-            <NuxtLinkLocale :to="`/office-tools/productivity/${tool.slug}`" class="hover:text-accent-dark">
-              {{ tool.name }}
+            <NuxtLinkLocale :to="`/office-tools/productivity/${slug}`" class="hover:text-accent-dark">
+              {{ t(`tools.${slug}`) }}
             </NuxtLinkLocale>
           </h2>
-          <p class="mt-1 max-w-[52ch] text-sm text-ink-soft">{{ tool.description }}</p>
+          <p class="mt-1 max-w-[52ch] text-sm text-ink-soft">{{ t(`toolDescriptions.${slug}`) }}</p>
         </div>
-        <NuxtLinkLocale :to="`/office-tools/productivity/${tool.slug}`"
-          class="inline-block shrink-0 rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
-          Buka tool
+        <NuxtLinkLocale
+          :to="`/office-tools/productivity/${slug}`"
+          class="inline-block shrink-0 rounded-md border border-slate-300 px-4 py-2 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark"
+        >
+          {{ t('common.openTool') }}
         </NuxtLinkLocale>
       </article>
     </section>
 
     <section class="pb-16">
-      <NuxtLinkLocale to="/office-tools"
-        class="border-b border-slate-300 pb-0.5 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
-        Lihat semua kategori Office Tools
+      <NuxtLinkLocale to="/office-tools" class="border-b border-slate-300 pb-0.5 text-sm font-medium text-ink hover:border-accent hover:text-accent-dark">
+        {{ t('common.backToCategories') }}
       </NuxtLinkLocale>
     </section>
   </div>

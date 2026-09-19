@@ -87,5 +87,62 @@
         "date-difference": "Date Difference",
         "working-hours": "Working Hours",
         "time-calculator": "Time Calculator"
+    },
+    "common": {
+        "openTool": "Open tool",
+        "backToCategories": "← Back to all categories"
+    },
+    "error": {
+        "notFoundTitle": "Page not found",
+        "notFoundDescription": "The page you're looking for may have moved or never existed. Try heading back to the homepage.",
+        "serverErrorTitle": "Something went wrong",
+        "serverErrorDescription": "Something broke on our end. Try reloading the page, or head back to the homepage.",
+        "backHome": "Back to Home"
+    },
+    "officeTools": {
+        "title": "Office Tools — all categories",
+        "subtitle": "All tools are grouped into 5 categories based on your daily work needs. Pick a category to see its full tool list."
+    },
+    "hubTitle": {
+        "documents": "Documents — online text and document tools",
+        "pdf": "PDF — merge, split, and edit PDFs online",
+        "spreadsheet": "Spreadsheet — online CSV and Excel tools",
+        "data": "Data — online data conversion tools",
+        "productivity": "Productivity — daily calculators for work and business"
+    },
+    "hubIntro": {
+        "documents": "The Documents category has lightweight tools for everyday writing and text tasks — counting words for an essay or article, cleaning up messy text pasted from PDF or Word, changing capitalization for variable names or titles, comparing two document drafts, or removing duplicate entries from a list. Every tool in this category processes your text entirely in the browser — nothing is ever uploaded to a server, so it's safe to use even for private or sensitive text.",
+        "pdf": "The PDF category covers everyday document needs — merging several files into one, splitting a long document into parts, shrinking file size for email, rotating pages that came out upside down from a scan, pulling out specific pages, or extracting text from a document. Every file is processed right in your browser — suitable for private or sensitive documents like contracts and ID scans.",
+        "spreadsheet": "The Spreadsheet category has tools for everyday work with tabular data — from simply viewing a CSV file's contents without opening Excel, cleaning up messy data, splitting a large file into parts, merging several files into one, to converting back and forth between CSV and Excel. Every file is processed right in your browser — nothing is uploaded to a server, safe for internal or sensitive data.",
+        "data": "The Data category has conversion and cleanup tools developers and analysts often need — turning a JSON API response into a CSV table you can open in Excel, converting spreadsheet data into JSON for use in code, working with legacy XML data, or tidying and validating a data structure before using it further. Everything runs entirely in your browser — suitable for sensitive or internal data.",
+        "productivity": "The Productivity category has lightweight calculators for everyday operational needs — working out discounts and business margins, projecting a deadline based on business days, finding the exact difference between two dates, totaling working hours across several shifts, or adding up time durations. Every calculation runs right in your browser without needing a separate spreadsheet app."
+    },
+    "toolDescriptions": {
+        "word-counter": "Instantly count words, characters, sentences, and paragraphs as you type.",
+        "text-cleaner": "Remove double spaces, blank lines, and tabs from messy pasted text.",
+        "case-converter": "Convert text to UPPERCASE, Title Case, camelCase, snake_case, and more.",
+        "text-compare": "Compare two versions of a text and spot the differences line by line.",
+        "duplicate-line-remover": "Remove duplicate lines from a list while keeping the first occurrence.",
+        "pdf-merge": "Combine several PDF files into one, with reorderable file order.",
+        "pdf-split": "Split a PDF into multiple files, by page or by custom range.",
+        "pdf-compress": "Shrink a PDF's file size by compacting its internal structure.",
+        "pdf-rotate": "Rotate PDF pages 90°, 180°, or 270°.",
+        "pdf-extract-pages": "Pull specific pages from a PDF into a new file.",
+        "pdf-to-text": "Extract text from a PDF that has a digital text layer.",
+        "csv-viewer": "Open and search CSV data as a table right in your browser.",
+        "csv-cleaner": "Remove blank rows, duplicates, and empty columns from a CSV.",
+        "csv-splitter": "Split a large CSV file into several smaller files.",
+        "csv-merger": "Combine several CSV files into a single file.",
+        "csv-to-xlsx": "Convert a CSV file to Excel (.xlsx) format.",
+        "xlsx-to-csv": "Convert an Excel file (.xlsx/.xls) to CSV format.",
+        "json-to-csv": "Convert JSON data to CSV, flattening nested structures into columns.",
+        "csv-to-json": "Convert a CSV table to JSON using the first row as headers.",
+        "xml-to-csv": "Convert XML with repeating elements to CSV, one element per row.",
+        "data-formatter": "Instantly format, validate, and minify JSON or XML data.",
+        "percentage": "Calculate a percentage of a number, percentage change, or add/subtract a percentage.",
+        "business-days": "Count business days between two dates, or add business days to a date.",
+        "date-difference": "Calculate the difference between two dates in years, months, days, and total days.",
+        "working-hours": "Calculate total working hours across several shifts with breaks.",
+        "time-calculator": "Add up several time durations, or add a duration to a specific clock time."
     }
 }

@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/i18n", "@nuxtjs/sitemap"],
 
   // Supaya <StatBar>, <FaqAccordion>, <RelatedTools> tidak perlu ditulis
   // sebagai <ToolsStatBar>, dst (default Nuxt menambah prefix nama folder).
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   // Halaman tool tidak butuh data server-side, jadi aman untuk di-prerender
   // penuh saat build (nuxt generate) — bagus untuk SEO & indexing cepat.
   routeRules: {
-    "/tools/**": { prerender: true },
+    "/office-tools/**": { prerender: true },
   },
 
   compatibilityDate: "2026-01-01",
@@ -48,4 +48,14 @@ export default defineNuxtConfig({
       redirectOn: "root", // hanya redirect otomatis di halaman root
     },
   },
+  // WAJIB diisi domain asli sebelum production
+  site: {
+    url: "https://kertaas.com",
+  },
+
+  // @nuxtjs/sitemap otomatis mendeteksi @nuxtjs/i18n (karena didaftarkan
+  // setelahnya di atas) dan menghasilkan entri per-locale dengan tag
+  // hreflang alternate secara otomatis — tidak perlu konfigurasi manual
+  // untuk route localized.
+  sitemap: {},
 });

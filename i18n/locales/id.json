@@ -87,5 +87,62 @@
         "date-difference": "Date Difference",
         "working-hours": "Working Hours",
         "time-calculator": "Time Calculator"
+    },
+    "common": {
+        "openTool": "Buka tool",
+        "backToCategories": "← Kembali ke semua kategori"
+    },
+    "error": {
+        "notFoundTitle": "Halaman tidak ditemukan",
+        "notFoundDescription": "Halaman yang Anda cari mungkin sudah dipindah atau tidak pernah ada. Coba kembali ke beranda.",
+        "serverErrorTitle": "Terjadi kesalahan",
+        "serverErrorDescription": "Ada yang tidak beres di sisi kami. Coba muat ulang halaman, atau kembali ke beranda.",
+        "backHome": "Kembali ke Beranda"
+    },
+    "officeTools": {
+        "title": "Office Tools — semua kategori",
+        "subtitle": "Semua tool dikelompokkan jadi 5 kategori sesuai kebutuhan kerja harian. Pilih kategori untuk melihat daftar lengkap tool-nya."
+    },
+    "hubTitle": {
+        "documents": "Documents — tool teks dan dokumen online",
+        "pdf": "PDF — gabung, pisah, dan olah PDF online",
+        "spreadsheet": "Spreadsheet — tool CSV dan Excel online",
+        "data": "Data — tool konversi format data online",
+        "productivity": "Productivity — kalkulator harian untuk kerja dan bisnis"
+    },
+    "hubIntro": {
+        "documents": "Kategori Documents berisi tool-tool ringan untuk kebutuhan menulis dan mengolah teks sehari-hari — mulai dari menghitung jumlah kata untuk esai atau artikel, merapikan teks yang berantakan setelah copy-paste dari PDF atau Word, mengubah format kapitalisasi untuk penamaan variabel maupun judul tulisan, hingga membandingkan dua draft dokumen atau membersihkan daftar yang punya entri berulang. Semua tool di kategori ini memproses teks Anda sepenuhnya di browser — tidak ada yang diunggah ke server manapun, sehingga aman dipakai bahkan untuk teks yang bersifat pribadi atau rahasia.",
+        "pdf": "Kategori PDF berisi tool untuk kebutuhan dokumen sehari-hari — menggabungkan beberapa file jadi satu, memecah dokumen panjang jadi beberapa bagian, memperkecil ukuran file untuk keperluan email, memutar halaman yang hasil scan-nya terbalik, mengambil halaman tertentu saja, hingga mengekstrak teks dari dokumen. Semua file diproses langsung di browser Anda — cocok untuk dokumen yang bersifat pribadi atau rahasia seperti kontrak dan KTP scan.",
+        "spreadsheet": "Kategori Spreadsheet berisi tool untuk kebutuhan kerja sehari-hari dengan data tabular — mulai dari sekadar melihat isi file CSV tanpa perlu membuka Excel, membersihkan data yang berantakan, memecah file besar jadi beberapa bagian, menggabungkan beberapa file jadi satu, hingga konversi bolak-balik antara format CSV dan Excel. Semua file diproses langsung di browser Anda — tidak ada yang diunggah ke server, aman dipakai untuk data internal maupun sensitif.",
+        "data": "Kategori Data berisi tool-tool untuk kebutuhan konversi dan pembersihan data yang sering dibutuhkan developer maupun analis — mulai dari mengubah response API berformat JSON jadi tabel CSV yang bisa dibuka di Excel, mengonversi data spreadsheet jadi JSON untuk dipakai di kode, mengolah data legacy berformat XML, hingga merapikan dan memvalidasi struktur data sebelum dipakai lebih lanjut. Semua proses berjalan sepenuhnya di browser Anda — cocok untuk data yang bersifat sensitif atau internal.",
+        "productivity": "Kategori Productivity berisi kalkulator ringan untuk kebutuhan operasional sehari-hari — mulai dari menghitung diskon dan margin bisnis, memproyeksikan deadline berdasarkan hari kerja, mengetahui selisih tepat antara dua tanggal, merekap total jam kerja dari beberapa shift, hingga menjumlahkan durasi waktu. Semua kalkulasi berjalan langsung di browser Anda tanpa perlu membuka aplikasi spreadsheet terpisah."
+    },
+    "toolDescriptions": {
+        "word-counter": "Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan saat Anda mengetik.",
+        "text-cleaner": "Bersihkan spasi ganda, baris kosong, dan tab dari teks hasil copy-paste yang berantakan.",
+        "case-converter": "Ubah teks ke UPPERCASE, Title Case, camelCase, snake_case, dan format lainnya.",
+        "text-compare": "Bandingkan dua versi teks dan temukan perbedaannya baris demi baris.",
+        "duplicate-line-remover": "Hapus baris duplikat dari daftar teks, urutan kemunculan pertama tetap dipertahankan.",
+        "pdf-merge": "Gabungkan beberapa file PDF jadi satu file, urutan bisa diatur.",
+        "pdf-split": "Pecah PDF jadi beberapa file, per halaman atau rentang kustom.",
+        "pdf-compress": "Perkecil ukuran file PDF dengan memadatkan struktur internal.",
+        "pdf-rotate": "Putar orientasi halaman PDF 90°, 180°, atau 270°.",
+        "pdf-extract-pages": "Ambil halaman tertentu dari PDF jadi satu file baru.",
+        "pdf-to-text": "Ekstrak teks dari file PDF yang punya lapisan teks digital.",
+        "csv-viewer": "Buka dan cari data CSV sebagai tabel langsung di browser.",
+        "csv-cleaner": "Hapus baris kosong, duplikat, dan kolom kosong dari CSV.",
+        "csv-splitter": "Pecah file CSV besar jadi beberapa file lebih kecil.",
+        "csv-merger": "Gabungkan beberapa file CSV jadi satu file.",
+        "csv-to-xlsx": "Konversi file CSV ke format Excel (.xlsx).",
+        "xlsx-to-csv": "Konversi file Excel (.xlsx/.xls) ke format CSV.",
+        "json-to-csv": "Konversi data JSON ke format CSV, termasuk meratakan struktur bersarang jadi kolom.",
+        "csv-to-json": "Konversi tabel CSV ke format JSON menggunakan baris pertama sebagai header.",
+        "xml-to-csv": "Konversi XML dengan elemen berulang ke format CSV, satu elemen jadi satu baris.",
+        "data-formatter": "Rapikan, validasi, dan minify data JSON atau XML secara instan.",
+        "percentage": "Hitung persentase dari suatu angka, persentase perubahan, atau tambah/kurang persentase.",
+        "business-days": "Hitung jumlah hari kerja antara dua tanggal, atau tambahkan hari kerja ke tanggal tertentu.",
+        "date-difference": "Hitung selisih dua tanggal dalam tahun, bulan, hari, dan total hari.",
+        "working-hours": "Hitung total jam kerja dari beberapa shift dengan waktu istirahat.",
+        "time-calculator": "Jumlahkan beberapa durasi waktu atau tambahkan durasi ke jam tertentu."
     }
 }
