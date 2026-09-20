@@ -90,7 +90,13 @@
     },
     "common": {
         "openTool": "Open tool",
-        "backToCategories": "← Back to all categories"
+        "backToCategories": "← Back to all categories",
+        "faqTitle": "Frequently asked questions",
+        "relatedTitle": "Other tools you might need",
+        "clear": "Clear",
+        "privacyNoteData": "Your data never leaves this browser.",
+        "rowsAndColumns": "{rows} rows, {columns} columns",
+        "rowsCount": "{rows} rows"
     },
     "error": {
         "notFoundTitle": "Page not found",
@@ -144,5 +150,241 @@
         "date-difference": "Calculate the difference between two dates in years, months, days, and total days.",
         "working-hours": "Calculate total working hours across several shifts with breaks.",
         "time-calculator": "Add up several time durations, or add a duration to a specific clock time."
+    },
+    "toolPages": {
+        "json-to-csv": {
+            "seoTitle": "JSON to CSV Converter, Free and Upload-Free",
+            "seoDescription": "Convert JSON to CSV instantly. Nested JSON becomes separate columns automatically. Everything runs in your browser.",
+            "schemaName": "JSON to CSV Converter",
+            "schemaDescription": "Converts JSON data to CSV format. Flattens nested structures into columns.",
+            "title": "JSON to CSV: convert JSON data to a CSV table",
+            "lede": "Paste your JSON. The CSV output appears right away, including nested JSON.",
+            "inputLabel": "JSON",
+            "outputLabel": "CSV",
+            "copyButton": "Copy CSV",
+            "downloadButton": "Download .csv",
+            "featuresTitle": "Why use this JSON to CSV tool?",
+            "features": [
+                {
+                    "title": "Handles nested JSON",
+                    "description": "Objects inside objects become separate columns."
+                },
+                {
+                    "title": "Automatic headers",
+                    "description": "Every column in your data lands in the header. No field gets skipped."
+                },
+                {
+                    "title": "Direct download",
+                    "description": "Download the CSV as a file, ready to open in Excel or Sheets."
+                }
+            ],
+            "howToTitle": "How to convert JSON to CSV",
+            "steps": [
+                "Paste your JSON data in the left column.",
+                "Watch the CSV result appear in the right column.",
+                "Click Copy to copy it, or Download to save it as a .csv file."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "An API returns JSON, but your team needs to open it in Excel or Google Sheets for further analysis.",
+                "Developers use this conversion to check an API response as a table, easier to scan than raw JSON."
+            ],
+            "faq": [
+                {
+                    "question": "Can nested JSON be converted?",
+                    "answer": "Yes. The tool flattens nested objects into columns with combined names. { \"address\": { \"city\": \"Bandung\" } } becomes the column address.city. CSV has no concept of nesting, so flattening keeps your data intact."
+                },
+                {
+                    "question": "What happens when array items have different fields?",
+                    "answer": "The tool combines every column found across your data into one header. Objects missing a field get an empty cell there."
+                },
+                {
+                    "question": "Does my JSON have to be an array?",
+                    "answer": "No. A single object works too. The tool wraps it into one row automatically."
+                },
+                {
+                    "question": "Is my data uploaded to a server?",
+                    "answer": "No. The conversion runs in your browser from start to finish."
+                }
+            ]
+        },
+        "csv-to-json": {
+            "seoTitle": "CSV to JSON Converter, Free and Upload-Free",
+            "seoDescription": "Convert CSV to JSON instantly in your browser. Free, no file upload.",
+            "schemaName": "CSV to JSON Converter",
+            "schemaDescription": "Converts CSV data to JSON format. The first row becomes the header.",
+            "title": "CSV to JSON: convert a CSV table to JSON",
+            "lede": "Paste your CSV data. The JSON output appears right away.",
+            "inputLabel": "CSV",
+            "outputLabel": "JSON",
+            "copyButton": "Copy JSON",
+            "downloadButton": "Download .json",
+            "featuresTitle": "Why use this CSV to JSON tool?",
+            "features": [
+                {
+                    "title": "Handles complex CSV",
+                    "description": "Fields with commas or quotes inside them still read correctly."
+                },
+                {
+                    "title": "Clean JSON",
+                    "description": "The result comes pre-indented, ready to use right away."
+                },
+                {
+                    "title": "Direct download",
+                    "description": "Download the JSON result as a .json file."
+                }
+            ],
+            "howToTitle": "How to convert CSV to JSON",
+            "steps": [
+                "Paste your CSV in the left column. The first row must be the header.",
+                "Watch the JSON result appear in the right column.",
+                "Click Copy to copy it, or Download to save it as a .json file."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Data exported from Excel or Google Sheets needs to become JSON for app seed data, a config file, or API test input.",
+                "Developers turn a plain spreadsheet into a ready-to-use array of objects, skipping a hand-written parser."
+            ],
+            "faq": [
+                {
+                    "question": "Does the first row need to hold column names?",
+                    "answer": "Yes. The first CSV row becomes the header and supplies the keys in the JSON output."
+                },
+                {
+                    "question": "What about a comma inside a cell?",
+                    "answer": "Wrap that cell in double quotes, like \"text, with a comma\". This is standard CSV format and the tool supports it."
+                },
+                {
+                    "question": "Are data types like numbers detected automatically?",
+                    "answer": "No. Every value becomes text in the JSON output, since CSV itself carries no type information."
+                },
+                {
+                    "question": "Is my data uploaded to a server?",
+                    "answer": "No. The conversion runs in your browser from start to finish."
+                }
+            ]
+        },
+        "xml-to-csv": {
+            "seoTitle": "XML to CSV Converter, Free and Upload-Free",
+            "seoDescription": "Convert XML with repeating elements to CSV instantly in your browser. Free, no file upload.",
+            "schemaName": "XML to CSV Converter",
+            "schemaDescription": "Converts XML with repeating elements to CSV format.",
+            "title": "XML to CSV: convert repeating XML to a CSV table",
+            "lede": "Paste XML with repeating elements. Each element becomes one CSV row.",
+            "inputLabel": "XML",
+            "outputLabel": "CSV",
+            "copyButton": "Copy CSV",
+            "downloadButton": "Download .csv",
+            "featuresTitle": "Why use this XML to CSV tool?",
+            "features": [
+                {
+                    "title": "Automatic pattern detection",
+                    "description": "The tool recognizes the row pattern on its own. No manual mapping needed."
+                },
+                {
+                    "title": "Nested tags become columns",
+                    "description": "Tags inside tags turn into separate columns automatically."
+                },
+                {
+                    "title": "Direct download",
+                    "description": "Download the CSV result straight as a file."
+                }
+            ],
+            "howToTitle": "How to convert XML to CSV",
+            "steps": [
+                "Paste your XML in the left column.",
+                "Watch the CSV result appear in the right column.",
+                "Click Copy to copy it, or Download to save it as a .csv file."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A legacy system or API still sends data as XML, but you need to analyze it in Excel or Google Sheets.",
+                "Product feeds and sitemaps in XML format become easier to scan once converted to a table."
+            ],
+            "faq": [
+                {
+                    "question": "What XML structure can this tool convert?",
+                    "answer": "XML with repeating elements that share a tag name as children of one root, for example several <item> tags inside <items>. Each repeating element becomes one table row."
+                },
+                {
+                    "question": "What if my XML has no repeating elements?",
+                    "answer": "The tool treats the whole document as a single row. Each child tag becomes one column."
+                },
+                {
+                    "question": "Are XML attributes converted too?",
+                    "answer": "Not yet. The tool reads only the text inside tags. Attributes on a tag, like id=\"1\", aren't supported yet."
+                },
+                {
+                    "question": "Is my data uploaded to a server?",
+                    "answer": "No. The conversion runs in your browser from start to finish."
+                }
+            ]
+        },
+        "data-formatter": {
+            "seoTitle": "Data Formatter, Format and Validate JSON/XML Free",
+            "seoDescription": "Format, validate, and minify JSON or XML instantly in your browser. Free, no data upload.",
+            "schemaName": "Data Formatter",
+            "schemaDescription": "Formats, validates, and minifies JSON or XML data.",
+            "title": "Data Formatter: format and validate JSON or XML",
+            "lede": "Paste messy data. Get a clean, indented version, and know right away if something's invalid.",
+            "modeJsonLabel": "JSON",
+            "modeXmlLabel": "XML",
+            "indentLabel": "Indent:",
+            "indent2Label": "2 spaces",
+            "indent4Label": "4 spaces",
+            "inputLabel": "Input",
+            "outputLabel": "Formatted result",
+            "copyFormattedButton": "Copy formatted",
+            "copyMinifiedButton": "Copy minified",
+            "downloadButton": "Download",
+            "placeholderJson": "{\"name\":\"Alex\",\"age\":30}",
+            "placeholderXml": "<root><name>Alex</name></root>",
+            "featuresTitle": "Why use this Data Formatter?",
+            "features": [
+                {
+                    "title": "Automatic validation",
+                    "description": "Invalid data triggers an error message first. The tool never shows a broken result."
+                },
+                {
+                    "title": "Format and minify together",
+                    "description": "Clean it up for reading, or compact it for production, in one place."
+                },
+                {
+                    "title": "Two formats at once",
+                    "description": "JSON and XML, the two most common data formats, in a single tool."
+                }
+            ],
+            "howToTitle": "How to format JSON or XML",
+            "steps": [
+                "Pick JSON or XML mode.",
+                "Paste your data in the input column.",
+                "Watch the formatted result appear in the right column.",
+                "Click Copy or Download to save it."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "An API response arrives as one long line. Checking it gets much easier once it's formatted.",
+                "A JSON or XML config file needs a validity check before your app uses it.",
+                "The minify feature shrinks a JSON file before you ship it to production, without changing the data."
+            ],
+            "faq": [
+                {
+                    "question": "Does this tool validate my JSON/XML too?",
+                    "answer": "Yes. Invalid data triggers an error message explaining the problem, and the tool never shows a broken result."
+                },
+                {
+                    "question": "What's the difference between Format and Minify?",
+                    "answer": "Format adds indentation so people can read it easily. Minify strips every space and line break to shrink the file, suited for production."
+                },
+                {
+                    "question": "Is minify available for XML too?",
+                    "answer": "Not yet. Minify currently works for JSON mode only. For XML, the tool focuses on indentation."
+                },
+                {
+                    "question": "Is my data uploaded to a server?",
+                    "answer": "No. Formatting and validation run in your browser from start to finish."
+                }
+            ]
+        }
     }
 }

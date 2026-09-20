@@ -90,7 +90,13 @@
     },
     "common": {
         "openTool": "Buka tool",
-        "backToCategories": "← Kembali ke semua kategori"
+        "backToCategories": "← Kembali ke semua kategori",
+        "faqTitle": "Pertanyaan umum",
+        "relatedTitle": "Tool lain yang mungkin Anda butuhkan",
+        "clear": "Clear",
+        "privacyNoteData": "Data Anda tidak pernah meninggalkan browser ini.",
+        "rowsAndColumns": "{rows} baris, {columns} kolom",
+        "rowsCount": "{rows} baris"
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
@@ -144,5 +150,241 @@
         "date-difference": "Hitung selisih dua tanggal dalam tahun, bulan, hari, dan total hari.",
         "working-hours": "Hitung total jam kerja dari beberapa shift dengan waktu istirahat.",
         "time-calculator": "Jumlahkan beberapa durasi waktu atau tambahkan durasi ke jam tertentu."
+    },
+    "toolPages": {
+        "json-to-csv": {
+            "seoTitle": "JSON to CSV Converter Online, Gratis dan Tanpa Upload",
+            "seoDescription": "Konversi JSON ke CSV secara instan. JSON bersarang otomatis menjadi kolom terpisah. Semua proses berjalan di browser Anda.",
+            "schemaName": "JSON to CSV Converter",
+            "schemaDescription": "Mengonversi data JSON ke format CSV. Meratakan struktur bersarang jadi kolom.",
+            "title": "JSON to CSV: konversi data JSON ke tabel CSV",
+            "lede": "Tempel JSON Anda. Hasil CSV muncul otomatis, termasuk JSON bersarang.",
+            "inputLabel": "JSON",
+            "outputLabel": "CSV",
+            "copyButton": "Copy CSV",
+            "downloadButton": "Download .csv",
+            "featuresTitle": "Kenapa menggunakan JSON to CSV ini?",
+            "features": [
+                {
+                    "title": "Menangani JSON bersarang",
+                    "description": "Object di dalam object otomatis menjadi kolom terpisah."
+                },
+                {
+                    "title": "Header otomatis",
+                    "description": "Setiap kolom yang muncul di data masuk ke header. Tidak ada field yang hilang."
+                },
+                {
+                    "title": "Download langsung",
+                    "description": "Unduh hasil CSV sebagai file, siap dibuka di Excel atau Sheets."
+                }
+            ],
+            "howToTitle": "Cara mengonversi JSON ke CSV",
+            "steps": [
+                "Tempel data JSON di kolom kiri.",
+                "Lihat hasil CSV muncul otomatis di kolom kanan.",
+                "Klik Copy untuk menyalin, atau Download untuk menyimpan sebagai file .csv."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sebuah API mengembalikan data JSON, tapi tim Anda perlu membukanya di Excel atau Google Sheets untuk analisis lanjutan.",
+                "Developer memakai konversi ini untuk mengecek isi response API dalam bentuk tabel, jauh lebih mudah dibaca dibanding JSON mentah."
+            ],
+            "faq": [
+                {
+                    "question": "Bisakah JSON dengan struktur nested (bersarang) dikonversi?",
+                    "answer": "Ya. Tool ini meratakan object bersarang jadi kolom dengan nama gabungan. { \"alamat\": { \"kota\": \"Bandung\" } } menjadi kolom alamat.kota. CSV tidak mengenal struktur bersarang, jadi perataan ini menjaga data tetap utuh."
+                },
+                {
+                    "question": "Apa yang terjadi kalau tiap object di array punya field berbeda?",
+                    "answer": "Tool ini menggabungkan semua kolom yang muncul di seluruh data jadi satu header. Object tanpa field tertentu mendapat sel kosong pada kolom itu."
+                },
+                {
+                    "question": "Apakah JSON saya harus berupa array?",
+                    "answer": "Tidak. Satu object saja sudah cukup. Tool ini membungkusnya otomatis jadi satu baris data."
+                },
+                {
+                    "question": "Apakah data saya diunggah ke server?",
+                    "answer": "Tidak. Konversi berjalan di browser Anda dari awal sampai akhir."
+                }
+            ]
+        },
+        "csv-to-json": {
+            "seoTitle": "CSV to JSON Converter Online, Gratis dan Tanpa Upload",
+            "seoDescription": "Konversi CSV ke JSON secara instan di browser Anda. Gratis, tanpa upload file.",
+            "schemaName": "CSV to JSON Converter",
+            "schemaDescription": "Mengonversi data CSV ke format JSON. Baris pertama menjadi header.",
+            "title": "CSV to JSON: konversi tabel CSV ke JSON",
+            "lede": "Tempel data CSV Anda. Hasil JSON muncul otomatis.",
+            "inputLabel": "CSV",
+            "outputLabel": "JSON",
+            "copyButton": "Copy JSON",
+            "downloadButton": "Download .json",
+            "featuresTitle": "Kenapa menggunakan CSV to JSON ini?",
+            "features": [
+                {
+                    "title": "Mendukung CSV kompleks",
+                    "description": "Field dengan koma atau tanda kutip di dalamnya tetap terbaca benar."
+                },
+                {
+                    "title": "JSON rapi",
+                    "description": "Hasil sudah diformat dengan indentasi, siap dipakai langsung."
+                },
+                {
+                    "title": "Download langsung",
+                    "description": "Unduh hasil JSON sebagai file .json."
+                }
+            ],
+            "howToTitle": "Cara mengonversi CSV ke JSON",
+            "steps": [
+                "Tempel data CSV di kolom kiri. Baris pertama harus header.",
+                "Lihat hasil JSON muncul otomatis di kolom kanan.",
+                "Klik Copy untuk menyalin, atau Download untuk menyimpan sebagai file .json."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Data yang diekspor dari Excel atau Google Sheets perlu menjadi JSON untuk data seed aplikasi, config file, atau input testing API.",
+                "Developer mengubah spreadsheet sederhana jadi array object siap pakai di kode, tanpa menulis parser manual."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah baris pertama harus berisi nama kolom?",
+                    "answer": "Ya. Baris pertama CSV menjadi header dan dipakai sebagai key di JSON hasil."
+                },
+                {
+                    "question": "Bagaimana kalau ada koma di dalam salah satu sel?",
+                    "answer": "Bungkus sel itu dengan tanda kutip ganda, seperti \"teks, dengan koma\". Ini format CSV standar dan tool ini mendukungnya."
+                },
+                {
+                    "question": "Apakah tipe data seperti angka otomatis dikenali?",
+                    "answer": "Tidak. Setiap nilai menjadi teks di JSON hasil, karena CSV sendiri tidak menyimpan informasi tipe data."
+                },
+                {
+                    "question": "Apakah data saya diunggah ke server?",
+                    "answer": "Tidak. Konversi berjalan di browser Anda dari awal sampai akhir."
+                }
+            ]
+        },
+        "xml-to-csv": {
+            "seoTitle": "XML to CSV Converter Online, Gratis dan Tanpa Upload",
+            "seoDescription": "Konversi XML dengan elemen berulang ke CSV secara instan di browser Anda. Gratis, tanpa upload file.",
+            "schemaName": "XML to CSV Converter",
+            "schemaDescription": "Mengonversi XML dengan elemen berulang ke format CSV.",
+            "title": "XML to CSV: konversi XML berulang ke tabel CSV",
+            "lede": "Tempel XML dengan elemen berulang. Setiap elemen menjadi satu baris CSV.",
+            "inputLabel": "XML",
+            "outputLabel": "CSV",
+            "copyButton": "Copy CSV",
+            "downloadButton": "Download .csv",
+            "featuresTitle": "Kenapa menggunakan XML to CSV ini?",
+            "features": [
+                {
+                    "title": "Deteksi elemen berulang",
+                    "description": "Tool ini mengenali pola baris sendiri. Anda tidak perlu mengatur mapping manual."
+                },
+                {
+                    "title": "Tag bersarang jadi kolom",
+                    "description": "Tag di dalam tag menjadi kolom terpisah secara otomatis."
+                },
+                {
+                    "title": "Download langsung",
+                    "description": "Unduh hasil CSV langsung sebagai file."
+                }
+            ],
+            "howToTitle": "Cara mengonversi XML ke CSV",
+            "steps": [
+                "Tempel XML Anda di kolom kiri.",
+                "Lihat hasil CSV muncul otomatis di kolom kanan.",
+                "Klik Copy untuk menyalin, atau Download untuk menyimpan sebagai file .csv."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sistem lama atau API legacy masih mengirim data dalam format XML, tapi Anda perlu menganalisisnya di Excel atau Google Sheets.",
+                "Feed produk atau sitemap berformat XML jadi lebih mudah dibaca setelah dikonversi ke tabel."
+            ],
+            "faq": [
+                {
+                    "question": "Struktur XML seperti apa yang bisa dikonversi?",
+                    "answer": "XML dengan elemen berulang bertag sama sebagai anak dari satu root, misal beberapa <item> di dalam <items>. Setiap elemen berulang menjadi satu baris tabel."
+                },
+                {
+                    "question": "Bagaimana kalau XML saya tidak punya elemen berulang?",
+                    "answer": "Tool ini memperlakukan seluruh dokumen sebagai satu baris tunggal. Setiap tag anak menjadi satu kolom."
+                },
+                {
+                    "question": "Apakah atribut XML ikut dikonversi?",
+                    "answer": "Belum. Tool ini membaca isi teks di dalam tag saja. Atribut pada tag, seperti id=\"1\", belum didukung."
+                },
+                {
+                    "question": "Apakah data saya diunggah ke server?",
+                    "answer": "Tidak. Konversi berjalan di browser Anda dari awal sampai akhir."
+                }
+            ]
+        },
+        "data-formatter": {
+            "seoTitle": "Data Formatter Online, Rapikan dan Validasi JSON/XML Gratis",
+            "seoDescription": "Format, validasi, dan minify JSON atau XML secara instan di browser Anda. Gratis, tanpa upload data.",
+            "schemaName": "Data Formatter",
+            "schemaDescription": "Merapikan, memvalidasi, dan meminify data JSON atau XML.",
+            "title": "Data Formatter: rapikan dan validasi JSON atau XML",
+            "lede": "Tempel data berantakan. Dapatkan versi rapi dengan indentasi, plus tahu langsung kalau ada yang tidak valid.",
+            "modeJsonLabel": "JSON",
+            "modeXmlLabel": "XML",
+            "indentLabel": "Indentasi:",
+            "indent2Label": "2 spasi",
+            "indent4Label": "4 spasi",
+            "inputLabel": "Input",
+            "outputLabel": "Hasil rapi",
+            "copyFormattedButton": "Copy hasil rapi",
+            "copyMinifiedButton": "Copy minified",
+            "downloadButton": "Download",
+            "placeholderJson": "{\"nama\":\"Andi\",\"umur\":30}",
+            "placeholderXml": "<root><nama>Andi</nama></root>",
+            "featuresTitle": "Kenapa menggunakan Data Formatter ini?",
+            "features": [
+                {
+                    "title": "Validasi otomatis",
+                    "description": "Data tidak valid memicu pesan error dulu. Tool ini tidak pernah menampilkan hasil yang salah."
+                },
+                {
+                    "title": "Format dan minify sekaligus",
+                    "description": "Rapikan untuk dibaca manusia, atau padatkan untuk production, dalam satu tempat."
+                },
+                {
+                    "title": "Dua format sekaligus",
+                    "description": "JSON dan XML, dua format data paling umum, tersedia di satu tool."
+                }
+            ],
+            "howToTitle": "Cara merapikan JSON atau XML",
+            "steps": [
+                "Pilih mode JSON atau XML.",
+                "Tempel data Anda di kolom input.",
+                "Lihat hasil rapi muncul otomatis di kolom kanan.",
+                "Klik Copy atau Download untuk menyimpan hasilnya."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sebuah response API datang dalam satu baris panjang. Memeriksa isinya jadi jauh lebih mudah setelah dirapikan.",
+                "File konfigurasi JSON atau XML perlu dicek validitasnya sebelum dipakai di aplikasi.",
+                "Fitur minify mengecilkan ukuran file JSON sebelum dikirim ke production, tanpa mengubah datanya."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah tool ini juga memvalidasi JSON/XML saya?",
+                    "answer": "Ya. Data tidak valid memicu pesan error yang menjelaskan masalahnya, dan tool ini tidak menampilkan hasil yang salah."
+                },
+                {
+                    "question": "Apa bedanya Format dan Minify?",
+                    "answer": "Format menambah indentasi supaya manusia mudah membaca. Minify menghapus semua spasi dan baris baru supaya ukuran file mengecil, cocok untuk production."
+                },
+                {
+                    "question": "Apakah minify tersedia untuk XML juga?",
+                    "answer": "Belum. Minify saat ini hanya tersedia untuk mode JSON. Untuk XML, tool ini fokus pada indentasi."
+                },
+                {
+                    "question": "Apakah data saya diunggah ke server?",
+                    "answer": "Tidak. Format dan validasi berjalan di browser Anda dari awal sampai akhir."
+                }
+            ]
+        }
     }
 }
