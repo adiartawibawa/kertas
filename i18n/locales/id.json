@@ -3,12 +3,12 @@
         "name": "Kertaas"
     },
     "home": {
-        "title": "Office tools yang bekerja di browser Anda, bukan di server kami",
-        "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data — semua diproses lokal di perangkat Anda. Tanpa upload, tanpa daftar akun, dan tanpa biaya.",
-        "seoTitle": "Kertaas — Office Tools Privasi-First, Tanpa Upload",
-        "seoDescription": "Kumpulan tool dokumen, PDF, spreadsheet, dan data yang berjalan sepenuhnya di browser Anda. Tanpa upload, tanpa daftar akun, gratis dan cepat.",
-        "ogDescription": "Tool office harian yang berjalan di browser Anda — tanpa upload, tanpa akun, gratis.",
-        "jsonLdDescription": "Platform utilitas web privasi-first untuk kebutuhan dokumen, spreadsheet, teks, PDF, dan data harian.",
+        "title": "Office tools yang berjalan di browser Anda",
+        "subtitle": "Hitung kata, olah PDF, bersihkan CSV, atau konversi data. File Anda tetap di perangkat Anda. Tanpa upload, tanpa daftar akun, tanpa biaya.",
+        "seoTitle": "Kertaas: Office Tools Privat, Tanpa Upload",
+        "seoDescription": "Tool dokumen, PDF, spreadsheet, dan data yang berjalan di browser Anda. Tanpa upload, tanpa akun, gratis dan cepat.",
+        "ogDescription": "Tool office harian yang berjalan di browser Anda. Tanpa upload, tanpa akun, gratis.",
+        "jsonLdDescription": "Tool web untuk kebutuhan dokumen, spreadsheet, teks, PDF, dan data. File tetap di browser Anda.",
         "viewAll": "Lihat semua tool {category}",
         "badges": {
             "noUpload": "Tidak ada upload file",
@@ -24,7 +24,7 @@
         "productivity": "Productivity"
     },
     "footer": {
-        "tagline": "office utilities yang berjalan sepenuhnya di browser Anda."
+        "tagline": "office utilities yang berjalan di browser Anda."
     },
     "diffView": {
         "placeholder": "Tempel teks di kedua kolom di atas untuk melihat perbedaannya."
@@ -41,11 +41,11 @@
     "categories": {
         "documents": {
             "name": "Documents",
-            "description": "Bersihkan, hitung, dan bandingkan teks tanpa install apapun."
+            "description": "Bersihkan, hitung, dan bandingkan teks tanpa install apa pun."
         },
         "pdf": {
             "name": "PDF",
-            "description": "Gabung, pisah, kompres, dan olah PDF langsung di browser."
+            "description": "Gabung, pisah, kompres, dan olah PDF di browser."
         },
         "spreadsheet": {
             "name": "Spreadsheet",
@@ -53,11 +53,11 @@
         },
         "data": {
             "name": "Data",
-            "description": "Konversi antar format data untuk kebutuhan development."
+            "description": "Konversi antar format data untuk pekerjaan development."
         },
         "productivity": {
             "name": "Productivity",
-            "description": "Kalkulator harian untuk kebutuhan kerja dan bisnis."
+            "description": "Kalkulator untuk pekerjaan dan bisnis."
         }
     },
     "tools": {
@@ -94,51 +94,51 @@
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
-        "notFoundDescription": "Halaman yang Anda cari mungkin sudah dipindah atau tidak pernah ada. Coba kembali ke beranda.",
+        "notFoundDescription": "Kami tidak menemukan halaman itu. Tautan mungkin salah, atau halamannya sudah pindah. Kembali ke beranda.",
         "serverErrorTitle": "Terjadi kesalahan",
-        "serverErrorDescription": "Ada yang tidak beres di sisi kami. Coba muat ulang halaman, atau kembali ke beranda.",
+        "serverErrorDescription": "Ada error di sisi kami. Muat ulang halaman atau kembali ke beranda.",
         "backHome": "Kembali ke Beranda"
     },
     "officeTools": {
-        "title": "Office Tools — semua kategori",
-        "subtitle": "Semua tool dikelompokkan jadi 5 kategori sesuai kebutuhan kerja harian. Pilih kategori untuk melihat daftar lengkap tool-nya."
+        "title": "Office Tools: semua kategori",
+        "subtitle": "Kami membagi tool ke dalam lima kategori sesuai tugas harian. Pilih satu untuk melihat daftar lengkapnya."
     },
     "hubTitle": {
-        "documents": "Documents — tool teks dan dokumen online",
-        "pdf": "PDF — gabung, pisah, dan olah PDF online",
-        "spreadsheet": "Spreadsheet — tool CSV dan Excel online",
-        "data": "Data — tool konversi format data online",
-        "productivity": "Productivity — kalkulator harian untuk kerja dan bisnis"
+        "documents": "Documents: tool teks dan dokumen online",
+        "pdf": "PDF: gabung, pisah, dan olah PDF online",
+        "spreadsheet": "Spreadsheet: tool CSV dan Excel online",
+        "data": "Data: tool konversi format data online",
+        "productivity": "Productivity: kalkulator harian untuk kerja dan bisnis"
     },
     "hubIntro": {
-        "documents": "Kategori Documents berisi tool-tool ringan untuk kebutuhan menulis dan mengolah teks sehari-hari — mulai dari menghitung jumlah kata untuk esai atau artikel, merapikan teks yang berantakan setelah copy-paste dari PDF atau Word, mengubah format kapitalisasi untuk penamaan variabel maupun judul tulisan, hingga membandingkan dua draft dokumen atau membersihkan daftar yang punya entri berulang. Semua tool di kategori ini memproses teks Anda sepenuhnya di browser — tidak ada yang diunggah ke server manapun, sehingga aman dipakai bahkan untuk teks yang bersifat pribadi atau rahasia.",
-        "pdf": "Kategori PDF berisi tool untuk kebutuhan dokumen sehari-hari — menggabungkan beberapa file jadi satu, memecah dokumen panjang jadi beberapa bagian, memperkecil ukuran file untuk keperluan email, memutar halaman yang hasil scan-nya terbalik, mengambil halaman tertentu saja, hingga mengekstrak teks dari dokumen. Semua file diproses langsung di browser Anda — cocok untuk dokumen yang bersifat pribadi atau rahasia seperti kontrak dan KTP scan.",
-        "spreadsheet": "Kategori Spreadsheet berisi tool untuk kebutuhan kerja sehari-hari dengan data tabular — mulai dari sekadar melihat isi file CSV tanpa perlu membuka Excel, membersihkan data yang berantakan, memecah file besar jadi beberapa bagian, menggabungkan beberapa file jadi satu, hingga konversi bolak-balik antara format CSV dan Excel. Semua file diproses langsung di browser Anda — tidak ada yang diunggah ke server, aman dipakai untuk data internal maupun sensitif.",
-        "data": "Kategori Data berisi tool-tool untuk kebutuhan konversi dan pembersihan data yang sering dibutuhkan developer maupun analis — mulai dari mengubah response API berformat JSON jadi tabel CSV yang bisa dibuka di Excel, mengonversi data spreadsheet jadi JSON untuk dipakai di kode, mengolah data legacy berformat XML, hingga merapikan dan memvalidasi struktur data sebelum dipakai lebih lanjut. Semua proses berjalan sepenuhnya di browser Anda — cocok untuk data yang bersifat sensitif atau internal.",
-        "productivity": "Kategori Productivity berisi kalkulator ringan untuk kebutuhan operasional sehari-hari — mulai dari menghitung diskon dan margin bisnis, memproyeksikan deadline berdasarkan hari kerja, mengetahui selisih tepat antara dua tanggal, merekap total jam kerja dari beberapa shift, hingga menjumlahkan durasi waktu. Semua kalkulasi berjalan langsung di browser Anda tanpa perlu membuka aplikasi spreadsheet terpisah."
+        "documents": "Kategori Documents berisi tool untuk menulis dan mengolah teks sehari-hari. Hitung kata untuk esai atau artikel, rapikan teks berantakan hasil copy-paste dari PDF atau Word, ubah kapitalisasi untuk nama variabel atau judul, bandingkan dua draft, atau hapus entri berulang dari daftar. Browser Anda memproses teks dan tidak ada yang diunggah ke server, jadi Anda bisa memakainya untuk teks pribadi atau rahasia.",
+        "pdf": "Kategori PDF menangani kebutuhan dokumen sehari-hari. Gabungkan beberapa file jadi satu, pecah dokumen panjang jadi beberapa bagian, perkecil ukuran file untuk email, putar halaman hasil scan yang terbalik, ambil halaman tertentu, atau ekstrak teks. Browser Anda memproses setiap file, jadi kontrak dan scan KTP tetap di perangkat Anda.",
+        "spreadsheet": "Kategori Spreadsheet menangani data tabular sehari-hari. Lihat isi file CSV tanpa membuka Excel, bersihkan data berantakan, pecah file besar jadi beberapa bagian, gabungkan beberapa file jadi satu, atau konversi antara CSV dan Excel. Browser Anda memproses setiap file dan tidak ada yang sampai ke server, jadi data internal maupun sensitif tetap privat.",
+        "data": "Kategori Data berisi tool konversi dan pembersihan untuk developer dan analis. Ubah response API berformat JSON jadi tabel CSV yang bisa dibuka di Excel, konversi data spreadsheet jadi JSON untuk kode Anda, olah data legacy berformat XML, atau rapikan dan validasi struktur data sebelum dipakai. Proses berjalan di browser Anda, jadi data sensitif atau internal tetap bersama Anda.",
+        "productivity": "Kategori Productivity berisi kalkulator untuk kebutuhan operasional sehari-hari. Hitung diskon dan margin bisnis, proyeksikan deadline berdasarkan hari kerja, cari selisih tepat antara dua tanggal, rekap total jam kerja dari beberapa shift, atau jumlahkan durasi waktu. Setiap kalkulasi berjalan di browser Anda, jadi Anda tidak perlu membuka aplikasi spreadsheet terpisah."
     },
     "toolDescriptions": {
-        "word-counter": "Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan saat Anda mengetik.",
+        "word-counter": "Hitung jumlah kata, karakter, kalimat, dan paragraf saat Anda mengetik.",
         "text-cleaner": "Bersihkan spasi ganda, baris kosong, dan tab dari teks hasil copy-paste yang berantakan.",
         "case-converter": "Ubah teks ke UPPERCASE, Title Case, camelCase, snake_case, dan format lainnya.",
         "text-compare": "Bandingkan dua versi teks dan temukan perbedaannya baris demi baris.",
-        "duplicate-line-remover": "Hapus baris duplikat dari daftar teks, urutan kemunculan pertama tetap dipertahankan.",
-        "pdf-merge": "Gabungkan beberapa file PDF jadi satu file, urutan bisa diatur.",
+        "duplicate-line-remover": "Hapus baris duplikat dari daftar dan pertahankan kemunculan pertama.",
+        "pdf-merge": "Gabungkan beberapa file PDF jadi satu dengan urutan pilihan Anda.",
         "pdf-split": "Pecah PDF jadi beberapa file, per halaman atau rentang kustom.",
         "pdf-compress": "Perkecil ukuran file PDF dengan memadatkan struktur internal.",
         "pdf-rotate": "Putar orientasi halaman PDF 90°, 180°, atau 270°.",
         "pdf-extract-pages": "Ambil halaman tertentu dari PDF jadi satu file baru.",
         "pdf-to-text": "Ekstrak teks dari file PDF yang punya lapisan teks digital.",
-        "csv-viewer": "Buka dan cari data CSV sebagai tabel langsung di browser.",
+        "csv-viewer": "Buka dan cari data CSV sebagai tabel di browser.",
         "csv-cleaner": "Hapus baris kosong, duplikat, dan kolom kosong dari CSV.",
         "csv-splitter": "Pecah file CSV besar jadi beberapa file lebih kecil.",
         "csv-merger": "Gabungkan beberapa file CSV jadi satu file.",
         "csv-to-xlsx": "Konversi file CSV ke format Excel (.xlsx).",
         "xlsx-to-csv": "Konversi file Excel (.xlsx/.xls) ke format CSV.",
-        "json-to-csv": "Konversi data JSON ke format CSV, termasuk meratakan struktur bersarang jadi kolom.",
+        "json-to-csv": "Konversi data JSON ke CSV dan ratakan struktur bersarang jadi kolom.",
         "csv-to-json": "Konversi tabel CSV ke format JSON menggunakan baris pertama sebagai header.",
         "xml-to-csv": "Konversi XML dengan elemen berulang ke format CSV, satu elemen jadi satu baris.",
-        "data-formatter": "Rapikan, validasi, dan minify data JSON atau XML secara instan.",
+        "data-formatter": "Rapikan, validasi, dan minify data JSON atau XML.",
         "percentage": "Hitung persentase dari suatu angka, persentase perubahan, atau tambah/kurang persentase.",
         "business-days": "Hitung jumlah hari kerja antara dua tanggal, atau tambahkan hari kerja ke tanggal tertentu.",
         "date-difference": "Hitung selisih dua tanggal dalam tahun, bulan, hari, dan total hari.",

@@ -3,12 +3,12 @@
         "name": "Kertaas"
     },
     "home": {
-        "title": "Office tools that run in your browser, not on our servers",
-        "subtitle": "Count words, edit PDFs, clean CSVs, or convert data — everything is processed locally on your device. No uploads, no sign-up, no cost.",
-        "seoTitle": "Kertaas — Privacy-First Office Tools, No Upload Needed",
-        "seoDescription": "A collection of document, PDF, spreadsheet, and data tools that run entirely in your browser. No uploads, no account, free and fast.",
-        "ogDescription": "Everyday office tools that run in your browser — no uploads, no account, free.",
-        "jsonLdDescription": "A privacy-first web utility platform for everyday document, spreadsheet, text, PDF, and data workflows.",
+        "title": "Office tools that run in your browser",
+        "subtitle": "Count words, edit PDFs, clean CSVs, or convert data. Your files stay on your device. No uploads, no sign-up, no cost.",
+        "seoTitle": "Kertaas: Private Office Tools, No Uploads",
+        "seoDescription": "Document, PDF, spreadsheet, and data tools that run in your browser. No uploads, no account, free and fast.",
+        "ogDescription": "Everyday office tools that run in your browser. No uploads, no account, free.",
+        "jsonLdDescription": "Web tools for document, spreadsheet, text, PDF, and data tasks. Files stay in your browser.",
         "viewAll": "View all {category} tools",
         "badges": {
             "noUpload": "No file uploads",
@@ -24,7 +24,7 @@
         "productivity": "Productivity"
     },
     "footer": {
-        "tagline": "office utilities that run entirely in your browser."
+        "tagline": "office utilities that run in your browser."
     },
     "diffView": {
         "placeholder": "Paste text into both columns above to see the difference."
@@ -45,7 +45,7 @@
         },
         "pdf": {
             "name": "PDF",
-            "description": "Merge, split, compress, and edit PDFs right in your browser."
+            "description": "Merge, split, compress, and edit PDFs in your browser."
         },
         "spreadsheet": {
             "name": "Spreadsheet",
@@ -53,11 +53,11 @@
         },
         "data": {
             "name": "Data",
-            "description": "Convert between data formats for development needs."
+            "description": "Convert between data formats for development work."
         },
         "productivity": {
             "name": "Productivity",
-            "description": "Daily calculators for work and business needs."
+            "description": "Calculators for work and business."
         }
     },
     "tools": {
@@ -94,42 +94,42 @@
     },
     "error": {
         "notFoundTitle": "Page not found",
-        "notFoundDescription": "The page you're looking for may have moved or never existed. Try heading back to the homepage.",
+        "notFoundDescription": "We can't find that page. The link may be wrong or the page may have moved. Head back to the homepage.",
         "serverErrorTitle": "Something went wrong",
-        "serverErrorDescription": "Something broke on our end. Try reloading the page, or head back to the homepage.",
+        "serverErrorDescription": "We hit an error on our side. Reload the page or return to the homepage.",
         "backHome": "Back to Home"
     },
     "officeTools": {
-        "title": "Office Tools — all categories",
-        "subtitle": "All tools are grouped into 5 categories based on your daily work needs. Pick a category to see its full tool list."
+        "title": "Office Tools: all categories",
+        "subtitle": "We group the tools into five categories by daily task. Pick one to see its full list."
     },
     "hubTitle": {
-        "documents": "Documents — online text and document tools",
-        "pdf": "PDF — merge, split, and edit PDFs online",
-        "spreadsheet": "Spreadsheet — online CSV and Excel tools",
-        "data": "Data — online data conversion tools",
-        "productivity": "Productivity — daily calculators for work and business"
+        "documents": "Documents: online text and document tools",
+        "pdf": "PDF: merge, split, and edit PDFs online",
+        "spreadsheet": "Spreadsheet: online CSV and Excel tools",
+        "data": "Data: online data conversion tools",
+        "productivity": "Productivity: daily calculators for work and business"
     },
     "hubIntro": {
-        "documents": "The Documents category has lightweight tools for everyday writing and text tasks — counting words for an essay or article, cleaning up messy text pasted from PDF or Word, changing capitalization for variable names or titles, comparing two document drafts, or removing duplicate entries from a list. Every tool in this category processes your text entirely in the browser — nothing is ever uploaded to a server, so it's safe to use even for private or sensitive text.",
-        "pdf": "The PDF category covers everyday document needs — merging several files into one, splitting a long document into parts, shrinking file size for email, rotating pages that came out upside down from a scan, pulling out specific pages, or extracting text from a document. Every file is processed right in your browser — suitable for private or sensitive documents like contracts and ID scans.",
-        "spreadsheet": "The Spreadsheet category has tools for everyday work with tabular data — from simply viewing a CSV file's contents without opening Excel, cleaning up messy data, splitting a large file into parts, merging several files into one, to converting back and forth between CSV and Excel. Every file is processed right in your browser — nothing is uploaded to a server, safe for internal or sensitive data.",
-        "data": "The Data category has conversion and cleanup tools developers and analysts often need — turning a JSON API response into a CSV table you can open in Excel, converting spreadsheet data into JSON for use in code, working with legacy XML data, or tidying and validating a data structure before using it further. Everything runs entirely in your browser — suitable for sensitive or internal data.",
-        "productivity": "The Productivity category has lightweight calculators for everyday operational needs — working out discounts and business margins, projecting a deadline based on business days, finding the exact difference between two dates, totaling working hours across several shifts, or adding up time durations. Every calculation runs right in your browser without needing a separate spreadsheet app."
+        "documents": "The Documents category covers everyday writing and text tasks. Count the words in an essay or article, clean up text pasted from a PDF or Word file, change capitalization for variable names or titles, compare two drafts, or remove duplicate entries from a list. Your browser processes the text and nothing goes to a server, so you can use these tools on private or sensitive writing.",
+        "pdf": "The PDF category handles everyday document jobs. Merge several files into one, split a long document into parts, shrink a file for email, rotate pages that came out upside down from a scan, pull out specific pages, or extract text. Your browser processes each file, so contracts and ID scans stay on your device.",
+        "spreadsheet": "The Spreadsheet category handles everyday tabular data. View a CSV file without opening Excel, clean messy data, split a large file into parts, merge several files into one, or convert between CSV and Excel. Your browser processes each file and nothing reaches a server, so internal and sensitive data stays private.",
+        "data": "The Data category holds conversion and cleanup tools for developers and analysts. Turn a JSON API response into a CSV table you can open in Excel, convert spreadsheet data into JSON for your code, work with legacy XML, or tidy and validate a data structure before you use it. The conversion runs in your browser, so sensitive and internal data stays with you.",
+        "productivity": "The Productivity category has calculators for everyday operational work. Work out discounts and business margins, project a deadline in business days, find the exact difference between two dates, total working hours across several shifts, or add up time durations. Each calculation runs in your browser, so you don't need a separate spreadsheet app."
     },
     "toolDescriptions": {
-        "word-counter": "Instantly count words, characters, sentences, and paragraphs as you type.",
+        "word-counter": "Count words, characters, sentences, and paragraphs as you type.",
         "text-cleaner": "Remove double spaces, blank lines, and tabs from messy pasted text.",
         "case-converter": "Convert text to UPPERCASE, Title Case, camelCase, snake_case, and more.",
         "text-compare": "Compare two versions of a text and spot the differences line by line.",
-        "duplicate-line-remover": "Remove duplicate lines from a list while keeping the first occurrence.",
-        "pdf-merge": "Combine several PDF files into one, with reorderable file order.",
+        "duplicate-line-remover": "Remove duplicate lines from a list and keep the first occurrence.",
+        "pdf-merge": "Combine several PDFs into one file in the order you choose.",
         "pdf-split": "Split a PDF into multiple files, by page or by custom range.",
         "pdf-compress": "Shrink a PDF's file size by compacting its internal structure.",
         "pdf-rotate": "Rotate PDF pages 90°, 180°, or 270°.",
         "pdf-extract-pages": "Pull specific pages from a PDF into a new file.",
         "pdf-to-text": "Extract text from a PDF that has a digital text layer.",
-        "csv-viewer": "Open and search CSV data as a table right in your browser.",
+        "csv-viewer": "Open and search CSV data as a table in your browser.",
         "csv-cleaner": "Remove blank rows, duplicates, and empty columns from a CSV.",
         "csv-splitter": "Split a large CSV file into several smaller files.",
         "csv-merger": "Combine several CSV files into a single file.",
@@ -138,8 +138,8 @@
         "json-to-csv": "Convert JSON data to CSV, flattening nested structures into columns.",
         "csv-to-json": "Convert a CSV table to JSON using the first row as headers.",
         "xml-to-csv": "Convert XML with repeating elements to CSV, one element per row.",
-        "data-formatter": "Instantly format, validate, and minify JSON or XML data.",
-        "percentage": "Calculate a percentage of a number, percentage change, or add/subtract a percentage.",
+        "data-formatter": "Format, validate, and minify JSON or XML data.",
+        "percentage": "Find a percentage of a number, a percentage change, or add or subtract a percentage.",
         "business-days": "Count business days between two dates, or add business days to a date.",
         "date-difference": "Calculate the difference between two dates in years, months, days, and total days.",
         "working-hours": "Calculate total working hours across several shifts with breaks.",

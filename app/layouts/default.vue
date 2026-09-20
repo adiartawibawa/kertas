@@ -68,9 +68,13 @@ function getFlagEmoji(countryCode: string) {
       <slot />
     </main>
 
-    <footer class="mx-auto mt-16 flex w-full max-w-3xl px-6 py-8">
-      <div class="text-sm text-ink-soft">
-        {{ t('brand.name') }} © {{ currentYear }} — {{ t('footer.tagline') }}
+    <footer class="mt-16 border-t border-slate-200 py-8">
+      <div class="mx-auto max-w-3xl px-6">
+        <p class="text-sm text-ink-soft">{{ t('brand.name') }} © {{ currentYear }} — {{ t('footer.tagline') }}</p>
+        <div class="mt-3 flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-ink-soft">
+          <NuxtLinkLocale to="/privacy-policy" class="hover:text-ink hover:underline">Kebijakan Privasi</NuxtLinkLocale>
+          <NuxtLinkLocale to="/terms" class="hover:text-ink hover:underline">Syarat &amp; Ketentuan</NuxtLinkLocale>
+        </div>
       </div>
     </footer>
   </div>

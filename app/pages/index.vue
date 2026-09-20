@@ -72,16 +72,9 @@ function toolName(slug: string) {
   return t(`tools.${slug}`)
 }
 
-const i18nHead = useLocaleHead({ seo: true })
-
-useHead({
-  htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs?.lang,
-    dir: i18nHead.value.htmlAttrs?.dir,
-  },
-  link: [...(i18nHead.value.link || [])],
-  meta: [...(i18nHead.value.meta || [])],
-})
+// Catatan: lang attribute, canonical, dan hreflang alternate sudah
+// di-handle secara global di layouts/default.vue — tidak perlu diulang
+// di tiap halaman.
 
 useSeoMeta({
   title: t('home.seoTitle'),
@@ -108,10 +101,11 @@ useHead({
 <template>
   <div>
     <section class="pt-14 sm:pt-20">
-      <h1 class="max-w-[18ch] text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+      <h1
+        class="max-w-[18ch] text-4xl font-semibold leading-tight text-ink sm:text-5xl bg-clip-text text-transparent bg-gradient-to-tr from-accent-dark via-emerald-600 to-accent">
         {{ t('home.title') }}
       </h1>
-      <p class="mt-4 max-w-[56ch] text-base text-ink-soft sm:text-lg">
+      <p class="mt-4 max-w-[56ch] text-xl text-ink-soft sm:text-lg">
         {{ t('home.subtitle') }}
       </p>
 
