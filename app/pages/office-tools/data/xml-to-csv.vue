@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t, tm, rt } = useI18n()
 const { url: siteUrl } = useSiteConfig()
 
 const slug = 'xml-to-csv'
@@ -15,10 +15,41 @@ function toolName() {
   return t(`tools.${slug}`)
 }
 
-const features = computed(() => tm(`toolPages.${slug}.features`) as { title: string; description: string }[])
-const steps = computed(() => tm(`toolPages.${slug}.steps`) as string[])
-const useCase = computed(() => tm(`toolPages.${slug}.useCase`) as string[])
-const faqItems = computed(() => tm(`toolPages.${slug}.faq`) as { question: string; answer: string }[])
+const features = computed(() => {
+  const items = tm(`toolPages.${slug}.features`) as Array<{
+    title: unknown
+    description: unknown
+  }>
+
+  return items.map((item) => ({
+    title: rt(item.title as any),
+    description: rt(item.description as any),
+  }))
+})
+
+const steps = computed(() => {
+  const items = tm(`toolPages.${slug}.steps`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const useCase = computed(() => {
+  const items = tm(`toolPages.${slug}.useCase`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const faqItems = computed(() => {
+  const items = tm(`toolPages.${slug}.faq`) as Array<{
+    question: unknown
+    answer: unknown
+  }>
+
+  return items.map((item) => ({
+    question: rt(item.question as any),
+    answer: rt(item.answer as any),
+  }))
+})
 
 const relatedTools = [
   { href: '/office-tools/data/json-to-csv' },
@@ -31,7 +62,7 @@ const { csv, error, rowCount } = useXmlToCsv(text)
 
 function copyResult() {
   if (import.meta.client && navigator.clipboard && csv.value) {
-    navigator.clipboard.writeText(csv.value).catch(() => {})
+    navigator.clipboard.writeText(csv.value).catch(() => { })
   }
 }
 
@@ -106,21 +137,14 @@ useHead({
     <div class="mt-7 grid gap-4 sm:grid-cols-2">
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">{{ tp('inputLabel') }}</p>
-        <textarea
-          v-model="text"
-          rows="12"
+        <textarea v-model="text" rows="12"
           placeholder="<items>&#10;  <item><nama>Kopi</nama><harga>25000</harga></item>&#10;  <item><nama>Teh</nama><harga>15000</harga></item>&#10;</items>"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">{{ tp('outputLabel') }}</p>
-        <textarea
-          :value="csv"
-          readonly
-          rows="12"
-          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none"
-        />
+        <textarea :value="csv" readonly rows="12"
+          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none" />
       </div>
     </div>
 
@@ -129,19 +153,18 @@ useHead({
     </p>
 
     <div class="mt-4 flex flex-wrap items-center gap-3">
-      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95" @click="copyResult">
+      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
+        @click="copyResult">
         {{ tp('copyButton') }}
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="downloadResult"
-      >
+        @click="downloadResult">
         {{ tp('downloadButton') }}
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearText"
-      >
+        @click="clearText">
         {{ t('common.clear') }}
       </button>
       <span v-if="rowCount > 0" class="text-sm text-ink-soft">{{ t('common.rowsCount', { rows: rowCount }) }}</span>
@@ -155,7 +178,8 @@ useHead({
     <section class="mt-14">
       <h2 class="text-xl font-semibold text-ink">{{ tp('featuresTitle') }}</h2>
       <ul class="mt-4 grid gap-3.5">
-        <li v-for="feature in features" :key="feature.title" class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
+        <li v-for="feature in features" :key="feature.title"
+          class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
           <strong class="font-semibold text-ink">{{ feature.title }}.</strong>
           {{ feature.description }}
         </li>

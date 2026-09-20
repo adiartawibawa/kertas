@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, tm } = useI18n()
+const { t, tm, rt } = useI18n()
 const { url: siteUrl } = useSiteConfig()
 
 const slug = 'data-formatter'
@@ -15,10 +15,37 @@ function toolName() {
   return t(`tools.${slug}`)
 }
 
-const features = computed(() => tm(`toolPages.${slug}.features`) as { title: string; description: string }[])
-const steps = computed(() => tm(`toolPages.${slug}.steps`) as string[])
-const useCase = computed(() => tm(`toolPages.${slug}.useCase`) as string[])
-const faqItems = computed(() => tm(`toolPages.${slug}.faq`) as { question: string; answer: string }[])
+const features = computed(() => {
+  const items = tm(`toolPages.${slug}.features`) as Array<{ title: string; description: string }>
+  return items.map((item) => ({
+    title: rt(item.title as any),
+    description: rt(item.description as any),
+  }))
+})
+
+const steps = computed(() => {
+  const items = tm(`toolPages.${slug}.steps`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const useCase = computed(() => {
+  const items = tm(`toolPages.${slug}.useCase`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const faqItems = computed(() => {
+  const items = tm(`toolPages.${slug}.faq`) as Array<{
+    question: unknown
+    answer: unknown
+  }>
+
+  return items.map((item) => ({
+    question: rt(item.question as any),
+    answer: rt(item.answer as any),
+  }))
+})
 
 const relatedTools = [
   { href: '/office-tools/data/json-to-csv' },
@@ -30,13 +57,13 @@ const { mode, input, indentSize, formatted, minified, error } = useDataFormatter
 
 function copyFormatted() {
   if (import.meta.client && navigator.clipboard && formatted.value) {
-    navigator.clipboard.writeText(formatted.value).catch(() => {})
+    navigator.clipboard.writeText(formatted.value).catch(() => { })
   }
 }
 
 function copyMinified() {
   if (import.meta.client && navigator.clipboard && minified.value) {
-    navigator.clipboard.writeText(minified.value).catch(() => {})
+    navigator.clipboard.writeText(minified.value).catch(() => { })
   }
 }
 
@@ -115,36 +142,28 @@ useHead({
 
     <div class="mt-7 flex flex-wrap items-center justify-between gap-3">
       <div class="flex flex-wrap gap-2">
-        <button
-          class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
+        <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
           :class="mode === 'json' ? 'border-accent bg-accent text-white' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-          @click="mode = 'json'"
-        >
+          @click="mode = 'json'">
           {{ tp('modeJsonLabel') }}
         </button>
-        <button
-          class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
+        <button class="rounded-md border px-3.5 py-2 text-sm font-medium transition-colors"
           :class="mode === 'xml' ? 'border-accent bg-accent text-white' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-          @click="mode = 'xml'"
-        >
+          @click="mode = 'xml'">
           {{ tp('modeXmlLabel') }}
         </button>
       </div>
 
       <div class="flex items-center gap-2 text-sm text-ink-soft">
         <span>{{ tp('indentLabel') }}</span>
-        <button
-          class="rounded-md border px-2.5 py-1 text-xs font-medium"
+        <button class="rounded-md border px-2.5 py-1 text-xs font-medium"
           :class="indentSize === 2 ? 'border-accent bg-accent-tint text-accent-dark' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-          @click="indentSize = 2"
-        >
+          @click="indentSize = 2">
           {{ tp('indent2Label') }}
         </button>
-        <button
-          class="rounded-md border px-2.5 py-1 text-xs font-medium"
+        <button class="rounded-md border px-2.5 py-1 text-xs font-medium"
           :class="indentSize === 4 ? 'border-accent bg-accent-tint text-accent-dark' : 'border-slate-300 bg-white text-ink hover:bg-slate-50'"
-          @click="indentSize = 4"
-        >
+          @click="indentSize = 4">
           {{ tp('indent4Label') }}
         </button>
       </div>
@@ -153,21 +172,13 @@ useHead({
     <div class="mt-4 grid gap-4 sm:grid-cols-2">
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">{{ tp('inputLabel') }}</p>
-        <textarea
-          v-model="input"
-          rows="14"
-          :placeholder="placeholderText"
-          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        />
+        <textarea v-model="input" rows="14" :placeholder="placeholderText"
+          class="w-full resize-y rounded-md border border-slate-200 bg-white p-4 font-mono text-xs text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" />
       </div>
       <div>
         <p class="mb-1.5 text-xs font-medium uppercase tracking-wide text-ink-soft">{{ tp('outputLabel') }}</p>
-        <textarea
-          :value="formatted"
-          readonly
-          rows="14"
-          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none"
-        />
+        <textarea :value="formatted" readonly rows="14"
+          class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none" />
       </div>
     </div>
 
@@ -176,26 +187,23 @@ useHead({
     </p>
 
     <div class="mt-4 flex flex-wrap items-center gap-3">
-      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95" @click="copyFormatted">
+      <button class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95"
+        @click="copyFormatted">
         {{ tp('copyFormattedButton') }}
       </button>
-      <button
-        v-if="mode === 'json'"
+      <button v-if="mode === 'json'"
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="copyMinified"
-      >
+        @click="copyMinified">
         {{ tp('copyMinifiedButton') }}
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="downloadResult"
-      >
+        @click="downloadResult">
         {{ tp('downloadButton') }}
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
-        @click="clearInput"
-      >
+        @click="clearInput">
         {{ t('common.clear') }}
       </button>
     </div>
@@ -208,7 +216,8 @@ useHead({
     <section class="mt-14">
       <h2 class="text-xl font-semibold text-ink">{{ tp('featuresTitle') }}</h2>
       <ul class="mt-4 grid gap-3.5">
-        <li v-for="feature in features" :key="feature.title" class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
+        <li v-for="feature in features" :key="feature.title"
+          class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
           <strong class="font-semibold text-ink">{{ feature.title }}.</strong>
           {{ feature.description }}
         </li>

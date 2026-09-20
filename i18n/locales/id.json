@@ -192,7 +192,7 @@
             "faq": [
                 {
                     "question": "Bisakah JSON dengan struktur nested (bersarang) dikonversi?",
-                    "answer": "Ya. Tool ini meratakan object bersarang jadi kolom dengan nama gabungan. { \"alamat\": { \"kota\": \"Bandung\" } } menjadi kolom alamat.kota. CSV tidak mengenal struktur bersarang, jadi perataan ini menjaga data tetap utuh."
+                    "answer": "Ya. Tool ini meratakan object bersarang jadi kolom dengan nama gabungan. {'{'} \"alamat\": {'{'} \"kota\": \"Bandung\" {'}'} {'}'} menjadi kolom alamat.kota. CSV tidak mengenal struktur bersarang, jadi perataan ini menjaga data tetap utuh."
                 },
                 {
                     "question": "Apa yang terjadi kalau tiap object di array punya field berbeda?",
@@ -304,7 +304,7 @@
             "faq": [
                 {
                     "question": "Struktur XML seperti apa yang bisa dikonversi?",
-                    "answer": "XML dengan elemen berulang bertag sama sebagai anak dari satu root, misal beberapa <item> di dalam <items>. Setiap elemen berulang menjadi satu baris tabel."
+                    "answer": "XML dengan elemen berulang bertag sama sebagai anak dari satu root, misal beberapa &lt;item&gt; di dalam &lt;items&gt;. Setiap elemen berulang menjadi satu baris tabel."
                 },
                 {
                     "question": "Bagaimana kalau XML saya tidak punya elemen berulang?",
@@ -337,8 +337,8 @@
             "copyFormattedButton": "Copy hasil rapi",
             "copyMinifiedButton": "Copy minified",
             "downloadButton": "Download",
-            "placeholderJson": "{\"nama\":\"Andi\",\"umur\":30}",
-            "placeholderXml": "<root><nama>Andi</nama></root>",
+            "placeholderJson": "{'{'}\"nama\":\"Andi\",\"umur\":30{'}'}",
+            "placeholderXml": "&lt;root&gt;&lt;nama&gt;Andi&lt;/nama&gt;&lt;/root&gt;",
             "featuresTitle": "Kenapa menggunakan Data Formatter ini?",
             "features": [
                 {

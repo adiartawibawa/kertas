@@ -192,7 +192,7 @@
             "faq": [
                 {
                     "question": "Can nested JSON be converted?",
-                    "answer": "Yes. The tool flattens nested objects into columns with combined names. { \"address\": { \"city\": \"Bandung\" } } becomes the column address.city. CSV has no concept of nesting, so flattening keeps your data intact."
+                    "answer": "Yes. The tool flattens nested objects into columns with combined names. {'{'} \"address\": {'{'} \"city\": \"Bandung\" {'}'} {'}'} becomes the column address.city. CSV has no concept of nesting, so flattening keeps your data intact."
                 },
                 {
                     "question": "What happens when array items have different fields?",
@@ -304,7 +304,7 @@
             "faq": [
                 {
                     "question": "What XML structure can this tool convert?",
-                    "answer": "XML with repeating elements that share a tag name as children of one root, for example several <item> tags inside <items>. Each repeating element becomes one table row."
+                    "answer": "XML with repeating elements that share a tag name as children of one root, for example several &lt;item&gt; tags inside &lt;items&gt;. Each repeating element becomes one table row."
                 },
                 {
                     "question": "What if my XML has no repeating elements?",
@@ -337,8 +337,8 @@
             "copyFormattedButton": "Copy formatted",
             "copyMinifiedButton": "Copy minified",
             "downloadButton": "Download",
-            "placeholderJson": "{\"name\":\"Alex\",\"age\":30}",
-            "placeholderXml": "<root><name>Alex</name></root>",
+            "placeholderJson": "{'{'}\"name\":\"Alex\",\"age\":30{'}'}",
+            "placeholderXml": "&lt;root&lt;&lt;name&lt;Alex&gt;name&lt;&gt;root&lt;",
             "featuresTitle": "Why use this Data Formatter?",
             "features": [
                 {
