@@ -96,7 +96,9 @@
         "clear": "Clear",
         "privacyNoteData": "Data Anda tidak pernah meninggalkan browser ini.",
         "rowsAndColumns": "{rows} baris, {columns} kolom",
-        "rowsCount": "{rows} baris"
+        "rowsCount": "{rows} baris",
+        "copyResult": "Copy hasil",
+        "privacyNoteText": "Teks Anda tidak pernah meninggalkan browser ini."
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
@@ -383,6 +385,307 @@
                 {
                     "question": "Apakah data saya diunggah ke server?",
                     "answer": "Tidak. Format dan validasi berjalan di browser Anda dari awal sampai akhir."
+                }
+            ]
+        },
+        "word-counter": {
+            "seoTitle": "Word Counter Online, Gratis dan Tanpa Batas",
+            "seoDescription": "Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan. Semuanya berjalan di browser Anda, tanpa upload dan tanpa login.",
+            "ogDescription": "Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan di browser Anda.",
+            "schemaName": "Word Counter",
+            "schemaDescription": "Menghitung jumlah kata, karakter, kalimat, dan paragraf secara instan di browser, tanpa upload.",
+            "title": "Word Counter: hitung kata dan karakter secara instan",
+            "lede": "Tempel teks Anda. Hasilnya muncul langsung, tanpa upload dan tanpa iklan yang mengganggu.",
+            "inputPlaceholder": "Mulai ketik atau tempel teks Anda di sini…",
+            "featuresTitle": "Kenapa menggunakan Word Counter ini?",
+            "features": [
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Setiap perhitungan berjalan di browser Anda. Teks tidak pernah dikirim atau disimpan di server manapun."
+                },
+                {
+                    "title": "Tanpa batas karakter",
+                    "description": "Hitung teks sependek caption Instagram atau sepanjang naskah buku."
+                },
+                {
+                    "title": "Hasil instan",
+                    "description": "Angka update saat Anda mengetik. Tidak ada tombol hitung untuk diklik."
+                },
+                {
+                    "title": "Gratis selamanya",
+                    "description": "Tanpa daftar akun, tanpa watermark, tanpa iklan."
+                }
+            ],
+            "howToTitle": "Cara menghitung kata dan karakter",
+            "steps": [
+                "Tempel atau ketik teks Anda ke kotak yang tersedia.",
+                "Lihat hasil kata, karakter, kalimat, dan paragraf muncul otomatis.",
+                "Gunakan tombol Copy untuk menyalin ringkasan hasil.",
+                "Klik Clear untuk mengosongkan teks dan mulai perhitungan baru."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan Word Counter?",
+            "useCase": [
+                "Esai atau tugas kuliah sering punya batas kata minimum atau maksimum. Tempel draft Anda di sini dan lihat hasilnya langsung, tanpa menghitung manual.",
+                "Content writer memakai tool ini untuk memastikan artikel SEO memenuhi target kata, atau caption media sosial tidak melewati batas karakter platform.",
+                "Cover letter, abstrak jurnal, dan deskripsi produk sering punya aturan panjang teks tertentu. Word Counter membantu Anda tetap dalam batas itu."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah spasi dihitung sebagai karakter?",
+                    "answer": "Ya. Kami menampilkan dua angka terpisah: karakter dengan spasi dan tanpa spasi, sesuai kebutuhan platform atau instansi yang meminta."
+                },
+                {
+                    "question": "Bagaimana cara menghitung paragraf?",
+                    "answer": "Paragraf dihitung berdasarkan baris teks yang dipisahkan baris kosong (enter dua kali). Jaga format paragraf Anda konsisten supaya hasilnya akurat."
+                },
+                {
+                    "question": "Apakah ada batas jumlah teks yang bisa dihitung?",
+                    "answer": "Tidak ada batas resmi. Semua proses berjalan di browser Anda, jadi batasnya bergantung pada kemampuan perangkat yang Anda pakai."
+                },
+                {
+                    "question": "Apakah teks yang saya masukkan disimpan di server?",
+                    "answer": "Tidak. Word Counter berjalan sepenuhnya di browser Anda. Teks tidak pernah terkirim, terunggah, atau tersimpan di server manapun."
+                },
+                {
+                    "question": "Apakah hasilnya sama dengan Word Count di Microsoft Word?",
+                    "answer": "Umumnya sama. Selisih kecil bisa muncul dari cara masing-masing aplikasi menghitung tanda baca atau paragraf kosong."
+                }
+            ]
+        },
+        "text-cleaner": {
+            "seoTitle": "Text Cleaner Online, Bersihkan Spasi dan Baris Kosong Gratis",
+            "seoDescription": "Hapus spasi ganda, baris kosong, dan tab. Rapikan teks secara instan, 100% berjalan di browser Anda.",
+            "schemaName": "Text Cleaner",
+            "schemaDescription": "Membersihkan spasi ganda, baris kosong, dan tab dari teks secara instan di browser.",
+            "title": "Text Cleaner: rapikan teks berantakan dalam satu klik",
+            "lede": "Hapus spasi ganda, baris kosong, dan tab dari teks hasil copy-paste. Semuanya berjalan di browser Anda.",
+            "inputLabel": "Teks asli",
+            "outputLabel": "Hasil bersih",
+            "inputPlaceholder": "Tempel teks yang ingin dibersihkan…",
+            "optionTrimLines": "Trim spasi di awal/akhir baris",
+            "optionRemoveExtraSpaces": "Hapus spasi ganda",
+            "optionRemoveEmptyLines": "Hapus baris kosong",
+            "optionConvertTabs": "Ubah tab jadi spasi",
+            "optionRemoveLineBreaks": "Gabungkan jadi satu baris",
+            "charsRemovedLabel": "{count} karakter dihapus",
+            "featuresTitle": "Kenapa menggunakan Text Cleaner ini?",
+            "features": [
+                {
+                    "title": "Opsi fleksibel",
+                    "description": "Pilih sendiri jenis pembersihan yang Anda butuhkan. Tidak ada mode yang dipaksakan."
+                },
+                {
+                    "title": "Hasil instan",
+                    "description": "Centang satu opsi, lihat hasilnya langsung tanpa reload halaman."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Teks Anda tidak pernah terkirim ke server manapun."
+                }
+            ],
+            "howToTitle": "Cara membersihkan teks",
+            "steps": [
+                "Tempel teks yang ingin dibersihkan ke kolom Teks asli.",
+                "Centang opsi pembersihan yang Anda butuhkan.",
+                "Lihat hasilnya muncul langsung di kolom Hasil bersih.",
+                "Klik Copy untuk menyalin hasil ke clipboard."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan Text Cleaner?",
+            "useCase": [
+                "Teks yang disalin dari PDF, Word, atau halaman web sering membawa spasi ganda, baris kosong berlebih, atau tab tersembunyi. Text Cleaner membersihkan semuanya dalam satu langkah.",
+                "Data teks perlu rapi sebelum masuk ke spreadsheet, dipakai sebagai input program, atau ditempel ke CMS yang sensitif terhadap format spasi."
+            ],
+            "faq": [
+                {
+                    "question": "Apa saja yang dibersihkan oleh Text Cleaner ini?",
+                    "answer": "Anda memilih sendiri: trim spasi di awal/akhir baris, hapus spasi ganda, hapus baris kosong, ubah tab jadi spasi, atau gabungkan semua jadi satu baris. Aktifkan hanya opsi yang Anda perlukan."
+                },
+                {
+                    "question": "Apakah teks asli saya berubah permanen?",
+                    "answer": "Tidak. Teks yang Anda tempel di kolom input tetap utuh. Hasil bersih tampil terpisah di kolom output, dan Anda bisa ganti opsi kapan saja tanpa kehilangan teks asli."
+                },
+                {
+                    "question": "Cocok untuk membersihkan teks hasil copy-paste dari PDF atau Word?",
+                    "answer": "Cocok. Teks dari PDF atau Word sering membawa spasi ganda, baris kosong berlebih, atau tab tersembunyi. Semua itu bisa dibersihkan sekaligus di sini."
+                },
+                {
+                    "question": "Apakah teks saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses pembersihan berjalan di browser Anda. Tidak ada data yang keluar dari perangkat Anda."
+                }
+            ]
+        },
+        "case-converter": {
+            "seoTitle": "Case Converter Online, UPPERCASE dan camelCase Gratis",
+            "seoDescription": "Ubah teks jadi UPPERCASE, lowercase, Title Case, camelCase, snake_case, dan format lain secara instan di browser Anda.",
+            "schemaName": "Case Converter",
+            "schemaDescription": "Mengonversi teks ke berbagai format kapitalisasi seperti UPPERCASE, camelCase, dan snake_case.",
+            "title": "Case Converter: ubah format huruf dalam satu klik",
+            "lede": "UPPERCASE, camelCase, snake_case, dan format lainnya. Pilih formatnya, hasilnya muncul langsung.",
+            "inputPlaceholder": "Ketik atau tempel teks Anda di sini…",
+            "featuresTitle": "Kenapa menggunakan Case Converter ini?",
+            "features": [
+                {
+                    "title": "8 format sekaligus",
+                    "description": "Dari penulisan formal (Title Case) sampai penamaan variabel kode (camelCase, snake_case)."
+                },
+                {
+                    "title": "Ganti format bebas",
+                    "description": "Klik format lain kapan saja. Hasilnya berubah langsung tanpa perlu menempel ulang teks."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Semua konversi berjalan di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara mengubah format huruf",
+            "steps": [
+                "Ketik atau tempel teks Anda ke kolom input.",
+                "Pilih format yang diinginkan dari daftar tombol.",
+                "Lihat hasil konversi muncul otomatis di kolom bawah.",
+                "Klik Copy untuk menyalin hasil ke clipboard."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan Case Converter?",
+            "useCase": [
+                "Developer sering mengubah nama variabel dari format bebas ke camelCase atau snake_case sesuai konvensi bahasa pemrograman. Tempel teksnya di sini, tidak perlu mengetik ulang manual.",
+                "Penulis dan editor merapikan judul artikel ke Title Case, atau memperbaiki teks yang tidak sengaja terketik dengan Caps Lock aktif."
+            ],
+            "faq": [
+                {
+                    "question": "Format apa saja yang didukung?",
+                    "answer": "Delapan format: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, dan kebab-case. Cocok untuk penulisan maupun penamaan variabel di kode."
+                },
+                {
+                    "question": "Apakah camelCase dan PascalCase bisa dipakai untuk teks biasa?",
+                    "answer": "Bisa, tapi hasil terbaik untuk kedua format ini adalah frasa pendek tanpa tanda baca. Keduanya menghilangkan spasi antar kata, sesuai konvensi penamaan variabel dalam pemrograman."
+                },
+                {
+                    "question": "Apakah Sentence case merapikan huruf kapital di tengah kalimat?",
+                    "answer": "Ya. Sentence case mengubah semua huruf jadi kecil dulu, lalu mengkapitalkan huruf pertama di awal kalimat dan setelah tanda titik, tanya, atau seru."
+                },
+                {
+                    "question": "Apakah teks saya disimpan di server?",
+                    "answer": "Tidak. Semua konversi berjalan di browser Anda tanpa terhubung ke server manapun."
+                }
+            ]
+        },
+        "text-compare": {
+            "seoTitle": "Text Compare Online, Bandingkan Dua Teks Gratis",
+            "seoDescription": "Bandingkan dua teks dan temukan perbedaannya baris demi baris secara instan. 100% berjalan di browser Anda.",
+            "schemaName": "Text Compare",
+            "schemaDescription": "Membandingkan dua teks dan menyorot baris yang berbeda secara instan di browser.",
+            "title": "Text Compare: temukan perbedaan dua teks secara instan",
+            "lede": "Tempel dua versi teks. Perbedaannya langsung ditandai warna, baris demi baris.",
+            "inputALabel": "Teks pertama",
+            "inputBLabel": "Teks kedua",
+            "inputAPlaceholder": "Tempel versi pertama…",
+            "inputBPlaceholder": "Tempel versi kedua…",
+            "removedLabel": "{count} baris dihapus",
+            "addedLabel": "{count} baris ditambahkan",
+            "clearAllButton": "Clear semua",
+            "privacyNote": "Kedua teks tidak pernah meninggalkan browser ini.",
+            "featuresTitle": "Kenapa menggunakan Text Compare ini?",
+            "features": [
+                {
+                    "title": "Perbandingan visual jelas",
+                    "description": "Baris yang berbeda tersorot warna langsung. Tidak perlu membaca manual satu per satu."
+                },
+                {
+                    "title": "Hasil real-time",
+                    "description": "Perbedaan muncul saat Anda mengedit salah satu teks."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Kedua teks diproses di browser. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara membandingkan dua teks",
+            "steps": [
+                "Tempel versi pertama di kolom kiri.",
+                "Tempel versi kedua di kolom kanan.",
+                "Lihat perbedaan muncul otomatis di panel bawah: merah untuk baris yang dihapus, hijau untuk baris yang ditambahkan."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan Text Compare?",
+            "useCase": [
+                "Dua draft dokumen perlu dibandingkan untuk melihat apa saja yang diubah editor.",
+                "Dua versi file konfigurasi, atau hasil terjemahan dengan naskah aslinya, perlu diverifikasi baris demi baris.",
+                "Developer membandingkan dua potongan kode atau isi file log tanpa membuka aplikasi diff terpisah."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah ini membandingkan per kata atau per baris?",
+                    "answer": "Per baris. Tool ini cocok untuk membandingkan paragraf, konfigurasi, atau daftar teks baris demi baris, bukan untuk mendeteksi perubahan satu-dua huruf dalam kalimat yang sama."
+                },
+                {
+                    "question": "Apa arti warna merah dan hijau?",
+                    "answer": "Baris merah di kolom kiri hanya ada di teks pertama (dihapus). Baris hijau di kolom kanan hanya ada di teks kedua (ditambahkan)."
+                },
+                {
+                    "question": "Bisakah membandingkan dokumen yang sangat panjang?",
+                    "answer": "Bisa. Karena perbandingan berjalan di browser Anda, dokumen dengan ribuan baris bisa memperlambat perangkat dengan spesifikasi rendah."
+                },
+                {
+                    "question": "Apakah kedua teks saya diunggah ke server?",
+                    "answer": "Tidak. Perbandingan berjalan sepenuhnya di browser Anda. Tidak ada data yang keluar."
+                }
+            ]
+        },
+        "duplicate-line-remover": {
+            "seoTitle": "Duplicate Line Remover Online, Hapus Baris Duplikat Gratis",
+            "seoDescription": "Hapus baris duplikat dari daftar teks secara instan, urutan tetap dipertahankan. 100% berjalan di browser Anda.",
+            "schemaName": "Duplicate Line Remover",
+            "schemaDescription": "Menghapus baris duplikat dari daftar teks secara instan di browser, urutan tetap dipertahankan.",
+            "title": "Duplicate Line Remover: hapus baris duplikat dari daftar teks",
+            "lede": "Tempel daftar teks Anda. Baris yang berulang terhapus otomatis, urutan tetap terjaga.",
+            "inputLabel": "Daftar asli",
+            "outputLabel": "Tanpa duplikat",
+            "inputPlaceholder": "Tempel daftar teks, satu item per baris…",
+            "optionCaseSensitive": "Case-sensitive (\"Apel\" ≠ \"apel\")",
+            "optionTrimLines": "Trim spasi tiap baris",
+            "optionRemoveEmptyLines": "Hapus baris kosong",
+            "duplicatesRemovedLabel": "{count} baris duplikat dihapus",
+            "featuresTitle": "Kenapa menggunakan Duplicate Line Remover ini?",
+            "features": [
+                {
+                    "title": "Urutan tetap terjaga",
+                    "description": "Baris pertama yang muncul dipertahankan. Tidak ada pengacakan ulang."
+                },
+                {
+                    "title": "Opsi fleksibel",
+                    "description": "Atur sendiri sensitivitas huruf besar/kecil dan cara memperlakukan baris kosong."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Semua proses berjalan di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara menghapus baris duplikat",
+            "steps": [
+                "Tempel daftar teks Anda, satu item per baris.",
+                "Atur opsi case-sensitive, trim spasi, dan baris kosong sesuai kebutuhan.",
+                "Lihat hasil tanpa duplikat muncul otomatis di kolom kanan.",
+                "Klik Copy untuk menyalin hasil ke clipboard."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Daftar email, kontak, atau kata kunci sering punya entri berulang setelah digabung dari beberapa sumber.",
+                "Developer merapikan file log atau daftar dependency yang punya baris identik sebelum diproses lebih lanjut."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah urutan baris tetap dipertahankan?",
+                    "answer": "Ya. Baris yang muncul pertama kali tetap di posisinya. Kemunculan berikutnya yang sama akan dihapus."
+                },
+                {
+                    "question": "Apa bedanya mode case-sensitive dan tidak?",
+                    "answer": "Dengan case-sensitive aktif, \"Apel\" dan \"apel\" dianggap dua baris berbeda. Matikan opsi ini dan keduanya dianggap sama, salah satunya terhapus sebagai duplikat."
+                },
+                {
+                    "question": "Apakah spasi di awal/akhir baris memengaruhi deteksi duplikat?",
+                    "answer": "Dengan opsi Trim spasi tiap baris aktif, spasi di awal/akhir baris diabaikan saat membandingkan. \"kata \" dan \"kata\" jadi dianggap sama."
+                },
+                {
+                    "question": "Apakah teks saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses berjalan di browser Anda. Tidak ada data yang terkirim ke server manapun."
                 }
             ]
         }

@@ -1,44 +1,64 @@
 <script setup lang="ts">
+const { t, tm, rt } = useI18n()
+const { url: siteUrl } = useSiteConfig()
+
+const slug = 'word-counter'
+const categorySlug = 'documents'
+
+function tp(key: string, params?: Record<string, unknown>) {
+  return t(`toolPages.${slug}.${key}`, params ?? {})
+}
+function categoryName() {
+  return t(`categories.${categorySlug}.name`)
+}
+function toolName() {
+  return t(`tools.${slug}`)
+}
+
+const features = computed(() => {
+  const items = tm(`toolPages.${slug}.features`) as Array<{ title: string; description: string }>
+  return items.map((item) => ({
+    title: rt(item.title as any),
+    description: rt(item.description as any),
+  }))
+})
+
+const steps = computed(() => {
+  const items = tm(`toolPages.${slug}.steps`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const useCase = computed(() => {
+  const items = tm(`toolPages.${slug}.useCase`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const faqItems = computed(() => {
+  const items = tm(`toolPages.${slug}.faq`) as Array<{
+    question: unknown
+    answer: unknown
+  }>
+
+  return items.map((item) => ({
+    question: rt(item.question as any),
+    answer: rt(item.answer as any),
+  }))
+})
+
+const relatedTools = [
+  { href: '/office-tools/documents/text-cleaner' },
+  { href: '/office-tools/documents/case-converter' },
+  { href: '/office-tools/documents/text-compare' },
+  { href: '/office-tools/documents/duplicate-line-remover' },
+]
+
 const text = ref('')
 const { stats } = useTextStats(text)
 
-const faqItems = [
-  {
-    question: 'Apakah spasi dihitung sebagai karakter?',
-    answer:
-      'Ya, kami menampilkan dua angka terpisah: jumlah karakter termasuk spasi dan tanpa spasi, agar Anda bisa memilih sesuai kebutuhan platform atau instansi yang meminta.',
-  },
-  {
-    question: 'Bagaimana cara menghitung paragraf?',
-    answer:
-      'Paragraf dihitung berdasarkan baris teks yang dipisahkan oleh baris kosong (enter dua kali). Pastikan format paragraf Anda konsisten agar hasil perhitungan akurat.',
-  },
-  {
-    question: 'Apakah ada batas jumlah teks yang bisa dihitung?',
-    answer:
-      'Tidak ada batas resmi. Karena semua proses dilakukan di browser Anda, batasnya hanya bergantung pada kemampuan perangkat yang digunakan.',
-  },
-  {
-    question: 'Apakah teks yang saya masukkan disimpan di server?',
-    answer:
-      'Tidak. Word Counter ini berjalan sepenuhnya di browser Anda. Teks tidak pernah dikirim, diunggah, atau disimpan di server manapun.',
-  },
-  {
-    question: 'Apakah hasilnya sama dengan Word Count di Microsoft Word?',
-    answer:
-      'Pada umumnya sama, namun bisa ada sedikit perbedaan dalam cara menghitung tanda baca atau paragraf kosong tergantung metode masing-masing aplikasi.',
-  },
-]
-
-const relatedTools = [
-  { name: 'Text Cleaner', href: '/office-tools/documents/text-cleaner' },
-  { name: 'Case Converter', href: '/office-tools/documents/case-converter' },
-  { name: 'Text Compare', href: '/office-tools/documents/text-compare' },
-  { name: 'Duplicate Line Remover', href: '/office-tools/documents/duplicate-line-remover' },
-]
-
 function copyResult() {
-  const summary = `Kata: ${stats.value.words} | Karakter: ${stats.value.characters} | Kalimat: ${stats.value.sentences} | Paragraf: ${stats.value.paragraphs}`
+  const summary = `${t('statBar.words')}: ${stats.value.words} | ${t('statBar.characters')}: ${stats.value.characters} | ${t('statBar.sentences')}: ${stats.value.sentences} | ${t('statBar.paragraphs')}: ${stats.value.paragraphs}`
   if (import.meta.client && navigator.clipboard) {
     navigator.clipboard.writeText(summary).catch(() => { })
   }
@@ -49,11 +69,10 @@ function clearText() {
 }
 
 useSeoMeta({
-  title: 'Word Counter Online — Hitung Kata & Karakter Gratis',
-  description:
-    'Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan. Tanpa upload, tanpa login, 100% diproses di browser Anda. Gratis dan tanpa batas.',
-  ogTitle: 'Word Counter Online — Hitung Kata & Karakter Gratis',
-  ogDescription: 'Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan langsung di browser Anda.',
+  title: tp('seoTitle'),
+  description: tp('seoDescription'),
+  ogTitle: tp('seoTitle'),
+  ogDescription: tp('ogDescription'),
 })
 
 useHead({
@@ -63,12 +82,11 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Word Counter',
+        name: tp('schemaName'),
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any (Web Browser)',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        description:
-          'Hitung jumlah kata, karakter, kalimat, dan paragraf secara instan langsung di browser tanpa upload.',
+        description: tp('schemaDescription'),
       }),
     },
     {
@@ -76,7 +94,7 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: faqItems.map((item) => ({
+        mainEntity: faqItems.value.map((item) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -88,12 +106,20 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: 'Cara Menghitung Kata dan Karakter',
-        step: [
-          { '@type': 'HowToStep', text: 'Tempel atau ketik teks Anda ke kotak yang tersedia.' },
-          { '@type': 'HowToStep', text: 'Hasil perhitungan muncul otomatis secara real-time.' },
-          { '@type': 'HowToStep', text: 'Gunakan tombol Copy untuk menyalin ringkasan hasil.' },
-          { '@type': 'HowToStep', text: 'Klik Clear untuk mengosongkan teks dan memulai ulang.' },
+        name: tp('howToTitle'),
+        step: steps.value.map((text) => ({ '@type': 'HowToStep', text })),
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Office Tools', item: `${siteUrl}/office-tools` },
+          { '@type': 'ListItem', position: 3, name: categoryName(), item: `${siteUrl}/office-tools/documents` },
+          { '@type': 'ListItem', position: 4, name: toolName(), item: `${siteUrl}/office-tools/documents/${slug}` },
         ],
       }),
     },
@@ -106,19 +132,16 @@ useHead({
     <p class="pt-7 text-sm text-ink-soft">
       <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
       <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
-      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">Documents</NuxtLinkLocale> /
-      Word Counter
+      <NuxtLinkLocale to="/office-tools/documents" class="hover:text-accent-dark">{{ categoryName() }}</NuxtLinkLocale>
+      /
+      {{ toolName() }}
     </p>
 
-    <h1 class="mt-3 max-w-[22ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-      Word Counter online — hitung kata &amp; karakter instan
-    </h1>
-    <p class="mt-2 max-w-[52ch] text-base text-ink-soft">
-      Tempel teks Anda, hasil langsung muncul. Tidak ada upload, tidak ada limit, tidak ada iklan yang mengganggu.
-    </p>
+    <h1 class="mt-3 max-w-[22ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">{{ tp('title') }}</h1>
+    <p class="mt-2 max-w-[52ch] text-base text-ink-soft">{{ tp('lede') }}</p>
 
     <div class="mt-7 rounded-md border border-slate-200 bg-white">
-      <textarea v-model="text" rows="9" placeholder="Mulai ketik atau tempel teks Anda di sini…"
+      <textarea v-model="text" rows="9" :placeholder="tp('inputPlaceholder')"
         class="w-full resize-y border-0 bg-transparent p-5 text-base text-ink placeholder:text-ink-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent" />
       <StatBar :stats="stats" />
     </div>
@@ -127,81 +150,54 @@ useHead({
       <button
         class="rounded-md bg-accent px-4 py-2.5 text-sm font-medium text-white hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         @click="copyResult">
-        Copy hasil
+        {{ t('common.copyResult') }}
       </button>
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
         @click="clearText">
-        Clear
+        {{ t('common.clear') }}
       </button>
     </div>
 
     <p class="mt-3.5 text-sm text-ink-soft">
       <span class="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-accent align-middle" />
-      Teks Anda tidak pernah meninggalkan browser ini.
+      {{ t('common.privacyNoteText') }}
     </p>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Kenapa menggunakan Word Counter ini?</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('featuresTitle') }}</h2>
       <ul class="mt-4 grid gap-3.5">
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Privasi terjaga.</strong>
-          Semua perhitungan dilakukan langsung di browser Anda. Teks tidak pernah dikirim atau disimpan di server
-          manapun.
-        </li>
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Tanpa batas karakter.</strong>
-          Hitung teks sependek caption Instagram atau sepanjang naskah buku.
-        </li>
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Hasil instan.</strong>
-          Tidak perlu klik tombol hitung — angka langsung update saat Anda mengetik.
-        </li>
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Gratis selamanya.</strong>
-          Tanpa daftar akun, tanpa watermark, tanpa iklan.
+        <li v-for="feature in features" :key="feature.title"
+          class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
+          <strong class="font-semibold text-ink">{{ feature.title }}.</strong>
+          {{ feature.description }}
         </li>
       </ul>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Cara menghitung kata dan karakter</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('howToTitle') }}</h2>
       <ol class="mt-4 grid list-decimal gap-2.5 pl-5 marker:font-mono marker:text-accent-dark">
-        <li class="text-sm text-ink-soft">Tempel atau ketik teks Anda ke kotak yang tersedia.</li>
-        <li class="text-sm text-ink-soft">Hasil kata, karakter, kalimat, dan paragraf muncul otomatis.</li>
-        <li class="text-sm text-ink-soft">Gunakan tombol Copy untuk menyalin ringkasan hasil.</li>
-        <li class="text-sm text-ink-soft">Klik Clear untuk mengosongkan teks dan mulai perhitungan baru.</li>
+        <li v-for="step in steps" :key="step" class="text-sm text-ink-soft">{{ step }}</li>
       </ol>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Kapan Anda membutuhkan Word Counter?</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('useCaseTitle') }}</h2>
       <div class="mt-4 grid gap-3.5">
-        <p class="max-w-[62ch] text-sm text-ink-soft">
-          Word Counter sangat berguna saat menulis esai atau tugas kuliah yang memiliki batas kata minimum atau
-          maksimum. Daripada menghitung manual, Anda bisa langsung tempel draft ke sini dan lihat hasilnya secara
-          real-time.
-        </p>
-        <p class="max-w-[62ch] text-sm text-ink-soft">
-          Bagi content writer, alat ini membantu memastikan artikel SEO memenuhi jumlah kata yang ditargetkan, atau
-          caption media sosial tidak melebihi batas karakter platform tertentu.
-        </p>
-        <p class="max-w-[62ch] text-sm text-ink-soft">
-          Word Counter juga sering dipakai untuk keperluan formal seperti cover letter, abstrak jurnal, atau
-          deskripsi produk dengan aturan panjang teks tertentu.
-        </p>
+        <p v-for="paragraph in useCase" :key="paragraph" class="max-w-[62ch] text-sm text-ink-soft">{{ paragraph }}</p>
       </div>
     </section>
 
     <section class="mt-14 pb-4">
-      <h2 class="text-xl font-semibold text-ink">Pertanyaan umum</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ t('common.faqTitle') }}</h2>
       <div class="mt-2">
         <FaqAccordion :items="faqItems" />
       </div>
     </section>
 
     <section class="mt-14 pb-16">
-      <h2 class="text-xl font-semibold text-ink">Tool lain yang mungkin Anda butuhkan</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ t('common.relatedTitle') }}</h2>
       <div class="mt-4">
         <RelatedTools :tools="relatedTools" />
       </div>

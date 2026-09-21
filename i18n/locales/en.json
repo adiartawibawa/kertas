@@ -96,7 +96,9 @@
         "clear": "Clear",
         "privacyNoteData": "Your data never leaves this browser.",
         "rowsAndColumns": "{rows} rows, {columns} columns",
-        "rowsCount": "{rows} rows"
+        "rowsCount": "{rows} rows",
+        "copyResult": "Copy result",
+        "privacyNoteText": "Your text never leaves this browser."
     },
     "error": {
         "notFoundTitle": "Page not found",
@@ -383,6 +385,307 @@
                 {
                     "question": "Is my data uploaded to a server?",
                     "answer": "No. Formatting and validation run in your browser from start to finish."
+                }
+            ]
+        },
+        "word-counter": {
+            "seoTitle": "Word Counter Online, Free and Unlimited",
+            "seoDescription": "Count words, characters, sentences, and paragraphs instantly. Everything runs in your browser, no upload and no login.",
+            "ogDescription": "Count words, characters, sentences, and paragraphs instantly in your browser.",
+            "schemaName": "Word Counter",
+            "schemaDescription": "Counts words, characters, sentences, and paragraphs instantly in the browser, no upload needed.",
+            "title": "Word Counter: count words and characters instantly",
+            "lede": "Paste your text. The result appears right away, no upload and no distracting ads.",
+            "inputPlaceholder": "Start typing or paste your text here…",
+            "featuresTitle": "Why use this Word Counter?",
+            "features": [
+                {
+                    "title": "Private by design",
+                    "description": "Every count runs in your browser. Your text is never sent or stored on any server."
+                },
+                {
+                    "title": "No character limit",
+                    "description": "Count text as short as an Instagram caption or as long as a novel manuscript."
+                },
+                {
+                    "title": "Instant results",
+                    "description": "Numbers update as you type. There's no calculate button to click."
+                },
+                {
+                    "title": "Free, always",
+                    "description": "No account, no watermark, no ads."
+                }
+            ],
+            "howToTitle": "How to count words and characters",
+            "steps": [
+                "Paste or type your text into the box.",
+                "Watch the word, character, sentence, and paragraph counts appear automatically.",
+                "Use the Copy button to copy the summary.",
+                "Click Clear to empty the text and start a new count."
+            ],
+            "useCaseTitle": "When you need Word Counter",
+            "useCase": [
+                "Essays and assignments often carry a minimum or maximum word count. Paste your draft here and see the result right away, no manual counting.",
+                "Content writers use this tool to hit a target word count for SEO articles, or to keep a social caption under a platform's character limit.",
+                "Cover letters, journal abstracts, and product descriptions often follow strict length rules. Word Counter keeps you inside them."
+            ],
+            "faq": [
+                {
+                    "question": "Does a space count as a character?",
+                    "answer": "Yes. We show two separate numbers: characters with spaces and without, so you can match whatever a platform or institution asks for."
+                },
+                {
+                    "question": "How are paragraphs counted?",
+                    "answer": "A paragraph is a block of text separated by a blank line (two line breaks). Keep your paragraph formatting consistent for an accurate count."
+                },
+                {
+                    "question": "Is there a limit on how much text I can count?",
+                    "answer": "No official limit. Everything runs in your browser, so the real limit depends on your device."
+                },
+                {
+                    "question": "Is the text I enter stored on a server?",
+                    "answer": "No. Word Counter runs entirely in your browser. Your text is never sent, uploaded, or stored anywhere."
+                },
+                {
+                    "question": "Does this match Word Count in Microsoft Word?",
+                    "answer": "Usually. Small differences can show up depending on how each app counts punctuation or empty paragraphs."
+                }
+            ]
+        },
+        "text-cleaner": {
+            "seoTitle": "Text Cleaner Online, Clean Spaces and Blank Lines Free",
+            "seoDescription": "Remove double spaces, blank lines, and tabs. Clean up text instantly, 100% in your browser.",
+            "schemaName": "Text Cleaner",
+            "schemaDescription": "Removes double spaces, blank lines, and tabs from text instantly in the browser.",
+            "title": "Text Cleaner: tidy up messy text in one click",
+            "lede": "Remove double spaces, blank lines, and tabs from pasted text. It all runs in your browser.",
+            "inputLabel": "Original text",
+            "outputLabel": "Cleaned result",
+            "inputPlaceholder": "Paste the text you want to clean…",
+            "optionTrimLines": "Trim leading/trailing spaces",
+            "optionRemoveExtraSpaces": "Remove double spaces",
+            "optionRemoveEmptyLines": "Remove blank lines",
+            "optionConvertTabs": "Convert tabs to spaces",
+            "optionRemoveLineBreaks": "Merge into a single line",
+            "charsRemovedLabel": "{count} characters removed",
+            "featuresTitle": "Why use this Text Cleaner?",
+            "features": [
+                {
+                    "title": "Flexible options",
+                    "description": "Pick exactly which cleanup you need. No mode gets forced on you."
+                },
+                {
+                    "title": "Instant results",
+                    "description": "Check one option and see the result right away, no page reload."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your text never gets sent to any server."
+                }
+            ],
+            "howToTitle": "How to clean text",
+            "steps": [
+                "Paste the text you want to clean into the Original text column.",
+                "Check the cleanup options you need.",
+                "Watch the result appear in the Cleaned result column.",
+                "Click Copy to copy the result to your clipboard."
+            ],
+            "useCaseTitle": "When you need Text Cleaner",
+            "useCase": [
+                "Text copied from a PDF, Word, or a web page often carries double spaces, extra blank lines, or hidden tabs. Text Cleaner clears all of it in one pass.",
+                "Text data needs tidying before it goes into a spreadsheet, feeds a program, or gets pasted into a CMS that's picky about spacing."
+            ],
+            "faq": [
+                {
+                    "question": "What does this Text Cleaner remove?",
+                    "answer": "You choose: trim leading/trailing spaces, remove double spaces, remove blank lines, convert tabs to spaces, or merge everything into one line. Turn on only what you need."
+                },
+                {
+                    "question": "Does this change my original text permanently?",
+                    "answer": "No. The text you paste stays intact. The cleaned result shows separately in the output column, and you can switch options anytime without losing the original."
+                },
+                {
+                    "question": "Does it handle text pasted from PDF or Word?",
+                    "answer": "Yes. Text from PDF or Word often carries double spaces, extra blank lines, or hidden tabs. This tool clears all of that in one pass."
+                },
+                {
+                    "question": "Is my text uploaded to a server?",
+                    "answer": "No. The entire cleanup runs in your browser. Nothing leaves your device."
+                }
+            ]
+        },
+        "case-converter": {
+            "seoTitle": "Case Converter Online, UPPERCASE and camelCase Free",
+            "seoDescription": "Convert text to UPPERCASE, lowercase, Title Case, camelCase, snake_case, and more, instantly in your browser.",
+            "schemaName": "Case Converter",
+            "schemaDescription": "Converts text to different capitalization formats like UPPERCASE, camelCase, and snake_case.",
+            "title": "Case Converter: change letter case in one click",
+            "lede": "UPPERCASE, camelCase, snake_case, and more. Pick a format and see the result right away.",
+            "inputPlaceholder": "Type or paste your text here…",
+            "featuresTitle": "Why use this Case Converter?",
+            "features": [
+                {
+                    "title": "8 formats in one place",
+                    "description": "From formal writing (Title Case) to code variable names (camelCase, snake_case)."
+                },
+                {
+                    "title": "Switch formats freely",
+                    "description": "Click another format anytime. The result changes instantly, no need to re-paste your text."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Every conversion runs in your browser."
+                }
+            ],
+            "howToTitle": "How to change letter case",
+            "steps": [
+                "Type or paste your text into the input field.",
+                "Pick the format you want from the button list.",
+                "Watch the converted result appear below.",
+                "Click Copy to copy the result to your clipboard."
+            ],
+            "useCaseTitle": "When you need Case Converter",
+            "useCase": [
+                "Developers often rename variables from free-form text to camelCase or snake_case to match a language's convention. Paste the text here instead of retyping it by hand.",
+                "Writers and editors turn article titles into Title Case, or fix text accidentally typed with Caps Lock on."
+            ],
+            "faq": [
+                {
+                    "question": "Which formats are supported?",
+                    "answer": "Eight formats: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, and kebab-case. Useful for writing and for naming variables in code."
+                },
+                {
+                    "question": "Can camelCase and PascalCase work on regular text?",
+                    "answer": "Yes, though both work best on short phrases without punctuation. Both strip spaces between words, matching how programming variable names get built."
+                },
+                {
+                    "question": "Does Sentence case fix random capitals mid-sentence?",
+                    "answer": "Yes. Sentence case lowercases everything first, then capitalizes the first letter of each sentence and the letter after a period, question mark, or exclamation point."
+                },
+                {
+                    "question": "Is my text stored on a server?",
+                    "answer": "No. Every conversion runs in your browser without touching any server."
+                }
+            ]
+        },
+        "text-compare": {
+            "seoTitle": "Text Compare Online, Compare Two Texts Free",
+            "seoDescription": "Compare two texts and spot line-by-line differences instantly. Runs 100% in your browser.",
+            "schemaName": "Text Compare",
+            "schemaDescription": "Compares two texts and highlights differing lines instantly in the browser.",
+            "title": "Text Compare: spot differences between two texts instantly",
+            "lede": "Paste two versions of a text. Differences get highlighted right away, line by line.",
+            "inputALabel": "First text",
+            "inputBLabel": "Second text",
+            "inputAPlaceholder": "Paste the first version…",
+            "inputBPlaceholder": "Paste the second version…",
+            "removedLabel": "{count} lines removed",
+            "addedLabel": "{count} lines added",
+            "clearAllButton": "Clear all",
+            "privacyNote": "Neither text ever leaves this browser.",
+            "featuresTitle": "Why use this Text Compare?",
+            "features": [
+                {
+                    "title": "Clear visual comparison",
+                    "description": "Differing lines get highlighted right away. No manual line-by-line reading."
+                },
+                {
+                    "title": "Real-time results",
+                    "description": "Differences update as you edit either text."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Both texts get processed in your browser. Nothing gets uploaded."
+                }
+            ],
+            "howToTitle": "How to compare two texts",
+            "steps": [
+                "Paste the first version in the left column.",
+                "Paste the second version in the right column.",
+                "Watch the differences appear below: red for removed lines, green for added lines."
+            ],
+            "useCaseTitle": "When you need Text Compare",
+            "useCase": [
+                "Two document drafts need a side-by-side check to see what an editor changed.",
+                "Two config file versions, or a translation against its source text, need a line-by-line check.",
+                "Developers compare two code snippets or log files without opening a separate diff app."
+            ],
+            "faq": [
+                {
+                    "question": "Does this compare word by word or line by line?",
+                    "answer": "Line by line. This tool suits comparing paragraphs, configs, or text lists row by row, not catching a one- or two-letter change inside the same sentence."
+                },
+                {
+                    "question": "What do the red and green colors mean?",
+                    "answer": "A red line on the left only exists in the first text (removed). A green line on the right only exists in the second text (added)."
+                },
+                {
+                    "question": "Can it compare very long documents?",
+                    "answer": "Yes. Since the comparison runs in your browser, documents with thousands of lines can slow down a lower-spec device."
+                },
+                {
+                    "question": "Are both texts uploaded to a server?",
+                    "answer": "No. The comparison runs entirely in your browser. Nothing leaves your device."
+                }
+            ]
+        },
+        "duplicate-line-remover": {
+            "seoTitle": "Duplicate Line Remover Online, Remove Duplicate Lines Free",
+            "seoDescription": "Remove duplicate lines from a text list instantly, order stays intact. Runs 100% in your browser.",
+            "schemaName": "Duplicate Line Remover",
+            "schemaDescription": "Removes duplicate lines from a text list instantly in the browser, keeping the original order.",
+            "title": "Duplicate Line Remover: strip duplicate lines from a text list",
+            "lede": "Paste your text list. Repeated lines get removed automatically, order stays intact.",
+            "inputLabel": "Original list",
+            "outputLabel": "Deduplicated",
+            "inputPlaceholder": "Paste your list, one item per line…",
+            "optionCaseSensitive": "Case-sensitive (\"Apple\" ≠ \"apple\")",
+            "optionTrimLines": "Trim whitespace per line",
+            "optionRemoveEmptyLines": "Remove blank lines",
+            "duplicatesRemovedLabel": "{count} duplicate lines removed",
+            "featuresTitle": "Why use this Duplicate Line Remover?",
+            "features": [
+                {
+                    "title": "Order stays intact",
+                    "description": "The first occurrence of each line stays put. Nothing gets reshuffled."
+                },
+                {
+                    "title": "Flexible options",
+                    "description": "Set case sensitivity and how blank lines get handled, your call."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Every step runs in your browser."
+                }
+            ],
+            "howToTitle": "How to remove duplicate lines",
+            "steps": [
+                "Paste your list, one item per line.",
+                "Set case sensitivity, whitespace trimming, and blank line handling as needed.",
+                "Watch the deduplicated result appear in the right column.",
+                "Click Copy to copy the result to your clipboard."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Email lists, contact lists, and keyword lists often pick up repeated entries after merging several sources.",
+                "Developers clean up log files or dependency lists with identical lines before further processing."
+            ],
+            "faq": [
+                {
+                    "question": "Does the line order stay the same?",
+                    "answer": "Yes. The first occurrence of each line keeps its position. Later repeats get removed."
+                },
+                {
+                    "question": "What's the difference between case-sensitive and not?",
+                    "answer": "With case-sensitive on, \"Apple\" and \"apple\" count as two different lines. Turn it off and both count as the same, with one removed as a duplicate."
+                },
+                {
+                    "question": "Does leading/trailing whitespace affect duplicate detection?",
+                    "answer": "With Trim whitespace per line on, leading and trailing spaces get ignored during comparison. \"word \" and \"word\" then count as the same."
+                },
+                {
+                    "question": "Is my text uploaded to a server?",
+                    "answer": "No. The whole process runs in your browser. Nothing gets sent to any server."
                 }
             ]
         }
