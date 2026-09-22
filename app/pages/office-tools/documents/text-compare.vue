@@ -121,8 +121,8 @@ useHead({
       {{ toolName() }}
     </p>
 
-    <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">{{ tp('title') }}</h1>
-    <p class="mt-2 max-w-[52ch] text-base text-ink-soft">{{ tp('lede') }}</p>
+    <h1 class="mt-3 max-w-3xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">{{ tp('title') }}</h1>
+    <p class="mt-2 max-w-4xl text-base text-ink-soft">{{ tp('lede') }}</p>
 
     <div class="mt-7 grid gap-4 sm:grid-cols-2">
       <div>
@@ -140,9 +140,11 @@ useHead({
     <div class="mt-5 rounded-md border border-slate-200 bg-white">
       <div class="flex flex-wrap gap-x-5 gap-y-1.5 border-b border-slate-200 px-4 py-2.5 text-xs text-ink-soft">
         <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-red-200 align-middle" />{{ tp('removedLabel', {
-          count: stats.removed }) }}</span>
+          count: stats.removed
+        }) }}</span>
         <span><span class="mr-1.5 inline-block h-2 w-2 rounded-sm bg-accent-tint align-middle" />{{ tp('addedLabel', {
-          count: stats.added }) }}</span>
+          count: stats.added
+        }) }}</span>
       </div>
       <DiffView :rows="rows" />
     </div>
@@ -181,7 +183,7 @@ useHead({
     <section class="mt-14">
       <h2 class="text-xl font-semibold text-ink">{{ tp('useCaseTitle') }}</h2>
       <div class="mt-4 grid gap-3.5">
-        <p v-for="paragraph in useCase" :key="paragraph" class="max-w-[62ch] text-sm text-ink-soft">{{ paragraph }}</p>
+        <p v-for="paragraph in useCase" :key="paragraph" class="max-w-5xl text-sm text-ink-soft">{{ paragraph }}</p>
       </div>
     </section>
 

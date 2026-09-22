@@ -14,7 +14,7 @@ defineProps<{
         <span class="font-mono text-ink-soft group-open:hidden">+</span>
         <span class="hidden font-mono text-ink-soft group-open:inline">–</span>
       </summary>
-      <p class="mt-2.5 max-w-[60ch] text-sm text-ink-soft">{{ item.answer }}</p>
+      <p class="mt-2.5 max-w-5xl text-sm text-ink-soft">{{ item.answer }}</p>
     </details>
   </div>
 </template>

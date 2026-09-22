@@ -72,15 +72,15 @@ useHead({
       {{ categoryName() }}
     </p>
 
-    <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+    <h1 class="mt-3 max-w-3xl text-3xl font-semibold leading-tight text-ink sm:text-4xl">
       {{ t('hubTitle.data') }}
     </h1>
-    <p class="mt-2 max-w-[56ch] text-base text-ink-soft">
+    <p class="mt-2 max-w-4xl text-base text-ink-soft">
       {{ categoryDescription() }}
     </p>
 
     <section class="mt-8">
-      <p class="max-w-[68ch] text-sm text-ink-soft">{{ t('hubIntro.data') }}</p>
+      <p class="max-w-6xl text-sm text-ink-soft">{{ t('hubIntro.data') }}</p>
     </section>
 
     <section class="mt-10 grid gap-4 pb-16">
