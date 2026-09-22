@@ -98,7 +98,11 @@
         "rowsAndColumns": "{rows} rows, {columns} columns",
         "rowsCount": "{rows} rows",
         "copyResult": "Copy result",
-        "privacyNoteText": "Your text never leaves this browser."
+        "privacyNoteText": "Your text never leaves this browser.",
+        "privacyNoteFile": "Your file never leaves this browser.",
+        "dropzoneLabel": "Drag and drop a PDF file here",
+        "downloadResult": "Download result",
+        "processing": "Processing…"
     },
     "error": {
         "notFoundTitle": "Page not found",
@@ -686,6 +690,353 @@
                 {
                     "question": "Is my text uploaded to a server?",
                     "answer": "No. The whole process runs in your browser. Nothing gets sent to any server."
+                }
+            ]
+        },
+        "pdf-merge": {
+            "seoTitle": "PDF Merge Online, Combine Multiple PDFs Free",
+            "seoDescription": "Combine several PDF files into one instantly in your browser. Free, no server upload, no watermark.",
+            "schemaName": "PDF Merge",
+            "schemaDescription": "Combines several PDF files into one file.",
+            "title": "PDF Merge: combine several PDFs into one file",
+            "lede": "Upload several PDF files, set their order, download one combined file.",
+            "dropzoneLabel": "Drag and drop several PDF files here",
+            "downloadButton": "Download merged file",
+            "processingLabel": "Merging…",
+            "filesSelectedLabel": "{count} files selected",
+            "featuresTitle": "Why use this PDF Merge?",
+            "features": [
+                {
+                    "title": "Reorder before merging",
+                    "description": "Rearrange files before combining them, no re-upload needed."
+                },
+                {
+                    "title": "No watermark",
+                    "description": "The merged result stays clean, no added logo or watermark."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your documents get processed in your browser, never uploaded."
+                }
+            ],
+            "howToTitle": "How to merge PDFs",
+            "steps": [
+                "Upload at least 2 PDF files.",
+                "Reorder files with the arrow buttons if needed.",
+                "Click Download merged file."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Several scanned documents, like an ID card and a contract, need to become one PDF to send as a single file to an office or client.",
+                "Several report or proposal chapters, written separately by different team members, need combining into one final document."
+            ],
+            "faq": [
+                {
+                    "question": "How is the merged file's order decided?",
+                    "answer": "By the file order in your list. Use each file's up/down arrows to set the order before merging."
+                },
+                {
+                    "question": "How many PDF files can I merge at once?",
+                    "answer": "No official limit, but many large files slow the process down since everything runs in your browser."
+                },
+                {
+                    "question": "Can password-protected PDFs be merged?",
+                    "answer": "Not yet. Remove the password from a protected PDF before processing it here."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire merge runs in your browser."
+                }
+            ]
+        },
+        "pdf-split": {
+            "seoTitle": "PDF Split Online, Split a PDF Into Multiple Files Free",
+            "seoDescription": "Split a PDF into smaller files, by page or by custom range. No server upload.",
+            "schemaName": "PDF Split",
+            "schemaDescription": "Splits a PDF into several smaller files.",
+            "title": "PDF Split: split a PDF into multiple parts",
+            "lede": "Upload your PDF, choose how to split it, download each part as a separate file.",
+            "pageCountLabel": "This file has {count} pages.",
+            "modeAllPagesLabel": "Each page separate",
+            "modeRangesLabel": "Custom ranges",
+            "rangesInputLabel": "One line = one output file (e.g. 1-3)",
+            "runButton": "Split PDF",
+            "downloadAllButton": "Download all ({count} files)",
+            "pageCountShort": "{count} pages",
+            "featuresTitle": "Why use this PDF Split?",
+            "features": [
+                {
+                    "title": "Two split modes",
+                    "description": "Split by page, or define your own ranges."
+                },
+                {
+                    "title": "Quality stays intact",
+                    "description": "Pages get copied as-is, no re-compression."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "The file gets processed and split in your browser."
+                }
+            ],
+            "howToTitle": "How to split a PDF",
+            "steps": [
+                "Upload the PDF you want to split.",
+                "Pick Each page separate or Custom ranges.",
+                "Click Split PDF, then download each part."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A specific chapter needs pulling from a long digital book, or an attachment needs separating from the main document.",
+                "Only some pages need sending to a particular party, without sharing the whole document."
+            ],
+            "faq": [
+                {
+                    "question": "What's the difference between Each page separate and Custom ranges?",
+                    "answer": "Each page separate produces one PDF file per page. Custom ranges uses input you write yourself, one line per output file, so a line reading 1-3 becomes one file with pages 1 through 3."
+                },
+                {
+                    "question": "How do I write a page range?",
+                    "answer": "Use a hyphen for a range (1-3) or commas for separate pages (1,4,7), one line per output file."
+                },
+                {
+                    "question": "Can I download every part at once?",
+                    "answer": "Yes. Click Download all and each part downloads one after another."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire split runs in your browser."
+                }
+            ]
+        },
+        "pdf-compress": {
+            "seoTitle": "PDF Compress Online, Shrink PDF File Size Free",
+            "seoDescription": "Shrink a PDF's file size instantly in your browser. Free, no server upload.",
+            "schemaName": "PDF Compress",
+            "schemaDescription": "Shrinks a PDF's file size by compacting its internal structure.",
+            "title": "PDF Compress: shrink your PDF file size",
+            "lede": "Upload your PDF, and we compact its structure to reduce file size.",
+            "warningNote": "Note: this compression compacts the PDF's internal structure, not image resolution. For PDFs dominated by high-resolution images, the size reduction may be limited.",
+            "originalSizeLabel": "Original size:",
+            "runButton": "Compress PDF",
+            "processingLabel": "Compressing…",
+            "originalSizeStatLabel": "Original size",
+            "compressedSizeStatLabel": "After compression",
+            "savedStatLabel": "Reduced by",
+            "downloadButton": "Download result",
+            "featuresTitle": "Why use this PDF Compress?",
+            "features": [
+                {
+                    "title": "Clear before-and-after",
+                    "description": "See the size before and after, plus the percentage saved."
+                },
+                {
+                    "title": "Quality stays the same",
+                    "description": "No drop in image resolution or text quality."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "The file gets processed in your browser."
+                }
+            ],
+            "howToTitle": "How to compress a PDF",
+            "steps": [
+                "Upload the PDF you want to shrink.",
+                "Click Compress PDF.",
+                "Compare the result size, then download it once you're happy."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A PDF needs sending by email with an attachment size limit, or uploading to an online form with a file size cap.",
+                "A scanned PDF with high-resolution images may not shrink much. Consider rescanning at a lower resolution if the size still runs too large."
+            ],
+            "faq": [
+                {
+                    "question": "How much can the file size shrink?",
+                    "answer": "It depends on the PDF's content. A text-based PDF can shrink noticeably since its internal structure gets compacted. A PDF dominated by high-resolution images shrinks less, since this tool doesn't compress or downsize images."
+                },
+                {
+                    "question": "Does the PDF's visual quality drop?",
+                    "answer": "No. This compression only compacts the file structure and strips metadata, not image or text quality."
+                },
+                {
+                    "question": "Why does the result sometimes come out the same size?",
+                    "answer": "A PDF already built with an efficient structure, like one exported directly from a modern app, may already be compact enough that little else can get trimmed."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The compression runs in your browser."
+                }
+            ]
+        },
+        "pdf-rotate": {
+            "seoTitle": "PDF Rotate Online, Rotate PDF Pages Free",
+            "seoDescription": "Rotate PDF pages 90°, 180°, or 270° instantly in your browser. Free, no server upload.",
+            "schemaName": "PDF Rotate",
+            "schemaDescription": "Rotates a PDF's page orientation.",
+            "title": "PDF Rotate: rotate your PDF's page orientation",
+            "lede": "Upload your PDF, pick a rotation angle and which pages to rotate.",
+            "pageCountLabel": "This file has {count} pages.",
+            "angleLabel": "Rotation angle",
+            "scopeLabel": "Pages to rotate",
+            "scopeAllLabel": "All pages",
+            "scopeSpecificLabel": "Specific pages",
+            "specificPlaceholder": "e.g. 1-3,5",
+            "runButton": "Rotate PDF",
+            "featuresTitle": "Why use this PDF Rotate?",
+            "features": [
+                {
+                    "title": "Selective rotation",
+                    "description": "Rotate every page, or only the ones that came out sideways."
+                },
+                {
+                    "title": "Quality stays intact",
+                    "description": "Rotation only changes the display orientation, not the rendered content."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "The file gets processed in your browser."
+                }
+            ],
+            "howToTitle": "How to rotate PDF pages",
+            "steps": [
+                "Upload your PDF.",
+                "Pick a rotation angle and which pages to rotate.",
+                "Click Rotate PDF, then download the result."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A scanned document sometimes comes out upside down or rotated 90 degrees from a misaligned scan.",
+                "Documents from different sources sometimes carry inconsistent orientation, some portrait and some landscape, once combined into one file."
+            ],
+            "faq": [
+                {
+                    "question": "Can rotation apply to specific pages only?",
+                    "answer": "Yes. Pick Specific pages and write the page numbers, e.g. 1-3,5. Without that, every page gets rotated."
+                },
+                {
+                    "question": "Does this rotation stack on top of existing rotation?",
+                    "answer": "Yes. If a page already carries rotation, say from a crooked scan, the angle you pick adds to what's already there."
+                },
+                {
+                    "question": "Can I rotate by 45 degrees or another custom angle?",
+                    "answer": "Not yet. Only 90-degree multiples are available for now, matching the standard PDF page orientation."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire rotation runs in your browser."
+                }
+            ]
+        },
+        "pdf-extract-pages": {
+            "seoTitle": "PDF Extract Pages Online, Pull Specific Pages Free",
+            "seoDescription": "Pull specific pages from a PDF into a new file instantly in your browser. Free, no server upload.",
+            "schemaName": "PDF Extract Pages",
+            "schemaDescription": "Pulls specific pages from a PDF into a new file.",
+            "title": "PDF Extract Pages: pull specific pages from a PDF",
+            "lede": "Upload your PDF, pick the pages you need, download them as one new file.",
+            "pageCountLabel": "This file has {count} pages.",
+            "pagesLabel": "Pages to extract",
+            "pagesPlaceholder": "e.g. 1-3,7,10-12",
+            "runButton": "Extract Pages",
+            "featuresTitle": "Why use this PDF Extract Pages?",
+            "features": [
+                {
+                    "title": "Flexible range format",
+                    "description": "Combine ranges and single pages in one input."
+                },
+                {
+                    "title": "One clean output file",
+                    "description": "Every selected page merges into a single new document."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "The file gets processed in your browser."
+                }
+            ],
+            "howToTitle": "How to extract specific pages",
+            "steps": [
+                "Upload the source PDF.",
+                "Write the page numbers or ranges you want.",
+                "Click Extract Pages, then download the result."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Only one chapter from a long report needs sharing, without sending the entire document.",
+                "A summary of a contract or proposal can come together by pulling just the important pages."
+            ],
+            "faq": [
+                {
+                    "question": "How do I write which pages to extract?",
+                    "answer": "Use a hyphen for a range (1-3) or commas for separate pages (1,4,7). Combine both, e.g. 1-3,7,10-12."
+                },
+                {
+                    "question": "Does the output follow my input order or the original order?",
+                    "answer": "The result always follows the source document's original order, regardless of how you wrote the page numbers."
+                },
+                {
+                    "question": "How is this different from PDF Split?",
+                    "answer": "Extract Pages produces one PDF file containing the pages you picked. PDF Split produces several separate files from one document."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire extraction runs in your browser."
+                }
+            ]
+        },
+        "pdf-to-text": {
+            "seoTitle": "PDF to Text Converter Online, Extract Text From a PDF Free",
+            "seoDescription": "Extract text from a PDF instantly in your browser. Free, no document upload to a server.",
+            "schemaName": "PDF to Text Converter",
+            "schemaDescription": "Extracts text from a PDF that has a digital text layer.",
+            "title": "PDF to Text: extract text from a PDF file",
+            "lede": "Upload your PDF, and the text gets extracted automatically, ready to copy.",
+            "extractingLabel": "Extracting text…",
+            "pagesExtractedLabel": "{count} pages extracted",
+            "copyButton": "Copy text",
+            "downloadButton": "Download .txt",
+            "privacyNote": "Your document's content is never sent to any server.",
+            "featuresTitle": "Why use this PDF to Text?",
+            "features": [
+                {
+                    "title": "Clear page markers",
+                    "description": "Every page gets tagged so its source stays easy to trace."
+                },
+                {
+                    "title": "Copy it or save it",
+                    "description": "The extracted text is ready to use right away or save as a .txt file."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your document's content gets processed locally, never uploaded."
+                }
+            ],
+            "howToTitle": "How to extract text from a PDF",
+            "steps": [
+                "Upload your PDF.",
+                "Wait for the extraction to finish.",
+                "Copy or download the extracted text."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A PDF report's content needs quoting or reworking into a new document without retyping it from scratch.",
+                "A long contract or paper needs extracting so it can go into another text tool, like Word Counter or Text Compare."
+            ],
+            "faq": [
+                {
+                    "question": "Can text be extracted from a scanned (image) PDF?",
+                    "answer": "Not yet. This tool reads text that already exists digitally inside the PDF, not text recognized from an image (OCR). A scanned PDF with no text layer produces empty output."
+                },
+                {
+                    "question": "Does the original layout, like tables or columns, carry over?",
+                    "answer": "Not fully. Text gets extracted in reading order by position on the page, so complex tables or columns can look jumbled in the plain text result."
+                },
+                {
+                    "question": "Why does this need an internet connection if it's private?",
+                    "answer": "The connection only loads the PDF-reading library's code, not your data. Your PDF's content still gets processed locally in your browser and never gets sent to any server."
+                },
+                {
+                    "question": "Can a password-protected PDF be extracted?",
+                    "answer": "Not yet. Remove the password from a protected PDF before processing it here."
                 }
             ]
         }

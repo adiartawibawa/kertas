@@ -22,18 +22,30 @@ export function downloadTextFile(
  */
 export function downloadBinaryFile(
   filename: string,
-  data: BlobPart,
+  data: Uint8Array | ArrayBuffer,
   mimeType = "application/octet-stream",
 ): void {
   if (typeof window === "undefined") return;
 
-  const blob = new Blob([data], { type: mimeType });
+  let buffer: ArrayBuffer;
+
+  if (data instanceof Uint8Array) {
+    buffer = new ArrayBuffer(data.byteLength);
+    new Uint8Array(buffer).set(data);
+  } else {
+    buffer = data;
+  }
+
+  const blob = new Blob([buffer], { type: mimeType });
   const url = URL.createObjectURL(blob);
+
   const link = document.createElement("a");
   link.href = url;
   link.download = filename;
+
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+
   URL.revokeObjectURL(url);
 }

@@ -98,7 +98,11 @@
         "rowsAndColumns": "{rows} baris, {columns} kolom",
         "rowsCount": "{rows} baris",
         "copyResult": "Copy hasil",
-        "privacyNoteText": "Teks Anda tidak pernah meninggalkan browser ini."
+        "privacyNoteText": "Teks Anda tidak pernah meninggalkan browser ini.",
+        "privacyNoteFile": "File Anda tidak pernah meninggalkan browser ini.",
+        "dropzoneLabel": "Tarik & lepas file PDF di sini",
+        "downloadResult": "Download hasil",
+        "processing": "Memproses…"
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
@@ -686,6 +690,353 @@
                 {
                     "question": "Apakah teks saya diunggah ke server?",
                     "answer": "Tidak. Seluruh proses berjalan di browser Anda. Tidak ada data yang terkirim ke server manapun."
+                }
+            ]
+        },
+        "pdf-merge": {
+            "seoTitle": "PDF Merge Online, Gabungkan Banyak PDF Gratis",
+            "seoDescription": "Gabungkan beberapa file PDF jadi satu secara instan di browser Anda. Gratis, tanpa upload ke server, tanpa watermark.",
+            "schemaName": "PDF Merge",
+            "schemaDescription": "Menggabungkan beberapa file PDF jadi satu file.",
+            "title": "PDF Merge: gabungkan beberapa PDF jadi satu file",
+            "lede": "Upload beberapa file PDF, atur urutannya, unduh sebagai satu file gabungan.",
+            "dropzoneLabel": "Tarik & lepas beberapa file PDF di sini",
+            "downloadButton": "Download hasil gabungan",
+            "processingLabel": "Menggabungkan…",
+            "filesSelectedLabel": "{count} file dipilih",
+            "featuresTitle": "Kenapa menggunakan PDF Merge ini?",
+            "features": [
+                {
+                    "title": "Urutan bisa diatur",
+                    "description": "Susun ulang file sebelum digabungkan tanpa upload ulang."
+                },
+                {
+                    "title": "Tanpa watermark",
+                    "description": "Hasil gabungan bersih tanpa logo atau tanda air tambahan."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Dokumen Anda diproses di browser, tidak pernah diunggah."
+                }
+            ],
+            "howToTitle": "Cara menggabungkan PDF",
+            "steps": [
+                "Upload minimal 2 file PDF.",
+                "Atur urutan file dengan tombol panah kalau perlu.",
+                "Klik Download hasil gabungan."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Beberapa dokumen scan, seperti KTP dan kontrak, perlu jadi satu file PDF untuk dikirim sebagai satu berkas ke instansi atau klien.",
+                "Beberapa bab laporan atau proposal yang dikerjakan terpisah oleh tim berbeda perlu disatukan jadi satu dokumen final."
+            ],
+            "faq": [
+                {
+                    "question": "Bagaimana urutan file hasil gabungan ditentukan?",
+                    "answer": "Sesuai urutan file di daftar. Gunakan tombol panah atas/bawah di tiap file untuk mengatur urutannya sebelum digabungkan."
+                },
+                {
+                    "question": "Berapa banyak file PDF yang bisa digabung sekaligus?",
+                    "answer": "Tidak ada batas resmi, tapi file yang besar dan banyak memperlambat proses karena semuanya berjalan di browser Anda."
+                },
+                {
+                    "question": "Apakah PDF yang terkunci password bisa digabungkan?",
+                    "answer": "Belum didukung. Buka dulu kunci PDF yang dilindungi password sebelum diproses di sini."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses penggabungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "pdf-split": {
+            "seoTitle": "PDF Split Online, Pecah PDF Jadi Beberapa File Gratis",
+            "seoDescription": "Pecah file PDF jadi beberapa file lebih kecil, per halaman atau per rentang kustom. Tanpa upload ke server.",
+            "schemaName": "PDF Split",
+            "schemaDescription": "Memecah file PDF jadi beberapa file lebih kecil.",
+            "title": "PDF Split: pecah file PDF jadi beberapa bagian",
+            "lede": "Upload PDF Anda, pilih cara membaginya, unduh tiap bagian sebagai file terpisah.",
+            "pageCountLabel": "File memiliki {count} halaman.",
+            "modeAllPagesLabel": "Setiap halaman terpisah",
+            "modeRangesLabel": "Rentang kustom",
+            "rangesInputLabel": "Satu baris = satu file hasil (misal: 1-3)",
+            "runButton": "Pecah PDF",
+            "downloadAllButton": "Download semua ({count} file)",
+            "pageCountShort": "{count} halaman",
+            "featuresTitle": "Kenapa menggunakan PDF Split ini?",
+            "features": [
+                {
+                    "title": "Dua mode pembagian",
+                    "description": "Pecah per halaman, atau tentukan rentang sendiri."
+                },
+                {
+                    "title": "Kualitas tetap terjaga",
+                    "description": "Halaman disalin apa adanya tanpa kompresi ulang."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "File diproses dan dipecah di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara memecah file PDF",
+            "steps": [
+                "Upload file PDF yang ingin dipecah.",
+                "Pilih mode Setiap halaman terpisah atau Rentang kustom.",
+                "Klik Pecah PDF, lalu download tiap bagian."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sebuah bab tertentu perlu diambil dari buku digital panjang, atau lampiran perlu dipisah dari dokumen utama.",
+                "Sebagian halaman saja perlu dikirim ke pihak tertentu, tanpa membagikan seluruh dokumen."
+            ],
+            "faq": [
+                {
+                    "question": "Apa bedanya mode Setiap halaman terpisah dan Rentang kustom?",
+                    "answer": "Setiap halaman terpisah menghasilkan satu file PDF per halaman. Rentang kustom memakai input yang Anda tulis sendiri, satu baris untuk satu file hasil, misal baris 1-3 jadi satu file berisi halaman 1 sampai 3."
+                },
+                {
+                    "question": "Bagaimana format penulisan rentang halaman?",
+                    "answer": "Gunakan tanda hubung untuk rentang (1-3) atau koma untuk halaman terpisah (1,4,7), satu baris untuk satu file hasil."
+                },
+                {
+                    "question": "Apakah bisa mendownload semua bagian sekaligus?",
+                    "answer": "Bisa. Klik Download semua, tiap bagian akan terunduh satu per satu secara berurutan."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses split berjalan di browser Anda."
+                }
+            ]
+        },
+        "pdf-compress": {
+            "seoTitle": "PDF Compress Online, Perkecil Ukuran PDF Gratis",
+            "seoDescription": "Perkecil ukuran file PDF secara instan di browser Anda. Gratis, tanpa upload ke server.",
+            "schemaName": "PDF Compress",
+            "schemaDescription": "Memperkecil ukuran file PDF dengan memadatkan struktur internal.",
+            "title": "PDF Compress: perkecil ukuran file PDF",
+            "lede": "Upload PDF Anda, kami padatkan strukturnya untuk mengurangi ukuran file.",
+            "warningNote": "Catatan: kompresi ini memadatkan struktur internal PDF, bukan menurunkan resolusi gambar. Untuk PDF yang didominasi gambar beresolusi tinggi, pengurangan ukurannya bisa terbatas.",
+            "originalSizeLabel": "Ukuran asli:",
+            "runButton": "Kompres PDF",
+            "processingLabel": "Mengompres…",
+            "originalSizeStatLabel": "Ukuran asli",
+            "compressedSizeStatLabel": "Setelah kompres",
+            "savedStatLabel": "Berkurang",
+            "downloadButton": "Download hasil",
+            "featuresTitle": "Kenapa menggunakan PDF Compress ini?",
+            "features": [
+                {
+                    "title": "Perbandingan jelas",
+                    "description": "Lihat ukuran sebelum dan sesudah, beserta persentase pengurangan."
+                },
+                {
+                    "title": "Kualitas tidak berubah",
+                    "description": "Tidak ada penurunan resolusi gambar atau kualitas teks."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "File diproses di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara mengompres file PDF",
+            "steps": [
+                "Upload file PDF yang ingin diperkecil.",
+                "Klik Kompres PDF.",
+                "Bandingkan ukuran hasil, lalu download kalau sudah sesuai."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sebuah PDF perlu dikirim lewat email yang membatasi ukuran lampiran, atau diunggah ke formulir online dengan batas ukuran file.",
+                "PDF hasil scan dengan gambar resolusi tinggi mungkin tidak berkurang banyak. Pertimbangkan scan ulang dengan resolusi lebih rendah kalau ukurannya masih terlalu besar."
+            ],
+            "faq": [
+                {
+                    "question": "Seberapa besar ukuran file bisa berkurang?",
+                    "answer": "Tergantung isi PDF. PDF berbasis teks bisa berkurang cukup terasa karena struktur internal dipadatkan. PDF yang didominasi gambar beresolusi tinggi berkurang lebih sedikit, karena tool ini tidak mengompres atau menurunkan resolusi gambar."
+                },
+                {
+                    "question": "Apakah kualitas visual PDF berkurang?",
+                    "answer": "Tidak. Kompresi ini hanya memadatkan struktur file dan menghapus metadata, bukan mengubah kualitas gambar atau teks."
+                },
+                {
+                    "question": "Kenapa hasilnya kadang tidak lebih kecil sama sekali?",
+                    "answer": "PDF yang sudah dibuat dengan struktur efisien, misalnya hasil export langsung dari aplikasi modern, mungkin sudah cukup padat sehingga tidak banyak lagi yang bisa dipangkas."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Proses kompresi berjalan di browser Anda."
+                }
+            ]
+        },
+        "pdf-rotate": {
+            "seoTitle": "PDF Rotate Online, Putar Halaman PDF Gratis",
+            "seoDescription": "Putar halaman PDF 90°, 180°, atau 270° secara instan di browser Anda. Gratis, tanpa upload ke server.",
+            "schemaName": "PDF Rotate",
+            "schemaDescription": "Memutar orientasi halaman PDF.",
+            "title": "PDF Rotate: putar orientasi halaman PDF",
+            "lede": "Upload PDF Anda, pilih sudut rotasi dan halaman yang ingin diputar.",
+            "pageCountLabel": "File memiliki {count} halaman.",
+            "angleLabel": "Sudut rotasi",
+            "scopeLabel": "Halaman yang dirotasi",
+            "scopeAllLabel": "Semua halaman",
+            "scopeSpecificLabel": "Halaman tertentu",
+            "specificPlaceholder": "Misal: 1-3,5",
+            "runButton": "Rotasi PDF",
+            "featuresTitle": "Kenapa menggunakan PDF Rotate ini?",
+            "features": [
+                {
+                    "title": "Rotasi selektif",
+                    "description": "Putar semua halaman, atau hanya halaman tertentu yang miring."
+                },
+                {
+                    "title": "Kualitas tetap terjaga",
+                    "description": "Rotasi hanya mengubah orientasi tampilan, bukan me-render ulang konten."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "File diproses di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara memutar halaman PDF",
+            "steps": [
+                "Upload file PDF Anda.",
+                "Pilih sudut rotasi dan halaman yang ingin diputar.",
+                "Klik Rotasi PDF, lalu download hasilnya."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Hasil scan dokumen kadang terbalik atau miring 90 derajat karena posisi kertas salah saat di-scan.",
+                "Dokumen dari sumber berbeda kadang punya orientasi tidak konsisten, sebagian potret dan sebagian lanskap, saat digabung jadi satu file."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah rotasi bisa diterapkan ke halaman tertentu saja?",
+                    "answer": "Bisa. Pilih Halaman tertentu, lalu tulis nomor halamannya, misal 1-3,5. Tanpa itu, semua halaman akan dirotasi."
+                },
+                {
+                    "question": "Apakah rotasi ini bersifat kumulatif dengan rotasi yang sudah ada?",
+                    "answer": "Ya. Kalau halaman sudah punya rotasi sebelumnya, misalnya dari hasil scan miring, sudut yang Anda pilih akan ditambahkan ke rotasi yang sudah ada."
+                },
+                {
+                    "question": "Apakah bisa merotasi 45 derajat atau sudut custom lainnya?",
+                    "answer": "Belum. Saat ini hanya tersedia rotasi kelipatan 90 derajat, sesuai standar orientasi halaman PDF."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses rotasi berjalan di browser Anda."
+                }
+            ]
+        },
+        "pdf-extract-pages": {
+            "seoTitle": "PDF Extract Pages Online, Ambil Halaman Tertentu Gratis",
+            "seoDescription": "Ambil halaman tertentu dari PDF jadi satu file baru secara instan di browser Anda. Gratis, tanpa upload ke server.",
+            "schemaName": "PDF Extract Pages",
+            "schemaDescription": "Mengambil halaman tertentu dari PDF jadi satu file baru.",
+            "title": "PDF Extract Pages: ambil halaman tertentu dari PDF",
+            "lede": "Upload PDF Anda, tentukan halaman yang diinginkan, unduh sebagai satu file baru.",
+            "pageCountLabel": "File memiliki {count} halaman.",
+            "pagesLabel": "Halaman yang diambil",
+            "pagesPlaceholder": "Misal: 1-3,7,10-12",
+            "runButton": "Ekstrak Halaman",
+            "featuresTitle": "Kenapa menggunakan PDF Extract Pages ini?",
+            "features": [
+                {
+                    "title": "Format rentang fleksibel",
+                    "description": "Kombinasikan rentang dan halaman tunggal dalam satu input."
+                },
+                {
+                    "title": "Hasil satu file rapi",
+                    "description": "Semua halaman terpilih digabung jadi satu dokumen baru."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "File diproses di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara mengambil halaman tertentu",
+            "steps": [
+                "Upload file PDF sumber.",
+                "Tulis nomor atau rentang halaman yang diinginkan.",
+                "Klik Ekstrak Halaman, lalu download hasilnya."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Hanya bab tertentu dari sebuah laporan panjang perlu dibagikan, tanpa mengirim keseluruhan dokumen.",
+                "Ringkasan sebuah kontrak atau proposal bisa dibuat dengan mengambil hanya halaman-halaman penting."
+            ],
+            "faq": [
+                {
+                    "question": "Bagaimana format penulisan halaman yang diekstrak?",
+                    "answer": "Gunakan tanda hubung untuk rentang (1-3) atau koma untuk halaman terpisah (1,4,7). Keduanya bisa dikombinasikan, misal 1-3,7,10-12."
+                },
+                {
+                    "question": "Apakah urutan halaman di hasil sesuai urutan yang saya tulis atau urutan asli?",
+                    "answer": "Hasil selalu mengikuti urutan asli di dokumen sumber, terlepas dari urutan penulisan nomor halaman di input."
+                },
+                {
+                    "question": "Apa bedanya dengan PDF Split?",
+                    "answer": "Extract Pages menghasilkan satu file PDF berisi halaman-halaman terpilih. PDF Split menghasilkan beberapa file terpisah dari satu dokumen."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses ekstraksi berjalan di browser Anda."
+                }
+            ]
+        },
+        "pdf-to-text": {
+            "seoTitle": "PDF to Text Converter Online, Ekstrak Teks dari PDF Gratis",
+            "seoDescription": "Ekstrak teks dari file PDF secara instan di browser Anda. Gratis, tanpa upload dokumen ke server.",
+            "schemaName": "PDF to Text Converter",
+            "schemaDescription": "Mengekstrak teks dari file PDF yang punya lapisan teks digital.",
+            "title": "PDF to Text: ekstrak teks dari file PDF",
+            "lede": "Upload PDF Anda, teksnya diekstrak otomatis dan siap disalin.",
+            "extractingLabel": "Mengekstrak teks…",
+            "pagesExtractedLabel": "{count} halaman diekstrak",
+            "copyButton": "Copy teks",
+            "downloadButton": "Download .txt",
+            "privacyNote": "Isi dokumen Anda tidak pernah dikirim ke server manapun.",
+            "featuresTitle": "Kenapa menggunakan PDF to Text ini?",
+            "features": [
+                {
+                    "title": "Penanda halaman jelas",
+                    "description": "Setiap halaman ditandai supaya mudah dilacak asalnya."
+                },
+                {
+                    "title": "Bisa disalin atau diunduh",
+                    "description": "Hasil teks siap dipakai langsung atau disimpan sebagai file .txt."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Isi dokumen Anda diproses secara lokal, tidak pernah diunggah."
+                }
+            ],
+            "howToTitle": "Cara mengekstrak teks dari PDF",
+            "steps": [
+                "Upload file PDF Anda.",
+                "Tunggu proses ekstraksi selesai.",
+                "Copy atau download hasil teksnya."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Isi sebuah laporan PDF perlu dikutip atau diolah ulang jadi dokumen baru tanpa mengetik ulang manual dari awal.",
+                "Kontrak atau makalah panjang perlu diekstrak agar bisa ditempel ke tool analisis teks lain, seperti Word Counter atau Text Compare."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah PDF hasil scan (gambar) bisa diekstrak teksnya?",
+                    "answer": "Belum. Tool ini membaca teks yang sudah ada secara digital di dalam PDF, bukan mengenali teks dari gambar (OCR). PDF hasil scan tanpa lapisan teks menghasilkan output kosong."
+                },
+                {
+                    "question": "Apakah format asli (tabel, kolom) ikut terbawa?",
+                    "answer": "Tidak sepenuhnya. Teks diekstrak berurutan sesuai posisi di halaman, jadi tata letak tabel atau kolom kompleks bisa terlihat berantakan di hasil teks polos."
+                },
+                {
+                    "question": "Kenapa proses butuh koneksi internet padahal katanya privasi terjaga?",
+                    "answer": "Koneksi internet hanya memuat kode library pembaca PDF, bukan data Anda. Isi PDF Anda tetap diproses secara lokal di browser dan tidak pernah terkirim ke server manapun."
+                },
+                {
+                    "question": "Apakah bisa mengekstrak PDF yang dilindungi password?",
+                    "answer": "Belum didukung. Buka dulu kunci PDF berpassword sebelum diproses di sini."
                 }
             ]
         }
