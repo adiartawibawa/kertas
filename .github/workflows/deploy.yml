@@ -2,8 +2,8 @@ name: Deploy
 
 on:
   push:
-    branches: [main]      # ganti kalau branch utama Anda bernama master
-  workflow_dispatch:      # tombol "Run workflow" manual di tab Actions
+    branches: [main] # ganti kalau branch utama Anda bernama master
+  workflow_dispatch: # tombol "Run workflow" manual di tab Actions
 
 concurrency:
   group: deploy
@@ -11,14 +11,14 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest        # server milik GitHub
+    runs-on: ubuntu-latest # server milik GitHub
     env:
       NUXT_SITE_URL: https://kertaas.com
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22        # samakan dengan node -v di komputer Anda
+          node-version: 22 # samakan dengan node -v di komputer Anda
           cache: npm
       - run: npm ci
       - run: npm run generate
@@ -35,7 +35,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted, kertaas]   # runner di LXC Anda (label dari Langkah 4)
+    runs-on: [self-hosted, kertaas] # runner di LXC Anda (label dari Langkah 4)
     env:
       DIR: /var/www/kertaas
     steps:
@@ -53,4 +53,5 @@ jobs:
           mv -Tf "$DIR/current.tmp" "$DIR/current"
           ls -1dt "$DIR"/releases/* | tail -n +6 | xargs -r rm -rf
       - name: Cek situs
-        run: curl -fsS -H 'Host: kertaas.com' -o /dev/null http://localhost/
+        run: |
+          curl -fsS -H 'Host: kertaas.com' -o /dev/null http://localhost/
