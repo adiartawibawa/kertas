@@ -161,6 +161,107 @@
         "working-hours": "Calculate total working hours across several shifts with breaks.",
         "time-calculator": "Add up several time durations, or add a duration to a specific clock time."
     },
+    "privacyPolicy": {
+        "seoTitle": "{brand} Privacy Policy",
+        "seoDescription": "{brand} privacy policy: how our tools work, what data we collect, and how we use cookies.",
+        "title": "Privacy Policy",
+        "lastUpdated": "Last updated: September 20, 2026",
+        "summaryLabel": "Short summary:",
+        "summary": "Every tool on {brand} processes your files and text directly in your browser. Files you open, upload, or paste into any tool on this site stay on your device. {emphasis}",
+        "summaryEmphasis": "We never receive or store them on our servers.",
+        "howItWorks": {
+            "title": "1. How Our Tools Work",
+            "p1": "{brand} is a set of office tools (documents, PDF, spreadsheets, data, and calculators) that run entirely on the client side. Your device and browser process every file and text using JavaScript that loads into your browser. We run no backend server to process your files, and no tool uploads a file to our servers.",
+            "p2": "With this architecture, we cannot access the contents of any file, text, or data you process in our tools."
+        },
+        "dataCollected": {
+            "title": "2. Data We Collect",
+            "intro": "We do not collect or store:",
+            "items": [
+                "Files, documents, or text you process in any tool",
+                "Names, emails, or other personal identity data (this site has no account or registration system)",
+                "Tool usage history linked to your identity"
+            ],
+            "logs": "Our hosting server records standard technical logs, such as IP address, browser type, and pages visited, as any web server does. We use these logs only for security and technical diagnostics, not to track individuals."
+        },
+        "cookies": {
+            "title": "3. Cookies",
+            "p1": "We use one functional cookie named {cookie} to remember your language preference (Indonesian or English), so you do not have to pick a language on every visit. We do not use this cookie to track you on other sites.",
+            "adsLabel": "About ads:",
+            "adsNone": "shows no ads",
+            "adsText": "{label} This site currently {none}. We plan to integrate Google AdSense in the future. Before that happens, we will update this page to explain that Google and its advertising partners may use cookies to show personalized ads based on your visits to this site and others. You will still be able to manage your personalized ad preferences through {link}."
+        },
+        "thirdParty": {
+            "title": "4. Third-Party Services",
+            "text": "Some tools load technical library code from third-party CDN networks when needed, for example Google Fonts (for typefaces) and cdnjs (for the PDF reader component). These requests only download program code and {emphasis}. Your browser still processes your files on your device.",
+            "emphasis": "do not send the contents of your files or text"
+        },
+        "security": {
+            "title": "5. Security",
+            "text": "Because your files never leave your device, the risk of file contents leaking through our servers is close to zero. We also use an encrypted connection (HTTPS) across the whole site."
+        },
+        "changes": {
+            "title": "6. Changes to This Policy",
+            "text": "We may update this privacy policy from time to time, for example when we add features such as analytics or ads. The \"Last updated\" date at the top of this page shows the latest revision."
+        },
+        "contact": {
+            "title": "7. Contact Us",
+            "text": "Questions about this privacy policy? Contact us at {email}."
+        }
+    },
+    "terms": {
+        "seoTitle": "{brand} Terms and Conditions",
+        "seoDescription": "Terms and conditions for using {brand} tools.",
+        "title": "Terms and Conditions",
+        "lastUpdated": "Last updated: September 20, 2026",
+        "acceptance": {
+            "title": "1. Acceptance of Terms",
+            "text": "By accessing and using {brand} (\"the Site\", \"we\"), you agree to these terms and conditions. If you disagree, do not use the Site."
+        },
+        "service": {
+            "title": "2. Description of Service",
+            "text": "{brand} offers a set of free office tools (documents, PDF, spreadsheets, data, and productivity calculators) that run entirely in your browser. We provide the service \"as is\", at no cost and with no account registration."
+        },
+        "acceptableUse": {
+            "title": "3. Acceptable Use",
+            "intro": "You agree not to:",
+            "items": [
+                "Use the Site for illegal purposes or in violation of applicable law",
+                "Attempt to damage, overload (abuse), or disrupt the operation of the Site",
+                "Reverse-engineer the Site, run large-scale automated scraping, or copy the entire Site to publish as your own",
+                "Use our tools to process content that infringes copyright or another party's legal rights"
+            ]
+        },
+        "disclaimer": {
+            "title": "4. No Warranty (Disclaimer)",
+            "p1": "We provide the tools on this Site without warranty of any kind, express or implied. This exclusion includes, but is not limited to, any warranty of accuracy in conversion or calculation results, fitness for a particular purpose, or freedom from errors (bugs). You are responsible for verifying outputs yourself, such as converted files, calculation results, or processed PDF files, before you use them for anything important.",
+            "p2": "We recommend that you keep a backup copy of your original file before you process it in any tool."
+        },
+        "liability": {
+            "title": "5. Limitation of Liability",
+            "text": "To the extent applicable law permits, {brand} is not liable for any direct, indirect, incidental, or consequential loss that arises from using or being unable to use the Site. This includes, but is not limited to, data loss from a failed file process or results that fall short of your expectations."
+        },
+        "ip": {
+            "title": "6. Intellectual Property",
+            "text": "{brand} owns the design, code, and content of the Site (excluding files you process yourself). Files and data you process with our tools remain your property and your responsibility. We never receive or store copies of them."
+        },
+        "ads": {
+            "title": "7. Third-Party Ads",
+            "text": "In the future, this Site may show ads from third-party networks (such as Google AdSense) to help cover operating costs. The ad providers manage that ad content, and it sits outside our direct control. We are not responsible for the products, services, or claims that ads promote."
+        },
+        "changes": {
+            "title": "8. Changes to the Service and Terms",
+            "text": "We may change, add, or discontinue certain tools, and update these terms at any time. If you keep using the Site after a change, we treat that as your agreement to the updated terms."
+        },
+        "law": {
+            "title": "9. Governing Law",
+            "text": "The laws of the Republic of Indonesia govern these terms and guide their interpretation, without regard to conflict of law rules."
+        },
+        "contact": {
+            "title": "10. Contact Us",
+            "text": "Questions about these terms and conditions? Contact us at {email}."
+        }
+    },
     "toolPages": {
         "json-to-csv": {
             "seoTitle": "JSON to CSV Converter, Free and Upload-Free",

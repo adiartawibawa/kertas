@@ -161,6 +161,107 @@
         "working-hours": "Hitung total jam kerja dari beberapa shift dengan waktu istirahat.",
         "time-calculator": "Jumlahkan beberapa durasi waktu atau tambahkan durasi ke jam tertentu."
     },
+    "privacyPolicy": {
+        "seoTitle": "Kebijakan Privasi {brand}",
+        "seoDescription": "Kebijakan privasi {brand}: cara kerja tool kami, data yang kami kumpulkan, dan penggunaan cookie.",
+        "title": "Kebijakan Privasi",
+        "lastUpdated": "Terakhir diperbarui: 20 September 2026",
+        "summaryLabel": "Ringkasan singkat:",
+        "summary": "Semua tool di {brand} memproses file dan teks Anda langsung di browser. File yang Anda buka, upload, atau tempel ke tool mana pun di situs ini tetap ada di perangkat Anda. {emphasis}",
+        "summaryEmphasis": "Kami tidak pernah menerima atau menyimpannya di server kami.",
+        "howItWorks": {
+            "title": "1. Cara Kerja Tool Kami",
+            "p1": "{brand} adalah kumpulan tool office (dokumen, PDF, spreadsheet, data, dan kalkulator) yang seluruhnya berjalan di sisi klien (client-side). Perangkat dan browser Anda memproses semua file dan teks memakai JavaScript yang dimuat ke browser. Kami tidak menjalankan server backend untuk memproses file Anda, dan tidak ada tool yang mengunggah file ke server kami.",
+            "p2": "Dengan arsitektur ini, kami tidak dapat mengakses isi file, teks, atau data apa pun yang Anda proses di tool kami."
+        },
+        "dataCollected": {
+            "title": "2. Data yang Kami Kumpulkan",
+            "intro": "Kami tidak mengumpulkan atau menyimpan:",
+            "items": [
+                "File, dokumen, atau teks yang Anda proses di tool mana pun",
+                "Nama, email, atau data identitas pribadi lainnya (situs ini tidak memiliki sistem akun atau registrasi)",
+                "Riwayat penggunaan tool yang terhubung ke identitas Anda"
+            ],
+            "logs": "Server hosting kami mencatat log teknis standar, seperti alamat IP, jenis browser, dan halaman yang diakses, sebagaimana lazimnya web server. Kami memakai log ini hanya untuk keamanan dan diagnostik teknis, bukan untuk melacak individu."
+        },
+        "cookies": {
+            "title": "3. Cookie",
+            "p1": "Kami menggunakan satu cookie fungsional bernama {cookie} untuk mengingat preferensi bahasa Anda (Indonesia atau English), sehingga Anda tidak perlu memilih bahasa lagi setiap berkunjung. Kami tidak memakai cookie ini untuk melacak Anda di situs lain.",
+            "adsLabel": "Soal iklan:",
+            "adsNone": "tidak menampilkan iklan",
+            "adsText": "{label} Situs ini saat ini {none}. Kami berencana mengintegrasikan Google AdSense di masa depan. Sebelum itu terjadi, kami akan memperbarui halaman ini untuk menjelaskan bahwa Google dan mitra iklannya dapat memakai cookie guna menampilkan iklan yang dipersonalisasi berdasarkan kunjungan Anda ke situs ini maupun situs lain. Anda tetap bisa mengatur preferensi iklan personalisasi lewat {link}."
+        },
+        "thirdParty": {
+            "title": "4. Layanan Pihak Ketiga",
+            "text": "Beberapa tool memuat kode pustaka (library) teknis dari jaringan CDN pihak ketiga saat dibutuhkan, misalnya Google Fonts (untuk tampilan huruf) dan cdnjs (untuk komponen pembaca PDF). Permintaan ini hanya mengunduh kode program dan {emphasis}. Browser Anda tetap memproses file di perangkat Anda.",
+            "emphasis": "tidak mengirim isi file atau teks Anda"
+        },
+        "security": {
+            "title": "5. Keamanan",
+            "text": "Karena file Anda tidak pernah meninggalkan perangkat Anda, risiko kebocoran isi file lewat server kami praktis tidak ada. Kami juga memakai koneksi terenkripsi (HTTPS) di seluruh situs."
+        },
+        "changes": {
+            "title": "6. Perubahan Kebijakan Ini",
+            "text": "Kami dapat memperbarui kebijakan privasi ini sewaktu-waktu, misalnya saat menambahkan fitur baru seperti analitik atau iklan. Tanggal \"Terakhir diperbarui\" di bagian atas halaman ini menunjukkan revisi terbaru."
+        },
+        "contact": {
+            "title": "7. Hubungi Kami",
+            "text": "Punya pertanyaan tentang kebijakan privasi ini? Hubungi kami di {email}."
+        }
+    },
+    "terms": {
+        "seoTitle": "Syarat & Ketentuan {brand}",
+        "seoDescription": "Syarat dan ketentuan penggunaan tool {brand}.",
+        "title": "Syarat & Ketentuan",
+        "lastUpdated": "Terakhir diperbarui: 20 September 2026",
+        "acceptance": {
+            "title": "1. Penerimaan Ketentuan",
+            "text": "Dengan mengakses dan menggunakan {brand} (\"Situs\", \"kami\"), Anda menyetujui syarat dan ketentuan berikut. Jika Anda tidak setuju, jangan gunakan Situs."
+        },
+        "service": {
+            "title": "2. Deskripsi Layanan",
+            "text": "{brand} menyediakan kumpulan tool office gratis (dokumen, PDF, spreadsheet, data, dan kalkulator produktivitas) yang seluruhnya berjalan di browser Anda. Kami menyediakan layanan ini \"sebagaimana adanya\" (as-is), tanpa biaya dan tanpa pendaftaran akun."
+        },
+        "acceptableUse": {
+            "title": "3. Penggunaan yang Diizinkan",
+            "intro": "Anda setuju untuk tidak:",
+            "items": [
+                "Menggunakan Situs untuk tujuan ilegal atau yang melanggar hukum yang berlaku",
+                "Mencoba merusak, membebani (abuse), atau mengganggu operasional Situs",
+                "Melakukan reverse-engineering, scraping otomatis skala besar, atau menyalin seluruh Situs untuk dipublikasikan sebagai milik sendiri",
+                "Memakai tool kami untuk memproses konten yang melanggar hak cipta atau hukum pihak lain"
+            ]
+        },
+        "disclaimer": {
+            "title": "4. Tidak Ada Jaminan (Disclaimer)",
+            "p1": "Kami menyediakan tool di Situs ini tanpa jaminan dalam bentuk apa pun, baik tersurat maupun tersirat. Pengecualian ini mencakup, tetapi tidak terbatas pada, jaminan akurasi hasil konversi atau perhitungan, kesesuaian untuk tujuan tertentu, dan bebas dari kesalahan (bug). Anda bertanggung jawab memverifikasi sendiri hasil keluaran, misalnya hasil konversi file, hasil kalkulasi, atau file PDF hasil olahan, sebelum memakainya untuk keperluan penting.",
+            "p2": "Kami menyarankan Anda menyimpan salinan cadangan (backup) file asli sebelum memprosesnya di tool mana pun."
+        },
+        "liability": {
+            "title": "5. Batasan Tanggung Jawab",
+            "text": "Sejauh diizinkan oleh hukum yang berlaku, {brand} tidak bertanggung jawab atas kerugian langsung, tidak langsung, insidental, atau konsekuensial apa pun yang timbul dari penggunaan atau ketidakmampuan menggunakan Situs. Ini mencakup, tetapi tidak terbatas pada, kehilangan data akibat proses file yang gagal atau hasil yang tidak sesuai harapan."
+        },
+        "ip": {
+            "title": "6. Hak Kekayaan Intelektual",
+            "text": "{brand} memiliki desain, kode, dan konten Situs (di luar file yang Anda proses sendiri). File dan data yang Anda proses dengan tool kami tetap menjadi milik dan tanggung jawab Anda. Kami tidak pernah menerima atau menyimpan salinannya."
+        },
+        "ads": {
+            "title": "7. Iklan Pihak Ketiga",
+            "text": "Di masa depan, Situs ini dapat menampilkan iklan dari jaringan pihak ketiga (seperti Google AdSense) untuk membantu biaya operasional. Penyedia iklan mengelola konten iklan tersebut, dan konten itu berada di luar kendali langsung kami. Kami tidak bertanggung jawab atas produk, layanan, atau klaim yang dipromosikan dalam iklan."
+        },
+        "changes": {
+            "title": "8. Perubahan Layanan & Ketentuan",
+            "text": "Kami dapat mengubah, menambah, atau menghentikan tool tertentu, dan memperbarui ketentuan ini kapan saja. Jika Anda terus memakai Situs setelah perubahan, kami menganggap Anda menyetujui ketentuan yang diperbarui."
+        },
+        "law": {
+            "title": "9. Hukum yang Berlaku",
+            "text": "Hukum Republik Indonesia mengatur dan menjadi dasar penafsiran ketentuan ini, tanpa memperhatikan pertentangan aturan hukum (conflict of law)."
+        },
+        "contact": {
+            "title": "10. Hubungi Kami",
+            "text": "Punya pertanyaan tentang syarat & ketentuan ini? Hubungi kami di {email}."
+        }
+    },
     "toolPages": {
         "json-to-csv": {
             "seoTitle": "JSON to CSV Converter Online, Gratis dan Tanpa Upload",
