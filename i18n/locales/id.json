@@ -102,7 +102,9 @@
         "privacyNoteFile": "File Anda tidak pernah meninggalkan browser ini.",
         "dropzoneLabel": "Tarik & lepas file PDF di sini",
         "downloadResult": "Download hasil",
-        "processing": "Memproses…"
+        "processing": "Memproses…",
+        "startDateLabel": "Tanggal awal",
+        "endDateLabel": "Tanggal akhir"
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
@@ -1037,6 +1039,328 @@
                 {
                     "question": "Apakah bisa mengekstrak PDF yang dilindungi password?",
                     "answer": "Belum didukung. Buka dulu kunci PDF berpassword sebelum diproses di sini."
+                }
+            ]
+        },
+        "percentage": {
+            "seoTitle": "Percentage Calculator Online, Hitung Persentase Gratis",
+            "seoDescription": "Hitung persentase dari suatu angka, persentase perubahan, atau tambah/kurang persentase secara instan di browser Anda.",
+            "schemaName": "Percentage Calculator",
+            "schemaDescription": "Kalkulator persentase dengan berbagai mode: proporsi, rasio, perubahan, dan tambah/kurang.",
+            "title": "Percentage Calculator: hitung persentase dalam satu klik",
+            "lede": "Proporsi, rasio, kenaikan atau penurunan, sampai diskon. Pilih mode yang sesuai kebutuhan Anda.",
+            "modes": {
+                "of": "X% dari Y",
+                "isWhatPercent": "X adalah berapa % dari Y",
+                "change": "Persentase perubahan",
+                "addSubtract": "Tambah/Kurang %"
+            },
+            "labelA": {
+                "of": "Persentase (%)",
+                "isWhatPercent": "Angka",
+                "change": "Nilai awal",
+                "addSubtract": "Persentase (%)"
+            },
+            "labelB": {
+                "of": "Dari angka",
+                "isWhatPercent": "Dari total",
+                "change": "Nilai akhir",
+                "addSubtract": "Dari angka"
+            },
+            "resultLabel": {
+                "of": "Hasil",
+                "isWhatPercent": "Persentase",
+                "change": "Perubahan"
+            },
+            "resultLabelAdd": "Hasil setelah ditambah",
+            "resultLabelSubtract": "Hasil setelah dikurangi",
+            "operationAdd": "Tambah",
+            "operationSubtract": "Kurang",
+            "directionUp": "naik",
+            "directionDown": "turun",
+            "featuresTitle": "Kenapa menggunakan Percentage Calculator ini?",
+            "features": [
+                {
+                    "title": "4 mode sekaligus",
+                    "description": "Dari perhitungan sederhana sampai persentase perubahan dan diskon."
+                },
+                {
+                    "title": "Hasil instan",
+                    "description": "Angka berubah saat Anda mengetik. Tidak ada tombol hitung."
+                },
+                {
+                    "title": "Gratis tanpa akun",
+                    "description": "Langsung pakai tanpa daftar atau install apapun."
+                }
+            ],
+            "howToTitle": "Cara menghitung persentase",
+            "steps": [
+                "Pilih mode perhitungan sesuai kebutuhan Anda.",
+                "Isi dua kolom angka yang diminta.",
+                "Lihat hasilnya muncul otomatis di bagian bawah."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan kalkulator ini?",
+            "useCase": [
+                "Diskon belanja, kenaikan gaji, atau margin keuntungan bisnis perlu dihitung cepat tanpa membuka aplikasi spreadsheet.",
+                "Pelajar dan mahasiswa memakainya untuk menghitung nilai ujian, bobot tugas, atau statistik sederhana dalam laporan."
+            ],
+            "faq": [
+                {
+                    "question": "Bagaimana rumus X% dari Y?",
+                    "answer": "Rumusnya adalah (X ÷ 100) × Y. Misalnya 20% dari 150.000 sama dengan (20 ÷ 100) × 150.000, hasilnya 30.000."
+                },
+                {
+                    "question": "Bagaimana menghitung persentase kenaikan atau penurunan?",
+                    "answer": "Gunakan mode Persentase perubahan. Masukkan nilai awal dan nilai akhir. Hasil positif berarti naik, hasil negatif berarti turun."
+                },
+                {
+                    "question": "Bisakah menghitung diskon atau kenaikan harga sekaligus?",
+                    "answer": "Bisa, gunakan mode Tambah/Kurang %. Pilih Kurang untuk menghitung harga setelah diskon, atau Tambah untuk menghitung harga setelah kenaikan."
+                },
+                {
+                    "question": "Apakah data yang saya masukkan disimpan?",
+                    "answer": "Tidak. Semua perhitungan berjalan di browser Anda, tidak ada data yang dikirim ke server."
+                }
+            ]
+        },
+        "business-days": {
+            "seoTitle": "Business Days Calculator Online, Hitung Hari Kerja Gratis",
+            "seoDescription": "Hitung jumlah hari kerja antara dua tanggal, atau tambahkan hari kerja ke tanggal tertentu. Tanpa hari libur nasional, hanya akhir pekan.",
+            "schemaName": "Business Days Calculator",
+            "schemaDescription": "Menghitung jumlah hari kerja antara dua tanggal atau menambahkan hari kerja ke suatu tanggal.",
+            "title": "Business Days Calculator: hitung hari kerja tanpa akhir pekan",
+            "lede": "Hitung jumlah hari kerja antara dua tanggal, atau tambahkan hari kerja ke tanggal tertentu.",
+            "modeCountLabel": "Hitung hari kerja",
+            "modeAddLabel": "Tambah hari kerja",
+            "daysToAddLabel": "Jumlah hari kerja (+/-)",
+            "businessDaysCountLabel": "Jumlah hari kerja",
+            "resultDateLabel": "Tanggal hasil",
+            "featuresTitle": "Kenapa menggunakan Business Days Calculator ini?",
+            "features": [
+                {
+                    "title": "Dua mode praktis",
+                    "description": "Hitung selisih hari kerja atau proyeksikan tanggal deadline."
+                },
+                {
+                    "title": "Akhir pekan otomatis dilewati",
+                    "description": "Sabtu dan Minggu tidak ikut dihitung sebagai hari kerja."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Tanggal yang Anda masukkan tidak pernah dikirim ke server."
+                }
+            ],
+            "howToTitle": "Cara menghitung hari kerja",
+            "steps": [
+                "Pilih mode Hitung hari kerja atau Tambah hari kerja.",
+                "Isi tanggal yang diminta.",
+                "Lihat hasilnya muncul otomatis di bagian bawah."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan kalkulator ini?",
+            "useCase": [
+                "Sebuah deadline proyek perlu diproyeksikan dari hari ini, misalnya 10 hari kerja dari sekarang jatuh tanggal berapa.",
+                "SLA layanan yang dihitung dalam hari kerja, bukan hari kalender, perlu diverifikasi cepat.",
+                "Tim HR menghitung masa kontrak, notice period, atau estimasi pengiriman barang yang dijanjikan dalam hari kerja."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah hari libur nasional diperhitungkan?",
+                    "answer": "Tidak. Tool ini hanya mengecualikan akhir pekan (Sabtu dan Minggu). Hari libur nasional atau cuti bersama perlu dihitung manual di luar hasil ini."
+                },
+                {
+                    "question": "Apakah tanggal awal dan akhir dihitung sebagai hari kerja?",
+                    "answer": "Ya, mode Hitung hari kerja bersifat inklusif. Kalau tanggal awal dan akhir jatuh di hari kerja, keduanya ikut dihitung."
+                },
+                {
+                    "question": "Bisakah menambahkan hari kerja mundur ke masa lalu?",
+                    "answer": "Bisa. Masukkan angka negatif pada mode Tambah hari kerja untuk mundur ke tanggal sebelumnya."
+                },
+                {
+                    "question": "Apakah data tanggal saya disimpan?",
+                    "answer": "Tidak. Semua perhitungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "date-difference": {
+            "seoTitle": "Date Difference Calculator Online, Hitung Selisih Tanggal Gratis",
+            "seoDescription": "Hitung selisih dua tanggal dalam tahun, bulan, hari, dan total hari secara instan di browser Anda.",
+            "schemaName": "Date Difference Calculator",
+            "schemaDescription": "Menghitung selisih dua tanggal dalam breakdown tahun, bulan, hari, dan total hari.",
+            "title": "Date Difference: hitung selisih dua tanggal secara instan",
+            "lede": "Isi dua tanggal, dapatkan selisihnya dalam tahun, bulan, hari, dan total hari.",
+            "emptyStateLabel": "Isi kedua tanggal untuk melihat hasilnya.",
+            "yearsLabel": "Tahun",
+            "monthsLabel": "Bulan",
+            "daysLabel": "Hari",
+            "totalWeeksLabel": "Total minggu",
+            "totalDaysLabel": "Total hari",
+            "featuresTitle": "Kenapa menggunakan Date Difference ini?",
+            "features": [
+                {
+                    "title": "Breakdown lengkap",
+                    "description": "Tahun, bulan, hari, total minggu, dan total hari sekaligus dalam satu tampilan."
+                },
+                {
+                    "title": "Akurat per kalender",
+                    "description": "Memperhitungkan jumlah hari aktual tiap bulan, bukan pembulatan kasar."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Semua perhitungan berjalan di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara menghitung selisih tanggal",
+            "steps": [
+                "Isi tanggal awal di kolom pertama.",
+                "Isi tanggal akhir di kolom kedua.",
+                "Lihat breakdown hasil muncul otomatis di bagian bawah."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan kalkulator ini?",
+            "useCase": [
+                "Usia tepat sampai hari, atau lama masa kerja seorang karyawan, perlu dihitung dengan presisi.",
+                "Durasi proyek yang sudah berjalan, masa berlaku kontrak, atau jangka waktu garansi produk dari tanggal pembelian perlu diverifikasi cepat."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah urutan tanggal awal dan akhir harus benar?",
+                    "answer": "Tidak masalah. Kalau tanggal akhir dimasukkan lebih awal dari tanggal awal, tool ini otomatis membalik urutannya."
+                },
+                {
+                    "question": "Kenapa breakdown tahun/bulan/hari bisa berbeda dari total hari dibagi 30?",
+                    "answer": "Breakdown memperhitungkan jumlah hari aktual di tiap bulan, 28 sampai 31 hari, bukan asumsi rata-rata 30 hari per bulan."
+                },
+                {
+                    "question": "Apakah tanggal awal dan akhir ikut dihitung?",
+                    "answer": "Perhitungan berbasis selisih waktu murni antara dua tanggal, sesuai standar perhitungan kalender."
+                },
+                {
+                    "question": "Apakah tanggal saya disimpan di server?",
+                    "answer": "Tidak. Semua perhitungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "working-hours": {
+            "seoTitle": "Working Hours Calculator Online, Hitung Jam Kerja Gratis",
+            "seoDescription": "Hitung total jam kerja dari beberapa shift dengan waktu istirahat, termasuk shift yang melewati tengah malam.",
+            "schemaName": "Working Hours Calculator",
+            "schemaDescription": "Menghitung total jam kerja dari beberapa shift dengan waktu istirahat.",
+            "title": "Working Hours Calculator: hitung total jam kerja",
+            "lede": "Isi jam mulai, jam selesai, dan istirahat. Total jam kerja terhitung otomatis, bisa untuk beberapa shift.",
+            "startColumnLabel": "Mulai",
+            "endColumnLabel": "Selesai",
+            "breakColumnLabel": "Istirahat (menit)",
+            "addShiftButton": "+ Tambah shift",
+            "totalLabel": "Total jam kerja",
+            "shiftDurationFormat": "{h}j {m}m",
+            "totalFormat": "{h} jam {m} menit",
+            "featuresTitle": "Kenapa menggunakan Working Hours Calculator ini?",
+            "features": [
+                {
+                    "title": "Multi-shift",
+                    "description": "Tambahkan beberapa baris untuk merekap jam kerja beberapa hari sekaligus."
+                },
+                {
+                    "title": "Shift lewat tengah malam didukung",
+                    "description": "Jam kerja seperti 22:00 sampai 06:00 dihitung dengan benar."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Semua data jam kerja diproses di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara menghitung jam kerja",
+            "steps": [
+                "Isi jam mulai dan jam selesai kerja.",
+                "Isi durasi istirahat dalam menit (opsional).",
+                "Klik Tambah shift kalau perlu menambahkan hari lain.",
+                "Lihat total jam kerja muncul otomatis di bagian bawah."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan kalkulator ini?",
+            "useCase": [
+                "Seorang freelancer perlu merekap total jam kerja mingguan untuk invoice klien.",
+                "Karyawan shift memverifikasi slip gaji berdasarkan jam kerja aktual, atau tim HR menghitung total jam lembur dari beberapa hari kerja sekaligus."
+            ],
+            "faq": [
+                {
+                    "question": "Bagaimana kalau jam kerja melewati tengah malam?",
+                    "answer": "Tool ini otomatis mendeteksi shift yang melewati tengah malam, misalnya 22:00 sampai 06:00, dan menghitungnya dengan benar dikurangi istirahat."
+                },
+                {
+                    "question": "Bisakah menghitung beberapa hari sekaligus?",
+                    "answer": "Bisa. Klik Tambah shift untuk menambahkan baris baru, cocok untuk merekap total jam kerja mingguan dari beberapa hari berbeda."
+                },
+                {
+                    "question": "Apakah istirahat wajib diisi?",
+                    "answer": "Tidak wajib. Boleh dikosongkan atau diisi 0 kalau hari itu tidak ada waktu istirahat."
+                },
+                {
+                    "question": "Apakah data jam kerja saya disimpan?",
+                    "answer": "Tidak. Semua perhitungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "time-calculator": {
+            "seoTitle": "Time Calculator Online, Jumlahkan dan Tambah Durasi Waktu Gratis",
+            "seoDescription": "Jumlahkan beberapa durasi waktu atau tambahkan durasi ke jam tertentu secara instan di browser Anda.",
+            "schemaName": "Time Calculator",
+            "schemaDescription": "Menjumlahkan durasi waktu atau menambahkan durasi ke jam tertentu.",
+            "title": "Time Calculator: jumlahkan dan tambahkan durasi waktu",
+            "lede": "Jumlahkan beberapa durasi, atau tambahkan durasi ke jam tertentu untuk tahu jam hasilnya.",
+            "modeSumLabel": "Jumlahkan durasi",
+            "modeAddToClockLabel": "Tambah ke jam",
+            "hoursUnitLabel": "jam",
+            "minutesUnitLabel": "menit",
+            "addDurationButton": "+ Tambah durasi",
+            "totalDurationLabel": "Total durasi",
+            "startTimeLabel": "Jam awal",
+            "addHoursLabel": "Tambah jam",
+            "addMinutesLabel": "Tambah menit",
+            "resultTimeLabel": "Jam hasil",
+            "daysOverLabel": "(+{count} hari)",
+            "sumFormat": "{h} jam {m} menit",
+            "featuresTitle": "Kenapa menggunakan Time Calculator ini?",
+            "features": [
+                {
+                    "title": "Dua mode praktis",
+                    "description": "Jumlahkan durasi atau proyeksikan jam selesai suatu aktivitas."
+                },
+                {
+                    "title": "Deteksi lewat tengah malam",
+                    "description": "Hasil otomatis menunjukkan kalau jatuh di hari berikutnya."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Semua perhitungan berjalan di browser Anda."
+                }
+            ],
+            "howToTitle": "Cara menghitung durasi waktu",
+            "steps": [
+                "Pilih mode Jumlahkan durasi atau Tambah ke jam.",
+                "Isi kolom jam/menit yang diminta.",
+                "Lihat hasilnya muncul otomatis di bagian bawah."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan kalkulator ini?",
+            "useCase": [
+                "Total durasi beberapa video atau rekaman yang akan digabung perlu dihitung dulu.",
+                "Jam selesai sebuah perjalanan atau penerbangan, dari jam berangkat ditambah durasi tempuh, perlu diperkirakan.",
+                "Jam bangun kalau harus tidur sekian jam dari sekarang, atau jam selesai memasak dari waktu mulai ditambah estimasi durasi resep, bisa dihitung cepat di sini."
+            ],
+            "faq": [
+                {
+                    "question": "Apa bedanya dua mode di tool ini?",
+                    "answer": "Mode Jumlahkan durasi menjumlahkan beberapa durasi jadi satu total, misalnya 1 jam 30 menit ditambah 2 jam 45 menit. Mode Tambah ke jam menambahkan satu durasi ke jam tertentu untuk mendapat jam hasil, misalnya jam 09:00 ditambah 3 jam 15 menit sama dengan 12:15."
+                },
+                {
+                    "question": "Apa artinya +1 hari pada hasil mode Tambah ke jam?",
+                    "answer": "Itu berarti hasil perhitungan melewati tengah malam dan jatuh di hari berikutnya."
+                },
+                {
+                    "question": "Bisakah menjumlahkan lebih dari 2 durasi?",
+                    "answer": "Bisa. Klik + Tambah durasi untuk menambahkan baris input durasi sebanyak yang dibutuhkan."
+                },
+                {
+                    "question": "Apakah data waktu saya disimpan?",
+                    "answer": "Tidak. Semua perhitungan berjalan di browser Anda."
                 }
             ]
         }

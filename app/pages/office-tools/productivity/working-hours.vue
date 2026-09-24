@@ -1,44 +1,75 @@
 <script setup lang="ts">
-const { shifts, addShift, removeShift, shiftMinutes, totalFormatted } = useWorkingHours()
+const { t, tm, rt } = useI18n()
+const { url: siteUrl } = useSiteConfig()
+
+const slug = 'working-hours'
+const categorySlug = 'productivity'
+
+function tp(key: string, params?: Record<string, unknown>) {
+  return t(`toolPages.${slug}.${key}`, params ?? {})
+}
+function categoryName() {
+  return t(`categories.${categorySlug}.name`)
+}
+function toolName() {
+  return t(`tools.${slug}`)
+}
+
+const features = computed(() => {
+  const items = tm(`toolPages.${slug}.features`) as Array<{ title: string; description: string }>
+  return items.map((item) => ({
+    title: rt(item.title as any),
+    description: rt(item.description as any),
+  }))
+})
+
+const steps = computed(() => {
+  const items = tm(`toolPages.${slug}.steps`) as unknown[]
+  return items.map((item) => rt(item as any))
+})
+
+const useCase = computed(() => {
+  const items = tm(`toolPages.${slug}.useCase`) as unknown[]
+
+  return items.map((item) => rt(item as any))
+})
+
+const faqItems = computed(() => {
+  const items = tm(`toolPages.${slug}.faq`) as Array<{
+    question: unknown
+    answer: unknown
+  }>
+
+  return items.map((item) => ({
+    question: rt(item.question as any),
+    answer: rt(item.answer as any),
+  }))
+})
+
+const relatedTools = [
+  { href: '/office-tools/productivity/percentage' },
+  { href: '/office-tools/productivity/business-days' },
+  { href: '/office-tools/productivity/date-difference' },
+  { href: '/office-tools/productivity/time-calculator' },
+]
+
+const { shifts, addShift, removeShift, shiftMinutes, totalMinutes } = useWorkingHours()
 
 function formatShiftMinutes(minutes: number): string {
   const h = Math.floor(minutes / 60)
   const m = minutes % 60
-  return `${h}j ${m}m`
+  return tp('shiftDurationFormat', { h, m })
 }
 
-const faqItems = [
-  {
-    question: 'Bagaimana kalau jam kerja melewati tengah malam?',
-    answer:
-      'Tool ini otomatis mendeteksi shift yang melewati tengah malam (misal 22:00 - 06:00) dan menghitungnya sebagai satu shift penuh sepanjang 8 jam dikurangi istirahat.',
-  },
-  {
-    question: 'Bisakah menghitung beberapa hari sekaligus?',
-    answer:
-      'Bisa. Klik "Tambah shift" untuk menambahkan baris baru — cocok untuk merekap total jam kerja mingguan dari beberapa hari kerja berbeda.',
-  },
-  {
-    question: 'Apakah istirahat wajib diisi?',
-    answer: 'Tidak wajib, boleh dikosongkan atau diisi 0 jika hari tersebut tidak ada waktu istirahat.',
-  },
-  {
-    question: 'Apakah data jam kerja saya disimpan?',
-    answer: 'Tidak. Semua perhitungan berjalan langsung di browser Anda.',
-  },
-]
-
-const relatedTools = [
-  { name: 'Percentage', href: '/office-tools/productivity/percentage' },
-  { name: 'Business Days', href: '/office-tools/productivity/business-days' },
-  { name: 'Date Difference', href: '/office-tools/productivity/date-difference' },
-  { name: 'Time Calculator', href: '/office-tools/productivity/time-calculator' },
-]
+const totalFormatted = computed(() => {
+  const h = Math.floor(totalMinutes.value / 60)
+  const m = totalMinutes.value % 60
+  return tp('totalFormat', { h, m })
+})
 
 useSeoMeta({
-  title: 'Working Hours Calculator — Hitung Jam Kerja Gratis',
-  description:
-    'Hitung total jam kerja dari beberapa shift dengan waktu istirahat, termasuk shift yang melewati tengah malam.',
+  title: tp('seoTitle'),
+  description: tp('seoDescription'),
 })
 
 useHead({
@@ -48,11 +79,11 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'SoftwareApplication',
-        name: 'Working Hours Calculator',
+        name: tp('schemaName'),
         applicationCategory: 'UtilitiesApplication',
         operatingSystem: 'Any (Web Browser)',
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        description: 'Menghitung total jam kerja dari beberapa shift dengan waktu istirahat.',
+        description: tp('schemaDescription'),
       }),
     },
     {
@@ -60,11 +91,24 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
-        mainEntity: faqItems.map((item) => ({
+        mainEntity: faqItems.value.map((item) => ({
           '@type': 'Question',
           name: item.question,
           acceptedAnswer: { '@type': 'Answer', text: item.answer },
         })),
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Office Tools', item: `${siteUrl}/office-tools` },
+          { '@type': 'ListItem', position: 3, name: categoryName(), item: `${siteUrl}/office-tools/productivity` },
+          { '@type': 'ListItem', position: 4, name: toolName(), item: `${siteUrl}/office-tools/productivity/${slug}` },
+        ],
       }),
     },
   ],
@@ -76,23 +120,20 @@ useHead({
     <p class="pt-7 text-sm text-ink-soft">
       <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
       <NuxtLinkLocale to="/office-tools" class="hover:text-accent-dark">Office Tools</NuxtLinkLocale> /
-      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">Productivity</NuxtLinkLocale> /
-      Working Hours
+      <NuxtLinkLocale to="/office-tools/productivity" class="hover:text-accent-dark">{{ categoryName() }}
+      </NuxtLinkLocale> /
+      {{ toolName() }}
     </p>
 
-    <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-      Working Hours Calculator — hitung total jam kerja
-    </h1>
-    <p class="mt-2 max-w-[52ch] text-base text-ink-soft">
-      Isi jam mulai, jam selesai, dan istirahat — total jam kerja dihitung otomatis, bisa untuk beberapa shift.
-    </p>
+    <h1 class="mt-3 max-w-[24ch] text-3xl font-semibold leading-tight text-ink sm:text-4xl">{{ tp('title') }}</h1>
+    <p class="mt-2 max-w-[52ch] text-base text-ink-soft">{{ tp('lede') }}</p>
 
     <div class="mt-7 overflow-hidden rounded-md border border-slate-200 bg-white">
       <div
         class="grid grid-cols-[1fr_1fr_1fr_auto] gap-3 border-b border-slate-200 bg-slate-50 px-4 py-2.5 text-xs font-medium uppercase tracking-wide text-ink-soft">
-        <span>Mulai</span>
-        <span>Selesai</span>
-        <span>Istirahat (menit)</span>
+        <span>{{ tp('startColumnLabel') }}</span>
+        <span>{{ tp('endColumnLabel') }}</span>
+        <span>{{ tp('breakColumnLabel') }}</span>
         <span />
       </div>
 
@@ -105,7 +146,7 @@ useHead({
         <input v-model.number="shift.breakMinutes" type="number" min="0"
           class="w-full rounded-md border border-slate-300 px-2.5 py-2 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent">
         <div class="flex items-center justify-end gap-2">
-          <span class="font-mono text-xs text-ink-soft">{{ formatShiftMinutes(shiftMinutes[i]) }}</span>
+          <span class="font-mono text-xs text-ink-soft">{{ formatShiftMinutes(shiftMinutes[i] ?? 0) }}</span>
           <button v-if="shifts.length > 1" class="text-ink-soft hover:text-red-600" aria-label="Hapus shift"
             @click="removeShift(shift.id)">
             ✕
@@ -118,69 +159,53 @@ useHead({
       <button
         class="rounded-md border border-slate-300 bg-white px-4 py-2.5 text-sm font-medium text-ink hover:bg-slate-50"
         @click="addShift">
-        + Tambah shift
+        {{ tp('addShiftButton') }}
       </button>
       <div class="text-right">
-        <p class="text-xs font-medium uppercase tracking-wide text-ink-soft">Total jam kerja</p>
+        <p class="text-xs font-medium uppercase tracking-wide text-ink-soft">{{ tp('totalLabel') }}</p>
         <p class="font-mono text-2xl font-medium text-accent-dark">{{ totalFormatted }}</p>
       </div>
     </div>
 
     <p class="mt-3.5 text-sm text-ink-soft">
       <span class="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-accent align-middle" />
-      Data Anda tidak pernah meninggalkan browser ini.
+      {{ t('common.privacyNoteData') }}
     </p>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Kenapa menggunakan Working Hours Calculator ini?</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('featuresTitle') }}</h2>
       <ul class="mt-4 grid gap-3.5">
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Multi-shift.</strong>
-          Tambahkan beberapa baris untuk merekap jam kerja beberapa hari sekaligus.
-        </li>
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Shift lewat tengah malam didukung.</strong>
-          Jam kerja seperti 22:00 - 06:00 dihitung dengan benar.
-        </li>
-        <li class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
-          <strong class="font-semibold text-ink">Privasi terjaga.</strong>
-          Semua data jam kerja diproses di browser Anda.
+        <li v-for="feature in features" :key="feature.title"
+          class="border-l-2 border-accent pl-4 text-sm text-ink-soft">
+          <strong class="font-semibold text-ink">{{ feature.title }}.</strong>
+          {{ feature.description }}
         </li>
       </ul>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Cara menghitung jam kerja</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('howToTitle') }}</h2>
       <ol class="mt-4 grid list-decimal gap-2.5 pl-5 marker:font-mono marker:text-accent-dark">
-        <li class="text-sm text-ink-soft">Isi jam mulai dan jam selesai kerja.</li>
-        <li class="text-sm text-ink-soft">Isi durasi istirahat dalam menit (opsional).</li>
-        <li class="text-sm text-ink-soft">Klik "Tambah shift" jika perlu menambahkan hari lain.</li>
-        <li class="text-sm text-ink-soft">Total jam kerja muncul otomatis di bagian bawah.</li>
+        <li v-for="step in steps" :key="step" class="text-sm text-ink-soft">{{ step }}</li>
       </ol>
     </section>
 
     <section class="mt-14">
-      <h2 class="text-xl font-semibold text-ink">Kapan Anda membutuhkan kalkulator ini?</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ tp('useCaseTitle') }}</h2>
       <div class="mt-4 grid gap-3.5">
-        <p class="max-w-[62ch] text-sm text-ink-soft">
-          Berguna untuk freelancer atau pekerja lepas yang perlu merekap total jam kerja mingguan untuk invoice
-          klien, atau karyawan shift yang ingin memverifikasi slip gaji berdasarkan jam kerja aktual.
-        </p>
-        <p class="max-w-[62ch] text-sm text-ink-soft">
-          Tim HR juga bisa memakainya untuk menghitung total jam lembur karyawan dari beberapa hari kerja sekaligus.
-        </p>
+        <p v-for="paragraph in useCase" :key="paragraph" class="max-w-[62ch] text-sm text-ink-soft">{{ paragraph }}</p>
       </div>
     </section>
 
     <section class="mt-14 pb-4">
-      <h2 class="text-xl font-semibold text-ink">Pertanyaan umum</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ t('common.faqTitle') }}</h2>
       <div class="mt-2">
         <FaqAccordion :items="faqItems" />
       </div>
     </section>
 
     <section class="mt-14 pb-16">
-      <h2 class="text-xl font-semibold text-ink">Tool lain yang mungkin Anda butuhkan</h2>
+      <h2 class="text-xl font-semibold text-ink">{{ t('common.relatedTitle') }}</h2>
       <div class="mt-4">
         <RelatedTools :tools="relatedTools" />
       </div>

@@ -102,7 +102,9 @@
         "privacyNoteFile": "Your file never leaves this browser.",
         "dropzoneLabel": "Drag and drop a PDF file here",
         "downloadResult": "Download result",
-        "processing": "Processing…"
+        "processing": "Processing…",
+        "startDateLabel": "Start date",
+        "endDateLabel": "End date"
     },
     "error": {
         "notFoundTitle": "Page not found",
@@ -1037,6 +1039,328 @@
                 {
                     "question": "Can a password-protected PDF be extracted?",
                     "answer": "Not yet. Remove the password from a protected PDF before processing it here."
+                }
+            ]
+        },
+        "percentage": {
+            "seoTitle": "Percentage Calculator Online, Free",
+            "seoDescription": "Find a percentage of a number, a percentage change, or add or subtract a percentage, instantly in your browser.",
+            "schemaName": "Percentage Calculator",
+            "schemaDescription": "A percentage calculator with several modes: proportion, ratio, change, and add/subtract.",
+            "title": "Percentage Calculator: work out a percentage in one click",
+            "lede": "Proportion, ratio, increase or decrease, even a discount. Pick the mode that fits.",
+            "modes": {
+                "of": "X% of Y",
+                "isWhatPercent": "X is what % of Y",
+                "change": "Percentage change",
+                "addSubtract": "Add/Subtract %"
+            },
+            "labelA": {
+                "of": "Percentage (%)",
+                "isWhatPercent": "Number",
+                "change": "Starting value",
+                "addSubtract": "Percentage (%)"
+            },
+            "labelB": {
+                "of": "Of number",
+                "isWhatPercent": "Of total",
+                "change": "Ending value",
+                "addSubtract": "Of number"
+            },
+            "resultLabel": {
+                "of": "Result",
+                "isWhatPercent": "Percentage",
+                "change": "Change"
+            },
+            "resultLabelAdd": "Result after adding",
+            "resultLabelSubtract": "Result after subtracting",
+            "operationAdd": "Add",
+            "operationSubtract": "Subtract",
+            "directionUp": "up",
+            "directionDown": "down",
+            "featuresTitle": "Why use this Percentage Calculator?",
+            "features": [
+                {
+                    "title": "4 modes in one",
+                    "description": "From a basic calculation to percentage change and discounts."
+                },
+                {
+                    "title": "Instant results",
+                    "description": "Numbers update as you type. There's no calculate button."
+                },
+                {
+                    "title": "Free, no account",
+                    "description": "Use it right away, no sign-up or install."
+                }
+            ],
+            "howToTitle": "How to calculate a percentage",
+            "steps": [
+                "Pick the calculation mode you need.",
+                "Fill in the two number fields.",
+                "Watch the result appear below."
+            ],
+            "useCaseTitle": "When you need this calculator",
+            "useCase": [
+                "A shopping discount, a raise, or a business margin needs a quick calculation without opening a spreadsheet.",
+                "Students use it to work out exam scores, assignment weights, or simple statistics for a report."
+            ],
+            "faq": [
+                {
+                    "question": "What's the formula for X% of Y?",
+                    "answer": "The formula is (X ÷ 100) × Y. For example, 20% of 150,000 equals (20 ÷ 100) × 150,000, which comes to 30,000."
+                },
+                {
+                    "question": "How do I calculate a percentage increase or decrease?",
+                    "answer": "Use the Percentage change mode. Enter a starting value and an ending value. A positive result means an increase, a negative result means a decrease."
+                },
+                {
+                    "question": "Can this handle a discount or a price increase?",
+                    "answer": "Yes, use the Add/Subtract % mode. Pick Subtract to calculate a price after a discount, or Add for a price after an increase."
+                },
+                {
+                    "question": "Is the data I enter stored anywhere?",
+                    "answer": "No. Every calculation runs in your browser, and nothing gets sent to a server."
+                }
+            ]
+        },
+        "business-days": {
+            "seoTitle": "Business Days Calculator Online, Free",
+            "seoDescription": "Count business days between two dates, or add business days to a date. No public holidays, weekends only.",
+            "schemaName": "Business Days Calculator",
+            "schemaDescription": "Counts business days between two dates or adds business days to a date.",
+            "title": "Business Days Calculator: count business days, weekends excluded",
+            "lede": "Count business days between two dates, or add business days to a specific date.",
+            "modeCountLabel": "Count business days",
+            "modeAddLabel": "Add business days",
+            "daysToAddLabel": "Business days (+/-)",
+            "businessDaysCountLabel": "Business days",
+            "resultDateLabel": "Resulting date",
+            "featuresTitle": "Why use this Business Days Calculator?",
+            "features": [
+                {
+                    "title": "Two practical modes",
+                    "description": "Count the business-day gap, or project a deadline date."
+                },
+                {
+                    "title": "Weekends skip automatically",
+                    "description": "Saturday and Sunday never count as business days."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "The dates you enter never get sent to a server."
+                }
+            ],
+            "howToTitle": "How to count business days",
+            "steps": [
+                "Pick Count business days or Add business days.",
+                "Fill in the requested dates.",
+                "Watch the result appear below."
+            ],
+            "useCaseTitle": "When you need this calculator",
+            "useCase": [
+                "A project deadline needs projecting from today, like figuring out what date falls 10 business days from now.",
+                "A service SLA measured in business days, not calendar days, needs a quick check.",
+                "HR teams calculate contract length, notice periods, or a delivery estimate promised in business days."
+            ],
+            "faq": [
+                {
+                    "question": "Are public holidays factored in?",
+                    "answer": "No. This tool only excludes weekends (Saturday and Sunday). Public holidays or collective leave need a manual adjustment on top of this result."
+                },
+                {
+                    "question": "Do the start and end dates count as business days?",
+                    "answer": "Yes, the Count business days mode is inclusive. If both dates fall on business days, both get counted."
+                },
+                {
+                    "question": "Can I add business days backward, into the past?",
+                    "answer": "Yes. Enter a negative number in Add business days mode to move back to an earlier date."
+                },
+                {
+                    "question": "Is my date data stored anywhere?",
+                    "answer": "No. Every calculation runs in your browser."
+                }
+            ]
+        },
+        "date-difference": {
+            "seoTitle": "Date Difference Calculator Online, Free",
+            "seoDescription": "Calculate the difference between two dates in years, months, days, and total days, instantly in your browser.",
+            "schemaName": "Date Difference Calculator",
+            "schemaDescription": "Calculates the difference between two dates broken down into years, months, days, and total days.",
+            "title": "Date Difference: calculate the gap between two dates instantly",
+            "lede": "Fill in two dates and get the gap in years, months, days, and total days.",
+            "emptyStateLabel": "Fill in both dates to see the result.",
+            "yearsLabel": "Years",
+            "monthsLabel": "Months",
+            "daysLabel": "Days",
+            "totalWeeksLabel": "Total weeks",
+            "totalDaysLabel": "Total days",
+            "featuresTitle": "Why use this Date Difference?",
+            "features": [
+                {
+                    "title": "Full breakdown",
+                    "description": "Years, months, days, total weeks, and total days, all in one view."
+                },
+                {
+                    "title": "Calendar-accurate",
+                    "description": "Counts each month's actual day total, not a rough average."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Every calculation runs in your browser."
+                }
+            ],
+            "howToTitle": "How to calculate a date difference",
+            "steps": [
+                "Fill in the start date in the first field.",
+                "Fill in the end date in the second field.",
+                "Watch the breakdown appear below."
+            ],
+            "useCaseTitle": "When you need this calculator",
+            "useCase": [
+                "An exact age down to the day, or an employee's tenure, needs a precise count.",
+                "A running project's duration, a contract's term, or a product's warranty period from the purchase date needs a quick check."
+            ],
+            "faq": [
+                {
+                    "question": "Does the order of the start and end date matter?",
+                    "answer": "Not at all. If the end date comes before the start date, this tool automatically flips the order."
+                },
+                {
+                    "question": "Why does the year/month/day breakdown differ from total days divided by 30?",
+                    "answer": "The breakdown counts each month's actual day total, 28 to 31 days, rather than assuming a flat 30-day average."
+                },
+                {
+                    "question": "Do the start and end dates get counted?",
+                    "answer": "The calculation is based on the pure time gap between two dates, matching standard calendar math."
+                },
+                {
+                    "question": "Is my date data stored on a server?",
+                    "answer": "No. Every calculation runs in your browser."
+                }
+            ]
+        },
+        "working-hours": {
+            "seoTitle": "Working Hours Calculator Online, Free",
+            "seoDescription": "Calculate total working hours across several shifts with break time, including shifts that cross midnight.",
+            "schemaName": "Working Hours Calculator",
+            "schemaDescription": "Calculates total working hours across several shifts with break time.",
+            "title": "Working Hours Calculator: total up your working hours",
+            "lede": "Enter start time, end time, and breaks. The total calculates automatically, across several shifts if needed.",
+            "startColumnLabel": "Start",
+            "endColumnLabel": "End",
+            "breakColumnLabel": "Break (minutes)",
+            "addShiftButton": "+ Add shift",
+            "totalLabel": "Total working hours",
+            "shiftDurationFormat": "{h}h {m}m",
+            "totalFormat": "{h}h {m}m",
+            "featuresTitle": "Why use this Working Hours Calculator?",
+            "features": [
+                {
+                    "title": "Multiple shifts",
+                    "description": "Add several rows to total up hours across multiple days at once."
+                },
+                {
+                    "title": "Overnight shifts supported",
+                    "description": "Hours like 22:00 to 06:00 get calculated correctly."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "All working-hours data gets processed in your browser."
+                }
+            ],
+            "howToTitle": "How to calculate working hours",
+            "steps": [
+                "Enter the start and end time for the shift.",
+                "Enter break duration in minutes (optional).",
+                "Click Add shift to include another day.",
+                "Watch the total appear below."
+            ],
+            "useCaseTitle": "When you need this calculator",
+            "useCase": [
+                "A freelancer needs to total up weekly working hours for a client invoice.",
+                "A shift worker checks a payslip against actual hours worked, or an HR team totals overtime across several days at once."
+            ],
+            "faq": [
+                {
+                    "question": "What if a shift crosses midnight?",
+                    "answer": "This tool automatically detects a shift that crosses midnight, like 22:00 to 06:00, and calculates it correctly minus the break."
+                },
+                {
+                    "question": "Can I calculate several days at once?",
+                    "answer": "Yes. Click Add shift to add a new row, useful for totaling weekly hours across several different days."
+                },
+                {
+                    "question": "Is filling in a break required?",
+                    "answer": "No. Leave it blank or enter 0 if that day had no break."
+                },
+                {
+                    "question": "Is my working-hours data stored anywhere?",
+                    "answer": "No. Every calculation runs in your browser."
+                }
+            ]
+        },
+        "time-calculator": {
+            "seoTitle": "Time Calculator Online, Free",
+            "seoDescription": "Add up several time durations or add a duration to a specific clock time, instantly in your browser.",
+            "schemaName": "Time Calculator",
+            "schemaDescription": "Adds up time durations or adds a duration to a specific clock time.",
+            "title": "Time Calculator: add and total time durations",
+            "lede": "Add up several durations, or add a duration to a clock time to find the resulting time.",
+            "modeSumLabel": "Add durations",
+            "modeAddToClockLabel": "Add to clock time",
+            "hoursUnitLabel": "hours",
+            "minutesUnitLabel": "minutes",
+            "addDurationButton": "+ Add duration",
+            "totalDurationLabel": "Total duration",
+            "startTimeLabel": "Start time",
+            "addHoursLabel": "Add hours",
+            "addMinutesLabel": "Add minutes",
+            "resultTimeLabel": "Resulting time",
+            "daysOverLabel": "(+{count} day)",
+            "sumFormat": "{h}h {m}m",
+            "featuresTitle": "Why use this Time Calculator?",
+            "features": [
+                {
+                    "title": "Two practical modes",
+                    "description": "Add up durations or project when an activity ends."
+                },
+                {
+                    "title": "Overnight detection",
+                    "description": "The result flags itself automatically when it falls on the next day."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Every calculation runs in your browser."
+                }
+            ],
+            "howToTitle": "How to calculate a time duration",
+            "steps": [
+                "Pick Add durations or Add to clock time.",
+                "Fill in the hour/minute fields.",
+                "Watch the result appear below."
+            ],
+            "useCaseTitle": "When you need this calculator",
+            "useCase": [
+                "The combined length of several videos or recordings to be merged needs adding up first.",
+                "A trip or flight's arrival time, from departure plus travel duration, needs estimating.",
+                "A wake-up time after sleeping a set number of hours from now, or a cooking finish time from a start time plus a recipe's duration, gets a quick answer here."
+            ],
+            "faq": [
+                {
+                    "question": "What's the difference between the two modes?",
+                    "answer": "Add durations sums several durations into one total, like 1 hour 30 minutes plus 2 hours 45 minutes. Add to clock time adds one duration to a specific time to get a resulting time, like 09:00 plus 3 hours 15 minutes equals 12:15."
+                },
+                {
+                    "question": "What does +1 day mean in the Add to clock time result?",
+                    "answer": "It means the calculation crosses midnight and lands on the next day."
+                },
+                {
+                    "question": "Can I add more than 2 durations?",
+                    "answer": "Yes. Click + Add duration to add as many duration rows as needed."
+                },
+                {
+                    "question": "Is my time data stored anywhere?",
+                    "answer": "No. Every calculation runs in your browser."
                 }
             ]
         }
