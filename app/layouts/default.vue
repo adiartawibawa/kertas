@@ -1,7 +1,10 @@
 <script setup lang="ts">
-const { t, locale, locales, setLocale } = useI18n()
+const { t, locale, locales, setLocale } = useI18n();
 
-const i18nHead = useLocaleHead({ seo: true })
+const i18nHead = useLocaleHead({ seo: true });
+
+const route = useRoute();
+const localePath = useLocalePath();
 
 const currentYear = new Date().getFullYear();
 
@@ -27,6 +30,15 @@ function getFlagEmoji(countryCode: string) {
   }
   return codeMap[countryCode] || '🌐'
 }
+
+// Mengecek apakah halaman saat ini termasuk dalam section tertentu
+function isActiveSection(path: string): boolean {
+
+  const localizedPath = localePath(path);
+
+  return (route.path === localizedPath || route.path.startsWith(`${localizedPath}/`));
+}
+
 </script>
 
 <template>
@@ -38,24 +50,33 @@ function getFlagEmoji(countryCode: string) {
         </NuxtLinkLocale>
 
         <nav class="hidden gap-6 text-sm text-ink-soft sm:flex">
-          <NuxtLinkLocale to="/office-tools/documents"
-            class="hover:text-accent [&.router-link-active]:font-semibold [&.router-link-active]:text-accent">
+          <NuxtLinkLocale to="/office-tools/documents" :class="{
+            'font-semibold text-accent': isActiveSection('/office-tools/documents')
+          }" class="hover:text-accent">
             {{ t('nav.documents') }}
           </NuxtLinkLocale>
-          <NuxtLinkLocale to="/office-tools/pdf"
-            class="hover:text-accent [&.router-link-active]:font-semibold [&.router-link-active]:text-accent">
+
+          <NuxtLinkLocale to="/office-tools/pdf" :class="{
+            'font-semibold text-accent': isActiveSection('/office-tools/pdf')
+          }" class="hover:text-accent">
             {{ t('nav.pdf') }}
           </NuxtLinkLocale>
-          <NuxtLinkLocale to="/office-tools/spreadsheet"
-            class="hover:text-accent [&.router-link-active]:font-semibold [&.router-link-active]:text-accent">
+
+          <NuxtLinkLocale to="/office-tools/spreadsheet" :class="{
+            'font-semibold text-accent': isActiveSection('/office-tools/spreadsheet')
+          }" class="hover:text-accent">
             {{ t('nav.spreadsheet') }}
           </NuxtLinkLocale>
-          <NuxtLinkLocale to="/office-tools/data"
-            class="hover:text-accent [&.router-link-active]:font-semibold [&.router-link-active]:text-accent">
+
+          <NuxtLinkLocale to="/office-tools/data" :class="{
+            'font-semibold text-accent': isActiveSection('/office-tools/data')
+          }" class="hover:text-accent">
             {{ t('nav.data') }}
           </NuxtLinkLocale>
-          <NuxtLinkLocale to="/office-tools/productivity"
-            class="hover:text-accent [&.router-link-active]:font-semibold [&.router-link-active]:text-accent">
+
+          <NuxtLinkLocale to="/office-tools/productivity" :class="{
+            'font-semibold text-accent': isActiveSection('/office-tools/productivity')
+          }" class="hover:text-accent">
             {{ t('nav.productivity') }}
           </NuxtLinkLocale>
         </nav>
