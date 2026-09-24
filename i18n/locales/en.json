@@ -104,7 +104,9 @@
         "downloadResult": "Download result",
         "processing": "Processing…",
         "startDateLabel": "Start date",
-        "endDateLabel": "End date"
+        "endDateLabel": "End date",
+        "downloadCsv": "Download .csv",
+        "converting": "Converting…"
     },
     "error": {
         "notFoundTitle": "Page not found",
@@ -1361,6 +1363,349 @@
                 {
                     "question": "Is my time data stored anywhere?",
                     "answer": "No. Every calculation runs in your browser."
+                }
+            ]
+        },
+        "csv-viewer": {
+            "seoTitle": "CSV Viewer Online, Open and Search CSV Files Free",
+            "seoDescription": "Open a CSV file as a table and filter rows as you type. No server upload.",
+            "schemaName": "CSV Viewer",
+            "schemaDescription": "Opens a CSV file as a table with search.",
+            "title": "CSV Viewer: open and search CSV data in your browser",
+            "lede": "Upload a CSV file to see it as a clean table with instant search.",
+            "dropzoneLabel": "Drag and drop a CSV file here",
+            "searchPlaceholder": "Search all columns…",
+            "rowsSummary": "{shown} / {total} rows · {columns} columns",
+            "featuresTitle": "Why use this CSV Viewer?",
+            "features": [
+                {
+                    "title": "Readable table",
+                    "description": "Check a CSV without opening Excel."
+                },
+                {
+                    "title": "Instant search",
+                    "description": "Type a keyword and the table filters to matching rows."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser reads the file. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to open a CSV file",
+            "steps": [
+                "Drag your CSV file into the upload area, or click to choose one.",
+                "The data appears as a table.",
+                "Type in the search box to filter rows."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A client or another system sends a CSV and you only need a quick look. Skip the heavier spreadsheet apps like Excel or Google Sheets.",
+                "Developers use it to check a database export before processing it further."
+            ],
+            "faq": [
+                {
+                    "question": "Is there a maximum file size?",
+                    "answer": "No fixed limit. Your device sets the ceiling because the browser does all the work. Files with tens of thousands of rows open without trouble."
+                },
+                {
+                    "question": "Can I edit data in the table?",
+                    "answer": "No. The tool views and searches data only."
+                },
+                {
+                    "question": "Does search cover every column?",
+                    "answer": "Yes. Type in the search box above the table and it shows only the rows that match in any column."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. Your browser reads the file through the File API and sends nothing out."
+                }
+            ]
+        },
+        "csv-cleaner": {
+            "seoTitle": "CSV Cleaner Online, Clean CSV Data Free",
+            "seoDescription": "Remove blank rows, duplicates, and empty columns from a CSV file. No server upload.",
+            "schemaName": "CSV Cleaner",
+            "schemaDescription": "Removes blank rows, duplicate rows, and empty columns from CSV data.",
+            "title": "CSV Cleaner: clean up messy CSV data",
+            "lede": "Upload your CSV and remove blank rows, duplicates, and empty columns in one pass.",
+            "dropzoneLabel": "Drag and drop a CSV file here",
+            "optionTrimCells": "Trim spaces in each cell",
+            "optionRemoveEmptyRows": "Remove blank rows",
+            "optionRemoveDuplicateRows": "Remove duplicate rows",
+            "optionRemoveEmptyColumns": "Remove empty columns",
+            "resultLabel": "Cleaned result",
+            "rowsRemovedLabel": "{count} rows removed",
+            "featuresTitle": "Why use this CSV Cleaner?",
+            "features": [
+                {
+                    "title": "Four cleaning options",
+                    "description": "Combine them however the file needs."
+                },
+                {
+                    "title": "Live results",
+                    "description": "Each option you switch on shows its effect right away."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser processes the file. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to clean a CSV file",
+            "steps": [
+                "Upload your CSV file.",
+                "Tick the cleaning options you need.",
+                "Copy the result or download it as .csv."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Exports from other systems often carry blank or duplicate rows left over from merging several sources.",
+                "Before you import data into a database or another spreadsheet, cleaning it first prevents errors and inconsistent records."
+            ],
+            "faq": [
+                {
+                    "question": "Can I combine several cleaning options?",
+                    "answer": "Yes. Trim spaces in each cell, remove blank rows, remove duplicate rows, and remove empty columns. All four work together."
+                },
+                {
+                    "question": "Does a row count as a duplicate only when every cell matches?",
+                    "answer": "Yes. A row is a duplicate when all its cells match a row that appeared earlier. The first copy stays."
+                },
+                {
+                    "question": "Does the tool remove an empty header?",
+                    "answer": "No. The header stays as the first row. The cleaning options apply only to the data rows below it."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. Everything runs in your browser."
+                }
+            ]
+        },
+        "csv-splitter": {
+            "seoTitle": "CSV Splitter Online, Split Large CSV Files Free",
+            "seoDescription": "Split a large CSV into smaller files by row count or file count. No server upload.",
+            "schemaName": "CSV Splitter",
+            "schemaDescription": "Splits a large CSV file into several smaller files.",
+            "title": "CSV Splitter: split a large CSV into smaller parts",
+            "lede": "Upload your CSV, choose how to split it, and download each part as a separate file.",
+            "dropzoneLabel": "Drag and drop a CSV file here",
+            "modeRowsLabel": "By row count",
+            "modeFilesLabel": "By file count",
+            "rowsPerFileLabel": "Rows per file",
+            "fileCountLabel": "Number of files",
+            "keepHeaderLabel": "Include the header in each file",
+            "splitSummary": "The tool splits {rows} data rows into {files} files.",
+            "downloadPartButton": "Download",
+            "downloadAllButton": "Download all ({count} files)",
+            "featuresTitle": "Why use this CSV Splitter?",
+            "features": [
+                {
+                    "title": "Two split modes",
+                    "description": "Split by a fixed row count or by the number of files you want."
+                },
+                {
+                    "title": "Optional header",
+                    "description": "Choose whether each output file keeps its own header row."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser splits the file. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to split a CSV file",
+            "steps": [
+                "Upload the CSV file you want to split.",
+                "Pick a split mode and set the number.",
+                "Download each part one by one, or all at once."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "An upload target caps the rows per file, such as an email marketing platform or an import tool with a size limit.",
+                "Several teams each need only part of the data, so you split it and hand each team its share."
+            ],
+            "faq": [
+                {
+                    "question": "Do By row count and By file count split the data differently?",
+                    "answer": "Yes. By row count cuts the file into parts with a fixed number of rows, such as 100 rows per file. By file count divides the data evenly across the number of files you set."
+                },
+                {
+                    "question": "Does each output file get the CSV header?",
+                    "answer": "It can. Turn on Include the header in each file so every part opens as a standalone CSV."
+                },
+                {
+                    "question": "Can I download all parts as a ZIP?",
+                    "answer": "Not yet. You can download parts one at a time, or all at once with the Download all button, but the tool has no ZIP option."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire split runs in your browser."
+                }
+            ]
+        },
+        "csv-merger": {
+            "seoTitle": "CSV Merger Online, Merge Multiple CSV Files Free",
+            "seoDescription": "Merge several CSV files into one file, with mismatched columns combined under a single header. No server upload.",
+            "schemaName": "CSV Merger",
+            "schemaDescription": "Merges several CSV files into one CSV file.",
+            "title": "CSV Merger: merge several CSV files into one",
+            "lede": "Upload several CSV files at once and download the merged result as a single file.",
+            "dropzoneLabel": "Drag and drop several CSV files here",
+            "removeFileLabel": "Remove file",
+            "resultLabel": "Merged result",
+            "clearAllButton": "Clear all",
+            "totalRowsLabel": "{count} rows in total",
+            "featuresTitle": "Why use this CSV Merger?",
+            "features": [
+                {
+                    "title": "Columns can differ",
+                    "description": "Files with different columns merge under one combined header."
+                },
+                {
+                    "title": "Many files at once",
+                    "description": "Drag and drop several files in one step."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser merges the files. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to merge CSV files",
+            "steps": [
+                "Upload the CSV files you want to merge.",
+                "The merged result appears below.",
+                "Copy the result or download it as .csv."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Branches or teams send separate monthly reports, and you merge them into one annual report to analyze together.",
+                "Survey or form exports arrive one period at a time, and you combine them into one complete dataset."
+            ],
+            "faq": [
+                {
+                    "question": "Must every file have the same columns?",
+                    "answer": "No. The tool combines the column names from all files into one header. If a file lacks a column, its cells stay empty."
+                },
+                {
+                    "question": "Is there a limit on the number of files?",
+                    "answer": "No official limit. Add as many files as you need and the tool merges them into one CSV."
+                },
+                {
+                    "question": "Do rows keep the order of the uploaded files?",
+                    "answer": "Yes. Rows from the first file come first, then the second file, and so on."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. The entire merge runs in your browser."
+                }
+            ]
+        },
+        "csv-to-xlsx": {
+            "seoTitle": "CSV to XLSX Converter Online, Free and Upload-Free",
+            "seoDescription": "Convert a CSV file to Excel (.xlsx) in your browser. Free, with no server upload.",
+            "schemaName": "CSV to XLSX Converter",
+            "schemaDescription": "Converts CSV files to Excel (.xlsx) format.",
+            "title": "CSV to XLSX: convert CSV to an Excel file",
+            "lede": "Upload your CSV and download it as an .xlsx file that opens in Excel.",
+            "dropzoneLabel": "Drag and drop a CSV file here",
+            "downloadButton": "Download .xlsx",
+            "dataRowsLabel": "{count} data rows",
+            "featuresTitle": "Why use this CSV to XLSX tool?",
+            "features": [
+                {
+                    "title": "A real Excel file",
+                    "description": "The output is a genuine .xlsx file you can format in Excel right away."
+                },
+                {
+                    "title": "Preview before download",
+                    "description": "Check a few rows before you convert."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser converts the file. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to convert CSV to Excel",
+            "steps": [
+                "Upload your CSV file.",
+                "Check the preview that appears.",
+                "Click Download .xlsx to save the file."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "Your data sits in CSV, but a coworker or client asks for an Excel file they can format, color, and add formulas to.",
+                "Some systems accept only .xlsx uploads, so you convert the CSV first."
+            ],
+            "faq": [
+                {
+                    "question": "Does the XLSX file open in Excel and Google Sheets?",
+                    "answer": "Yes. The .xlsx file uses the standard modern Excel format and opens in Excel, Google Sheets, and LibreOffice Calc."
+                },
+                {
+                    "question": "Does the tool detect numbers and dates as data types?",
+                    "answer": "The tool writes each value as plain text from the CSV. Excel usually still detects numbers, but you may need to reformat custom date formats by hand in Excel."
+                },
+                {
+                    "question": "Is there a file size limit?",
+                    "answer": "No official limit. A very large file, with hundreds of thousands of rows, slows the conversion because your browser does all the work."
+                },
+                {
+                    "question": "Is my data uploaded to a server?",
+                    "answer": "No. The conversion runs in your browser."
+                }
+            ]
+        },
+        "xlsx-to-csv": {
+            "seoTitle": "XLSX to CSV Converter Online, Free and Upload-Free",
+            "seoDescription": "Convert an Excel file (.xlsx or .xls) to CSV in your browser. Free, with no server upload.",
+            "schemaName": "XLSX to CSV Converter",
+            "schemaDescription": "Converts Excel files (.xlsx or .xls) to CSV format.",
+            "title": "XLSX to CSV: convert an Excel file to CSV",
+            "lede": "Upload your Excel file and the CSV from the first sheet appears right away.",
+            "dropzoneLabel": "Drag and drop an Excel file here",
+            "fileLabel": "File:",
+            "resultLabel": "CSV result",
+            "copyButton": "Copy CSV",
+            "featuresTitle": "Why use this XLSX to CSV tool?",
+            "features": [
+                {
+                    "title": "Supports .xls and .xlsx",
+                    "description": "Handles both the older and the modern Excel format."
+                },
+                {
+                    "title": "Instant result",
+                    "description": "Change the format without installing Excel."
+                },
+                {
+                    "title": "Private by design",
+                    "description": "Your browser reads and converts the file. Nothing uploads."
+                }
+            ],
+            "howToTitle": "How to convert Excel to CSV",
+            "steps": [
+                "Upload your .xlsx or .xls file.",
+                "The CSV from the first sheet appears.",
+                "Copy the result or download it as .csv."
+            ],
+            "useCaseTitle": "When you need this tool",
+            "useCase": [
+                "A report arrives as an Excel file, but the target system, such as an import tool or a script, accepts only CSV.",
+                "Developers convert Excel data to CSV so their code can process it more easily, or so the file can live in version control."
+            ],
+            "faq": [
+                {
+                    "question": "Does the tool convert every sheet in my workbook?",
+                    "answer": "No. Only the first (leftmost) sheet converts to CSV."
+                },
+                {
+                    "question": "Do formatting and formulas carry over?",
+                    "answer": "No. CSV stores only plain text and numbers. Formulas convert to their calculated values, and colors and borders do not carry over."
+                },
+                {
+                    "question": "Does the tool support the older .xls format?",
+                    "answer": "Yes. It supports both the older .xls and the modern .xlsx."
+                },
+                {
+                    "question": "Is my file uploaded to a server?",
+                    "answer": "No. Your browser reads and converts the file."
                 }
             ]
         }

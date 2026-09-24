@@ -104,7 +104,9 @@
         "downloadResult": "Download hasil",
         "processing": "Memproses…",
         "startDateLabel": "Tanggal awal",
-        "endDateLabel": "Tanggal akhir"
+        "endDateLabel": "Tanggal akhir",
+        "downloadCsv": "Download .csv",
+        "converting": "Mengonversi…"
     },
     "error": {
         "notFoundTitle": "Halaman tidak ditemukan",
@@ -1361,6 +1363,349 @@
                 {
                     "question": "Apakah data waktu saya disimpan?",
                     "answer": "Tidak. Semua perhitungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "csv-viewer": {
+            "seoTitle": "CSV Viewer Online, Buka dan Cari Data CSV Gratis",
+            "seoDescription": "Buka file CSV sebagai tabel dan saring baris saat Anda mengetik. Tanpa upload ke server.",
+            "schemaName": "CSV Viewer",
+            "schemaDescription": "Membuka file CSV sebagai tabel dengan fitur pencarian.",
+            "title": "CSV Viewer: buka dan cari data CSV di browser",
+            "lede": "Upload file CSV, lihat isinya sebagai tabel rapi, lalu cari data lewat kotak pencarian.",
+            "dropzoneLabel": "Tarik & lepas file CSV di sini",
+            "searchPlaceholder": "Cari di semua kolom…",
+            "rowsSummary": "{shown} / {total} baris · {columns} kolom",
+            "featuresTitle": "Kenapa menggunakan CSV Viewer ini?",
+            "features": [
+                {
+                    "title": "Tabel yang mudah dibaca",
+                    "description": "Cek isi CSV tanpa membuka Excel."
+                },
+                {
+                    "title": "Pencarian instan",
+                    "description": "Ketik kata kunci, tabel langsung menyaring baris yang cocok."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda membaca file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara membuka file CSV",
+            "steps": [
+                "Tarik file CSV ke area upload, atau klik untuk memilih file.",
+                "Data tampil sebagai tabel.",
+                "Ketik di kotak pencarian untuk menyaring baris."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Klien atau sistem lain mengirim file CSV dan Anda hanya perlu mengecek isinya. Tidak perlu membuka aplikasi spreadsheet yang lebih berat seperti Excel atau Google Sheets.",
+                "Developer memakainya untuk mengecek hasil export database sebelum diproses lebih lanjut."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah ada ukuran file maksimal?",
+                    "answer": "Tidak ada batas resmi. Perangkat Anda yang menentukan batasnya karena browser memproses semuanya. File dengan puluhan ribu baris masih terbuka lancar."
+                },
+                {
+                    "question": "Apakah saya bisa mengedit data di tabel?",
+                    "answer": "Belum. Tool ini hanya menampilkan dan mencari data."
+                },
+                {
+                    "question": "Apakah pencarian mencakup semua kolom?",
+                    "answer": "Ya. Ketik di kotak pencarian di atas tabel, dan tabel hanya menampilkan baris yang cocok di kolom mana pun."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Browser Anda membaca file lewat File API dan tidak mengirim apa pun keluar."
+                }
+            ]
+        },
+        "csv-cleaner": {
+            "seoTitle": "CSV Cleaner Online, Bersihkan Data CSV Gratis",
+            "seoDescription": "Hapus baris kosong, duplikat, dan kolom kosong dari file CSV. Tanpa upload ke server.",
+            "schemaName": "CSV Cleaner",
+            "schemaDescription": "Membersihkan data CSV dari baris kosong, duplikat, dan kolom kosong.",
+            "title": "CSV Cleaner: bersihkan data CSV yang berantakan",
+            "lede": "Upload CSV Anda, lalu hapus baris kosong, duplikat, dan kolom kosong sekaligus.",
+            "dropzoneLabel": "Tarik & lepas file CSV di sini",
+            "optionTrimCells": "Trim spasi tiap sel",
+            "optionRemoveEmptyRows": "Hapus baris kosong",
+            "optionRemoveDuplicateRows": "Hapus baris duplikat",
+            "optionRemoveEmptyColumns": "Hapus kolom kosong",
+            "resultLabel": "Hasil bersih",
+            "rowsRemovedLabel": "{count} baris dihapus",
+            "featuresTitle": "Kenapa menggunakan CSV Cleaner ini?",
+            "features": [
+                {
+                    "title": "4 opsi pembersihan",
+                    "description": "Kombinasikan sesuai kebutuhan file Anda."
+                },
+                {
+                    "title": "Hasil langsung",
+                    "description": "Setiap opsi yang Anda aktifkan langsung terlihat efeknya."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda memproses file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara membersihkan file CSV",
+            "steps": [
+                "Upload file CSV Anda.",
+                "Centang opsi pembersihan yang Anda butuhkan.",
+                "Salin hasilnya atau unduh sebagai file .csv."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Sistem lain sering mengekspor data dengan baris kosong atau duplikat sisa penggabungan beberapa sumber.",
+                "Bersihkan data sebelum Anda mengimpornya ke database atau spreadsheet lain, supaya tidak ada error atau data yang tidak konsisten."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah saya bisa menggabungkan beberapa opsi pembersihan?",
+                    "answer": "Bisa. Anda dapat memangkas spasi di tiap sel, menghapus baris kosong, menghapus baris duplikat, dan menghapus kolom kosong. Keempat opsi berjalan bersamaan."
+                },
+                {
+                    "question": "Apakah baris dianggap duplikat hanya kalau semua selnya sama?",
+                    "answer": "Ya. Baris menjadi duplikat kalau seluruh selnya sama persis dengan baris yang muncul lebih dulu. Baris pertama tetap ada."
+                },
+                {
+                    "question": "Apakah header ikut terhapus kalau kosong?",
+                    "answer": "Tidak. Header tetap menjadi baris pertama. Opsi pembersihan hanya berlaku untuk baris data di bawahnya."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Semua proses berjalan di browser Anda."
+                }
+            ]
+        },
+        "csv-splitter": {
+            "seoTitle": "CSV Splitter Online, Pecah File CSV Besar Gratis",
+            "seoDescription": "Pecah file CSV besar jadi beberapa file lebih kecil per jumlah baris atau jumlah file. Tanpa upload ke server.",
+            "schemaName": "CSV Splitter",
+            "schemaDescription": "Memecah file CSV besar jadi beberapa file lebih kecil.",
+            "title": "CSV Splitter: pecah file CSV besar jadi beberapa bagian",
+            "lede": "Upload CSV Anda, pilih cara membaginya, unduh tiap bagian sebagai file terpisah.",
+            "dropzoneLabel": "Tarik & lepas file CSV di sini",
+            "modeRowsLabel": "Per jumlah baris",
+            "modeFilesLabel": "Per jumlah file",
+            "rowsPerFileLabel": "Baris per file",
+            "fileCountLabel": "Jumlah file",
+            "keepHeaderLabel": "Sertakan header di tiap file",
+            "splitSummary": "Tool ini membagi {rows} baris data jadi {files} file.",
+            "downloadPartButton": "Download",
+            "downloadAllButton": "Download semua ({count} file)",
+            "featuresTitle": "Kenapa menggunakan CSV Splitter ini?",
+            "features": [
+                {
+                    "title": "Dua mode pembagian",
+                    "description": "Bagi berdasarkan jumlah baris tetap atau jumlah file yang Anda inginkan."
+                },
+                {
+                    "title": "Header opsional",
+                    "description": "Pilih apakah tiap file hasil memiliki baris header sendiri."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda memecah file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara memecah file CSV",
+            "steps": [
+                "Upload file CSV yang ingin Anda pecah.",
+                "Pilih mode pembagian dan atur angkanya.",
+                "Download tiap bagian satu per satu, atau semuanya sekaligus."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Platform tujuan membatasi jumlah baris per file, misalnya platform email marketing atau import tool dengan batas ukuran.",
+                "Beberapa tim masing-masing hanya membutuhkan sebagian data, jadi Anda memecahnya dan memberi tiap tim bagiannya."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah mode Per jumlah baris dan Per jumlah file membagi data dengan cara berbeda?",
+                    "answer": "Ya. Per jumlah baris memotong file jadi bagian dengan jumlah baris tetap, misalnya 100 baris per file. Per jumlah file membagi rata data ke sejumlah file yang Anda tentukan."
+                },
+                {
+                    "question": "Apakah header CSV ikut disalin ke tiap file hasil?",
+                    "answer": "Bisa. Aktifkan opsi Sertakan header di tiap file supaya tiap bagian tetap terbaca sebagai CSV mandiri."
+                },
+                {
+                    "question": "Apakah ada opsi download semua bagian sebagai ZIP?",
+                    "answer": "Belum. Anda bisa mengunduh bagian satu per satu atau sekaligus lewat tombol Download semua, tetapi opsi ZIP belum tersedia."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses split berjalan di browser Anda."
+                }
+            ]
+        },
+        "csv-merger": {
+            "seoTitle": "CSV Merger Online, Gabungkan Beberapa File CSV Gratis",
+            "seoDescription": "Gabungkan beberapa file CSV jadi satu file. Kolom yang berbeda menyatu dalam satu header. Tanpa upload ke server.",
+            "schemaName": "CSV Merger",
+            "schemaDescription": "Menggabungkan beberapa file CSV jadi satu file CSV.",
+            "title": "CSV Merger: gabungkan beberapa file CSV jadi satu",
+            "lede": "Upload beberapa file CSV sekaligus, lalu unduh hasil gabungannya sebagai satu file.",
+            "dropzoneLabel": "Tarik & lepas beberapa file CSV di sini",
+            "removeFileLabel": "Hapus file",
+            "resultLabel": "Hasil gabungan",
+            "clearAllButton": "Clear semua",
+            "totalRowsLabel": "Total {count} baris",
+            "featuresTitle": "Kenapa menggunakan CSV Merger ini?",
+            "features": [
+                {
+                    "title": "Kolom boleh berbeda",
+                    "description": "File dengan kolom berbeda tetap bergabung di bawah satu header."
+                },
+                {
+                    "title": "Banyak file sekaligus",
+                    "description": "Tarik & lepas beberapa file dalam satu langkah."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda menggabungkan file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara menggabungkan file CSV",
+            "steps": [
+                "Upload file CSV yang ingin Anda gabungkan.",
+                "Hasil gabungan muncul di bawah.",
+                "Salin hasilnya atau unduh sebagai file .csv."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Cabang atau tim mengirim laporan bulanan terpisah, dan Anda menggabungkannya jadi satu laporan tahunan untuk dianalisis bersama.",
+                "Hasil export form atau survei datang per periode, dan Anda menyatukannya jadi satu dataset utuh."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah semua file harus punya kolom yang sama persis?",
+                    "answer": "Tidak. Tool ini menggabungkan semua nama kolom dari seluruh file jadi satu header. Kalau sebuah file tidak punya kolom tertentu, selnya kosong."
+                },
+                {
+                    "question": "Apakah ada batas jumlah file?",
+                    "answer": "Tidak ada batas resmi. Tambahkan file sebanyak yang Anda butuhkan, dan tool ini menggabungkannya jadi satu file CSV."
+                },
+                {
+                    "question": "Apakah urutan baris mengikuti urutan file yang diunggah?",
+                    "answer": "Ya. Baris dari file pertama muncul lebih dulu, disusul file kedua, dan seterusnya."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Seluruh proses penggabungan berjalan di browser Anda."
+                }
+            ]
+        },
+        "csv-to-xlsx": {
+            "seoTitle": "CSV to XLSX Converter Online, Gratis dan Tanpa Upload",
+            "seoDescription": "Konversi file CSV ke format Excel (.xlsx) di browser Anda. Gratis, tanpa upload ke server.",
+            "schemaName": "CSV to XLSX Converter",
+            "schemaDescription": "Mengonversi file CSV ke format Excel (.xlsx).",
+            "title": "CSV to XLSX: konversi CSV ke file Excel",
+            "lede": "Upload CSV Anda, lalu unduh sebagai file .xlsx yang siap dibuka di Excel.",
+            "dropzoneLabel": "Tarik & lepas file CSV di sini",
+            "downloadButton": "Download .xlsx",
+            "dataRowsLabel": "{count} baris data",
+            "featuresTitle": "Kenapa menggunakan CSV to XLSX ini?",
+            "features": [
+                {
+                    "title": "File Excel asli",
+                    "description": "Hasilnya file .xlsx sungguhan yang bisa Anda format langsung di Excel."
+                },
+                {
+                    "title": "Preview sebelum download",
+                    "description": "Cek beberapa baris data sebelum Anda mengonversi."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda mengonversi file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara mengonversi CSV ke Excel",
+            "steps": [
+                "Upload file CSV Anda.",
+                "Periksa preview data yang muncul.",
+                "Klik Download .xlsx untuk menyimpan hasilnya."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Data Anda ada di CSV, tetapi rekan kerja atau klien meminta file Excel yang bisa mereka format, beri warna, dan tambahi rumus.",
+                "Sebagian sistem hanya menerima upload .xlsx, jadi Anda perlu mengonversi CSV lebih dulu."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah file XLSX bisa dibuka di Excel dan Google Sheets?",
+                    "answer": "Bisa. File .xlsx yang dihasilkan memakai format standar Excel modern dan terbuka di Excel, Google Sheets, maupun LibreOffice Calc."
+                },
+                {
+                    "question": "Apakah angka dan tanggal dikenali sebagai tipe data?",
+                    "answer": "Tool ini menulis setiap nilai sebagai teks apa adanya dari CSV. Excel biasanya tetap mengenali angka, tetapi format tanggal khusus mungkin perlu Anda atur ulang manual di Excel."
+                },
+                {
+                    "question": "Apakah ada batas ukuran file?",
+                    "answer": "Tidak ada batas resmi. File yang sangat besar, dengan ratusan ribu baris, memperlambat proses karena browser Anda mengerjakan semuanya."
+                },
+                {
+                    "question": "Apakah data saya diunggah ke server?",
+                    "answer": "Tidak. Konversi berjalan di browser Anda."
+                }
+            ]
+        },
+        "xlsx-to-csv": {
+            "seoTitle": "XLSX to CSV Converter Online, Gratis dan Tanpa Upload",
+            "seoDescription": "Konversi file Excel (.xlsx/.xls) ke format CSV di browser Anda. Gratis, tanpa upload ke server.",
+            "schemaName": "XLSX to CSV Converter",
+            "schemaDescription": "Mengonversi file Excel (.xlsx/.xls) ke format CSV.",
+            "title": "XLSX to CSV: konversi file Excel ke CSV",
+            "lede": "Upload file Excel Anda, dan CSV dari sheet pertama langsung muncul.",
+            "dropzoneLabel": "Tarik & lepas file Excel di sini",
+            "fileLabel": "File:",
+            "resultLabel": "Hasil CSV",
+            "copyButton": "Copy CSV",
+            "featuresTitle": "Kenapa menggunakan XLSX to CSV ini?",
+            "features": [
+                {
+                    "title": "Mendukung .xls dan .xlsx",
+                    "description": "Format Excel lama dan modern sama-sama bisa dibuka."
+                },
+                {
+                    "title": "Hasil instan",
+                    "description": "Ubah format tanpa menginstal Excel."
+                },
+                {
+                    "title": "Privasi terjaga",
+                    "description": "Browser Anda membaca dan mengonversi file. Tidak ada yang diunggah."
+                }
+            ],
+            "howToTitle": "Cara mengonversi Excel ke CSV",
+            "steps": [
+                "Upload file .xlsx atau .xls Anda.",
+                "CSV dari sheet pertama muncul.",
+                "Salin hasilnya atau unduh sebagai file .csv."
+            ],
+            "useCaseTitle": "Kapan Anda membutuhkan tool ini?",
+            "useCase": [
+                "Laporan datang dalam format Excel, tetapi sistem tujuan, seperti import tool atau script, hanya menerima CSV.",
+                "Developer mengubah data Excel jadi CSV supaya kode memprosesnya lebih mudah, atau supaya file bisa masuk version control."
+            ],
+            "faq": [
+                {
+                    "question": "Apakah semua sheet di file Excel saya ikut dikonversi?",
+                    "answer": "Tidak. Hanya sheet pertama (paling kiri) yang dikonversi ke CSV."
+                },
+                {
+                    "question": "Apakah format sel seperti warna atau rumus ikut terbawa?",
+                    "answer": "Tidak. CSV hanya menyimpan teks dan angka polos. Rumus berubah jadi hasil hitungnya, sedangkan warna dan border tidak ikut."
+                },
+                {
+                    "question": "Apakah format .xls lama juga didukung?",
+                    "answer": "Ya. Format .xls lama dan .xlsx modern sama-sama didukung."
+                },
+                {
+                    "question": "Apakah file saya diunggah ke server?",
+                    "answer": "Tidak. Browser Anda membaca dan mengonversi file."
                 }
             ]
         }
