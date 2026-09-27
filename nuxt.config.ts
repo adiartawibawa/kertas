@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
+    "nuxt-gtag",
   ],
 
   components: [{ path: "~/components", pathPrefix: false }],
@@ -33,6 +34,10 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: "2026-01-01",
+
+  gtag: {
+    id: process.env.NUXT_PUBLIC_GTAG_ID || "G-BBHRD2HRHD",
+  },
 
   i18n: {
     baseUrl: process.env.NUXT_SITE_URL || "https://domainanda.com",
