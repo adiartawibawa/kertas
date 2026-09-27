@@ -89,6 +89,7 @@
         "time-calculator": "Time Calculator"
     },
     "common": {
+        "breadcrumbHome": "Home",
         "openTool": "Open tool",
         "backToCategories": "← Back to all categories",
         "faqTitle": "Frequently asked questions",

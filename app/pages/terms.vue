@@ -20,7 +20,7 @@ useHead(() => ({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 1, name: t('common.breadcrumbHome'), item: siteUrl },
           { '@type': 'ListItem', position: 2, name: t('terms.title'), item: `${siteUrl}${localePath('/terms')}` },
         ],
       }),
@@ -32,7 +32,7 @@ useHead(() => ({
 <template>
   <div>
     <p class="pt-7 text-sm text-ink-soft">
-      <NuxtLinkLocale to="/" class="hover:text-accent-dark">Home</NuxtLinkLocale> /
+      <NuxtLinkLocale to="/" class="hover:text-accent-dark">{{ t('common.breadcrumbHome') }}</NuxtLinkLocale> /
       {{ t('terms.title') }}
     </p>
 
