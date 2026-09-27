@@ -2,8 +2,8 @@ name: Deploy
 
 on:
   push:
-    branches: [main] # ganti kalau branch utama Anda bernama master
-  workflow_dispatch: # tombol "Run workflow" manual di tab Actions
+    branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: deploy
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22 # samakan dengan node -v di komputer Anda
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run generate
@@ -35,7 +35,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted, kertaas] # runner di LXC Anda (label dari Langkah 4)
+    runs-on: [self-hosted, kertaas]
     env:
       DIR: /var/www/kertaas
     steps:
