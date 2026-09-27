@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 22 #LTS Ver
           cache: npm
+      - run: npm install
       - run: npm ci
       - run: npm run generate
       - name: Pastikan domain placeholder tidak ikut terbawa
