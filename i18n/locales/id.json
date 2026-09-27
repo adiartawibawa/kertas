@@ -90,6 +90,7 @@
     },
     "common": {
         "breadcrumbHome": "Beranda",
+        "breadcrumbOfficeTools": "Office tools",
         "openTool": "Buka tool",
         "backToCategories": "← Kembali ke semua kategori",
         "faqTitle": "Pertanyaan umum",

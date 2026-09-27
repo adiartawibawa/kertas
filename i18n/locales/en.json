@@ -90,6 +90,7 @@
     },
     "common": {
         "breadcrumbHome": "Home",
+        "breadcrumbOfficeTools": "Office tools",
         "openTool": "Open tool",
         "backToCategories": "← Back to all categories",
         "faqTitle": "Frequently asked questions",
