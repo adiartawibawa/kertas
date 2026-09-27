@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
-    "nuxt-gtag",
   ],
 
   components: [{ path: "~/components", pathPrefix: false }],
@@ -57,12 +56,4 @@ export default defineNuxtConfig({
   sitemap: {},
 
   robots: {},
-
-  runtimeConfig: {
-    public: {
-      gtag: {
-        id: process.env.NUXT_PUBLIC_GTAG_ID,
-      },
-    },
-  },
 });
