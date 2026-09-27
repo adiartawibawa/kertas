@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      htmlAttrs: { lang: "id" },
+      htmlAttrs: { lang: "en" },
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
@@ -49,7 +49,7 @@ export default defineNuxtConfig({
       { code: "id", language: "id-ID", name: "Indonesia", file: "id.json" },
       { code: "en", language: "en-US", name: "English", file: "en.json" },
     ],
-    defaultLocale: "id",
+    defaultLocale: "en",
     strategy: "prefix_except_default", // "/" = ID, "/en/..." = EN
     // lazy: true,
     langDir: "locales/",

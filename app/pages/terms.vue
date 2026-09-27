@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
+const siteUrl = useSiteConfig().url
+const localePath = useLocalePath()
 
 const brand = computed(() => t('brand.name'))
 
@@ -18,8 +20,8 @@ useHead(() => ({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
-          { '@type': 'ListItem', position: 2, name: t('terms.title'), item: '/terms' },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: t('terms.title'), item: `${siteUrl}${localePath('/terms')}` },
         ],
       }),
     },
