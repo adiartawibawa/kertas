@@ -21,7 +21,17 @@
         "pdf": "PDF",
         "spreadsheet": "Spreadsheet",
         "data": "Data",
-        "productivity": "Productivity"
+        "productivity": "Productivity",
+        "blog": "Blog"
+    },
+    "blog": {
+        "seoTitle": "Kertaas Blog",
+        "seoDescription": "Guides and tips on CSV, Excel, and data handling.",
+        "title": "Blog",
+        "lede": "Short guides around the tools we build.",
+        "readMore": "Read more",
+        "tryToolCta": "Want to try it yourself?",
+        "tryToolLink": "Open the tool here"
     },
     "footer": {
         "tagline": "office utilities that run in your browser."
