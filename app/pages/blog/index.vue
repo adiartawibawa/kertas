@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
+const defaultCoverImage = '/og-default.png'
 const collection = computed(() => `blog_${locale.value}`)
 
 const { data: posts } = await useAsyncData(
@@ -15,6 +16,9 @@ function formatDate(dateStr?: string) {
     }).format(new Date(dateStr))
 }
 
+const featured = computed(() => posts.value?.[0] ?? null)
+const rest = computed(() => posts.value?.slice(1) ?? [])
+
 useSeoMeta({
     title: () => t('blog.seoTitle'),
     description: () => t('blog.seoDescription'),
@@ -22,36 +26,56 @@ useSeoMeta({
 </script>
 
 <template>
-    <div>
-        <p class="pt-7 text-sm text-ink-soft">
-            <NuxtLinkLocale to="/" class="hover:text-accent-dark">{{ t('common.breadcrumbHome') }}</NuxtLinkLocale> /
-            {{ t('blog.title') }}
-        </p>
+    <div class="pb-20 pt-8 sm:pt-12">
+        <nav aria-label="Breadcrumb" class="text-sm text-ink-soft">
+            <NuxtLinkLocale to="/" class="transition-colors hover:text-accent-dark">
+                {{ t('common.breadcrumbHome') }}
+            </NuxtLinkLocale>
+            <span class="mx-2 text-slate-300" aria-hidden="true">/</span>
+            <span>{{ t('blog.title') }}</span>
+        </nav>
 
-        <h1 class="mt-3 text-3xl font-semibold text-ink sm:text-4xl">{{ t('blog.title') }}</h1>
-        <p class="mt-2 max-w-[52ch] text-base text-ink-soft">{{ t('blog.lede') }}</p>
+        <header class="mt-6 max-w-2xl">
+            <h1 class="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">{{ t('blog.title') }}</h1>
+            <p class="mt-3 text-lg leading-relaxed text-ink-soft">{{ t('blog.lede') }}</p>
+        </header>
 
-        <ul class="mt-8 grid gap-6 pb-16 sm:grid-cols-2 lg:grid-cols-3">
-            <li v-for="post in posts" :key="post.path"
-                class="group overflow-hidden rounded-md border border-slate-200 bg-white transition-shadow hover:shadow-md">
-                <NuxtLink :to="post.path" class="block">
-                    <div class="aspect-[1200/630] w-full overflow-hidden bg-slate-100">
-                        <img :src="post.coverImage || '/og-default.jpg'" :alt="post.title" loading="lazy"
-                            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
-                    </div>
-                    <div class="p-5">
-                        <p class="text-xs text-ink-soft">{{ formatDate(post.publishedAt) }}</p>
-                        <h2 class="mt-1.5 text-lg font-semibold text-ink group-hover:text-accent-dark">
-                            {{ post.title }}
-                        </h2>
-                        <p class="mt-2 line-clamp-2 text-sm text-ink-soft">{{ post.description }}</p>
-                        <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent-dark">
-                            {{ t('blog.readMore') }}
-                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </span>
-                    </div>
+        <!-- Artikel terbaru -->
+        <NuxtLink v-if="featured" :to="featured.path"
+            class="group mt-10 grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+            <img :src="featured.coverImage || defaultCoverImage" alt="" width="1200" height="630"
+                class="aspect-[1200/630] w-full rounded-xl border border-slate-200 bg-slate-100 object-cover">
+            <div>
+                <time :datetime="featured.publishedAt" class="text-sm text-ink-soft">
+                    {{ formatDate(featured.publishedAt) }}
+                </time>
+                <h2 class="mt-2 text-balance text-2xl font-semibold leading-snug tracking-tight text-ink
+                    transition-colors group-hover:text-accent-dark sm:text-3xl">
+                    {{ featured.title }}
+                </h2>
+                <p class="mt-3 line-clamp-3 leading-relaxed text-ink-soft">{{ featured.description }}</p>
+                <span
+                    class="mt-4 inline-block text-sm font-medium text-accent-dark underline-offset-4 group-hover:underline">
+                    {{ t('blog.readMore') }}
+                </span>
+            </div>
+        </NuxtLink>
+
+        <!-- Artikel lainnya -->
+        <ul v-if="rest.length"
+            class="mt-14 grid gap-x-6 gap-y-10 border-t border-slate-200 pt-10 sm:grid-cols-2 lg:grid-cols-3">
+            <li v-for="post in rest" :key="post.path">
+                <NuxtLink :to="post.path" class="group block">
+                    <img :src="post.coverImage || defaultCoverImage" alt="" width="1200" height="630" loading="lazy"
+                        class="aspect-[1200/630] w-full rounded-lg border border-slate-200 bg-slate-100 object-cover">
+                    <time :datetime="post.publishedAt" class="mt-4 block text-sm text-ink-soft">
+                        {{ formatDate(post.publishedAt) }}
+                    </time>
+                    <h2
+                        class="mt-1 text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-accent-dark">
+                        {{ post.title }}
+                    </h2>
+                    <p class="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-soft">{{ post.description }}</p>
                 </NuxtLink>
             </li>
         </ul>

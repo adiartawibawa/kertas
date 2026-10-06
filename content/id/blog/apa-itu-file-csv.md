@@ -4,7 +4,6 @@ description: Penjelasan format CSV, isi di dalamnya, dan perbedaannya dengan Exc
 publishedAt: "2026-10-10"
 translationKey: what-is-csv
 relatedToolPath: /office-tools/spreadsheet/csv-viewer
-coverImage: https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 ---
 
 Anda download data dari bank, toko online, atau sistem kantor, lalu filenya berekstensi `.csv`. Dibuka pakai Notepad, isinya cuma baris-baris teks dipisah koma. Dibuka pakai Excel, baru rapi jadi tabel. File ini CSV, dan hampir setiap sistem di dunia bisa membacanya.
