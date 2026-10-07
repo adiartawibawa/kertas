@@ -93,8 +93,26 @@ useSeoMeta({
             prose-h2:mt-12 prose-h2:text-2xl
             prose-h3:text-xl
             prose-p:leading-8 prose-p:text-slate-700
+
             prose-a:font-medium prose-a:text-accent-dark prose-a:underline prose-a:decoration-accent/40 prose-a:underline-offset-4
-            hover:prose-a:decoration-accent
+
+            [&_a:not(:is(h2,h3,h4)_a)]:px-1
+            [&_a:not(:is(h2,h3,h4)_a)]:-mx-1
+            [&_a:not(:is(h2,h3,h4)_a)]:rounded-sm
+            [&_a:not(:is(h2,h3,h4)_a)]:bg-gradient-to-t
+            [&_a:not(:is(h2,h3,h4)_a)]:from-accent
+            [&_a:not(:is(h2,h3,h4)_a)]:to-accent
+            [&_a:not(:is(h2,h3,h4)_a)]:bg-no-repeat
+            [&_a:not(:is(h2,h3,h4)_a)]:bg-bottom
+            [&_a:not(:is(h2,h3,h4)_a)]:bg-[length:100%_0%]
+            [&_a:not(:is(h2,h3,h4)_a)]:transition-[background-size,color]
+            [&_a:not(:is(h2,h3,h4)_a)]:duration-500
+            [&_a:not(:is(h2,h3,h4)_a)]:ease-in-out
+            [&_a:not(:is(h2,h3,h4)_a):hover]:text-white
+            [&_a:not(:is(h2,h3,h4)_a):hover]:no-underline
+            [&_a:not(:is(h2,h3,h4)_a):hover]:bg-[length:100%_100%]
+            [&_a:not(:is(h2,h3,h4)_a):hover]:[box-decoration-break:clone]
+
             prose-strong:font-semibold prose-strong:text-ink
             prose-blockquote:border-l-accent prose-blockquote:font-normal prose-blockquote:not-italic prose-blockquote:text-slate-600
             prose-img:rounded-lg
