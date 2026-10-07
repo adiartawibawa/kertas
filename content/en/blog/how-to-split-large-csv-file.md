@@ -4,6 +4,7 @@ description: Learn how to split a large CSV file into smaller parts in your brow
 publishedAt: "2026-10-14"
 translationKey: split-large-csv-file
 relatedToolPath: /office-tools/spreadsheet/csv-splitter
+coverImage: /img/blog/spliting-large-csv.jpg
 ---
 
 You open a CSV file with 2.5 million rows, and Excel stops loading at row 1,048,576. Or your email client rejects the attachment as too large. Splitting a large CSV file into smaller parts solves both problems, and you can do it without writing code.
@@ -61,11 +62,11 @@ The `dtype=str` option keeps leading zeros in values such as the zip code 00123.
 
 ## Which Method Fits
 
-| Method | Best for | Needs |
-| --- | --- | --- |
-| CSV Splitter | Fast splitting without code | A browser |
-| Terminal (`split`) | Large files on Mac and Linux | Command line basics |
-| Python (pandas) | Multi-line cells, repeated jobs | Python installed |
+| Method             | Best for                        | Needs               |
+| ------------------ | ------------------------------- | ------------------- |
+| CSV Splitter       | Fast splitting without code     | A browser           |
+| Terminal (`split`) | Large files on Mac and Linux    | Command line basics |
+| Python (pandas)    | Multi-line cells, repeated jobs | Python installed    |
 
 ## Check the Result
 

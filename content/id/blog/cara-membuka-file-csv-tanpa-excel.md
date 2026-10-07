@@ -4,6 +4,7 @@ description: Lima cara membuka file CSV tanpa Excel. Membuka file CSV melaui bro
 publishedAt: "2026-10-12"
 translationKey: open-csv-without-excel
 relatedToolPath: /office-tools/spreadsheet/csv-viewer
+coverImage: /img/blog/open-csv-file.jpg
 ---
 
 Anda menerima file `.csv` dari bank atau toko online, tapi komputer Anda tidak punya Excel. Atau Excel terbuka dan isinya berantakan. File CSV bisa dibuka tanpa Excel dengan lima cara gratis.

@@ -4,6 +4,7 @@ description: A plain explanation of the CSV format, what's inside one, how it di
 publishedAt: "2026-10-10"
 translationKey: what-is-csv
 relatedToolPath: /office-tools/spreadsheet/csv-viewer
+coverImage: /img/blog/what-is-csv-file.jpg
 ---
 
 You download a file from your bank, an online store, or a work system, and it ends in `.csv`. Open it in Notepad and you see rows of text split by commas. Open it in Excel and it snaps into a neat table. That file is a CSV, and almost every system on earth can read it.

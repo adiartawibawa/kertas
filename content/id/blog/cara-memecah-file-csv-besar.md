@@ -4,6 +4,7 @@ description: Cara memecah file CSV besar jadi beberapa bagian lewat browser, ter
 publishedAt: "2026-10-14"
 translationKey: split-large-csv-file
 relatedToolPath: /office-tools/spreadsheet/csv-splitter
+coverImage: /img/blog/spliting-large-csv.jpg
 ---
 
 Anda membuka file CSV berisi 2,5 juta baris, dan Excel berhenti memuat data di baris ke-1.048.576. Atau email menolak lampiran Anda karena terlalu besar. Memecah file CSV besar jadi beberapa bagian menyelesaikan kedua masalah itu, dan Anda bisa melakukannya tanpa menulis kode.
@@ -61,11 +62,11 @@ Opsi `dtype=str` menjaga nol di depan angka, misalnya kode pos 00123. Opsi `utf-
 
 ## Pilih Cara yang Paling Cocok
 
-| Cara | Cocok untuk | Perlu |
-| --- | --- | --- |
-| CSV Splitter | Pemecahan cepat tanpa kode | Browser |
-| Terminal (`split`) | File besar di Mac dan Linux | Paham command line |
-| Python (pandas) | File dengan sel multibaris, proses berulang | Python terpasang |
+| Cara               | Cocok untuk                                 | Perlu              |
+| ------------------ | ------------------------------------------- | ------------------ |
+| CSV Splitter       | Pemecahan cepat tanpa kode                  | Browser            |
+| Terminal (`split`) | File besar di Mac dan Linux                 | Paham command line |
+| Python (pandas)    | File dengan sel multibaris, proses berulang | Python terpasang   |
 
 ## Periksa Hasil Pemecahan
 

@@ -31,7 +31,9 @@
         "lede": "Panduan singkat seputar tool yang kami buat.",
         "readMore": "Baca selengkapnya",
         "tryToolCta": "Ingin coba langsung?",
-        "tryToolLink": "Buka tool-nya di sini"
+        "tryToolLink": "Buka tool-nya di sini",
+        "searchPlaceholder": "Cari artikel...",
+        "noResultsFor": "Tidak ada artikel yang cocok dengan \"{query}\"."
     },
     "footer": {
         "tagline": "office utilities yang berjalan di browser Anda."

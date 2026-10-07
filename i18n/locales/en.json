@@ -31,7 +31,9 @@
         "lede": "Short guides around the tools we build.",
         "readMore": "Read more",
         "tryToolCta": "Want to try it yourself?",
-        "tryToolLink": "Open the tool here"
+        "tryToolLink": "Open the tool here",
+        "searchPlaceholder": "Search articles...",
+        "noResultsFor": "No articles match \"{query}\"."
     },
     "footer": {
         "tagline": "office utilities that run in your browser."

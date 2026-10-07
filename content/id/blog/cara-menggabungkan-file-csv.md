@@ -4,6 +4,7 @@ description: Panduan menggabungkan beberapa file CSV dengan kolom sama atau berb
 publishedAt: "2026-10-12"
 translationKey: merge-csv-files
 relatedToolPath: /office-tools/spreadsheet/csv-merger
+coverImage: /img/blog/merge-multiple-csv-file.jpg
 ---
 
 Tiap cabang toko kirim laporan penjualan bulanan sendiri-sendiri, filenya 12 buah per tahun, masing-masing CSV terpisah. Mau dianalisis setahun penuh, Anda harus buka satu-satu dan copy-paste manual ke satu file. Prosesnya makan waktu, dan rawan salah baris kalau datanya ratusan.
