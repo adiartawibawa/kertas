@@ -33,7 +33,11 @@
         "tryToolCta": "Want to try it yourself?",
         "tryToolLink": "Open the tool here",
         "searchPlaceholder": "Search articles...",
-        "noResultsFor": "No articles match \"{query}\"."
+        "noResultsFor": "No articles match \"{query}\".",
+        "share": "Share:",
+        "copyLink": "Copy link",
+        "linkCopied": "Copied!",
+        "relatedPostsTitle": "Related articles"
     },
     "footer": {
         "tagline": "office utilities that run in your browser."

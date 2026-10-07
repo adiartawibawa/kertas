@@ -42,6 +42,59 @@ onUnmounted(() => {
     blogTranslation.value = { translationKey: null, alternates: {} }
 })
 
+// --- Related posts ---
+const { data: relatedPosts } = await useAsyncData(
+    () => `blog-related-${route.path}`,
+    async () => {
+        const current = post.value
+        if (!current) return []
+        const all = await queryCollection(collection.value).order('publishedAt', 'DESC').all()
+        const others = all.filter((p) => p.path !== current.path)
+        const sameTool = current.relatedToolPath
+            ? others.filter((p) => p.relatedToolPath === current.relatedToolPath)
+            : []
+        const rest = others.filter((p) => !sameTool.some((s) => s.path === p.path))
+        return [...sameTool, ...rest].slice(0, 3)
+    },
+    { watch: [locale] },
+)
+
+// --- Share ---
+const shareUrl = computed(() => `${siteUrl}${route.path}`)
+const shareText = computed(() => post.value?.title ?? '')
+
+const shareLinks = computed(() => [
+    {
+        name: 'WhatsApp',
+        href: `https://wa.me/?text=${encodeURIComponent(`${shareText.value} ${shareUrl.value}`)}`,
+    },
+    {
+        name: 'X',
+        href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText.value)}&url=${encodeURIComponent(shareUrl.value)}`,
+    },
+    {
+        name: 'Facebook',
+        href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl.value)}`,
+    },
+    {
+        name: 'LinkedIn',
+        href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl.value)}`,
+    },
+])
+
+const justCopied = ref(false)
+
+async function copyLink() {
+    if (!import.meta.client) return
+    try {
+        await navigator.clipboard.writeText(shareUrl.value)
+        justCopied.value = true
+        setTimeout(() => (justCopied.value = false), 2000)
+    } catch {
+        // clipboard tidak tersedia (browser lama atau bukan HTTPS), abaikan saja
+    }
+}
+
 const ogImage = computed(() => `${siteUrl}${post.value?.coverImage || defaultCoverImage}`)
 
 useSeoMeta({
@@ -82,6 +135,24 @@ useSeoMeta({
                 <time :datetime="post.publishedAt">{{ formatDate(post.publishedAt) }}</time>
                 <span class="h-1 w-1 rounded-full bg-slate-300" aria-hidden="true" />
                 <span>Admin</span>
+            </div>
+
+            <!-- Share -->
+            <div class="mt-5 flex flex-wrap items-center gap-2">
+                <span class="text-sm text-ink-soft">{{ t('blog.share') }}</span>
+                <a v-for="link in shareLinks" :key="link.name" :href="link.href" target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-full border border-slate-200 px-3 py-1 text-sm text-ink-soft transition-colors hover:border-accent hover:text-accent-dark">
+                    {{ link.name }}
+                </a>
+                <button type="button" :class="[
+                    'rounded-full border px-3 py-1 text-sm transition-colors',
+                    justCopied
+                        ? 'border-accent text-accent-dark'
+                        : 'border-slate-200 text-ink-soft hover:border-accent hover:text-accent-dark',
+                ]" @click="copyLink">
+                    {{ justCopied ? t('blog.linkCopied') : t('blog.copyLink') }}
+                </button>
             </div>
         </header>
 
@@ -134,6 +205,24 @@ useSeoMeta({
                 </NuxtLinkLocale>
             </p>
         </aside>
+
+        <!-- Related posts -->
+        <section v-if="relatedPosts?.length" class="mt-16 border-t border-slate-200 pt-10">
+            <h2 class="text-lg font-semibold tracking-tight text-ink">{{ t('blog.relatedPostsTitle') }}</h2>
+            <ul class="mt-6 grid gap-x-6 gap-y-8 sm:grid-cols-3">
+                <li v-for="related in relatedPosts" :key="related.path">
+                    <NuxtLink :to="related.path" class="group block">
+                        <img :src="related.coverImage || defaultCoverImage" alt="" width="1200" height="630"
+                            loading="lazy"
+                            class="aspect-[1200/630] w-full rounded-lg border border-slate-200 bg-slate-100 object-cover">
+                        <h3
+                            class="mt-3 text-sm font-semibold leading-snug text-ink transition-colors group-hover:text-accent-dark">
+                            {{ related.title }}
+                        </h3>
+                    </NuxtLink>
+                </li>
+            </ul>
+        </section>
 
         <footer class="mt-14 border-t border-slate-200 pt-6">
             <NuxtLink :to="localePath('/blog')"
