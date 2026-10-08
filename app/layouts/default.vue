@@ -17,9 +17,20 @@ useHead({
   meta: [...(i18nHead.value.meta || [])],
 })
 
-function onLocaleChange(event: Event) {
+const blogTranslation = useBlogTranslation()
+
+async function onLocaleChange(event: Event) {
   const target = event.target as HTMLSelectElement
-  setLocale(target.value as typeof locale.value)
+  const newLocale = target.value as typeof locale.value
+
+  // Khusus halaman artikel blog: arahkan ke padanan artikel di bahasa tujuan
+  if (blogTranslation.value.translationKey) {
+    const altPath = blogTranslation.value.alternates[newLocale]
+    await navigateTo(altPath ?? localePath('/blog', newLocale))
+    return
+  }
+
+  setLocale(newLocale)
 }
 
 // Fungsi untuk mengubah kode bahasa (misal: 'en', 'id') menjadi emoji bendera
@@ -78,6 +89,12 @@ function isActiveSection(path: string): boolean {
             'font-semibold text-accent': isActiveSection('/office-tools/productivity')
           }" class="hover:text-accent">
             {{ t('nav.productivity') }}
+          </NuxtLinkLocale>
+
+          <NuxtLinkLocale to="/blog" :class="{
+            'font-semibold text-accent': isActiveSection('/blog')
+          }" class="hover:text-accent">
+            {{ t('nav.blog') }}
           </NuxtLinkLocale>
         </nav>
 

@@ -21,7 +21,24 @@
         "pdf": "PDF",
         "spreadsheet": "Spreadsheet",
         "data": "Data",
-        "productivity": "Productivity"
+        "productivity": "Productivity",
+        "blog": "Blog"
+    },
+    "blog": {
+        "seoTitle": "Blog Kertaas",
+        "seoDescription": "Panduan dan tips seputar CSV, Excel, dan pengolahan data.",
+        "title": "Blog",
+        "lede": "Panduan singkat seputar tool yang kami buat.",
+        "readMore": "Baca selengkapnya",
+        "tryToolCta": "Ingin coba langsung?",
+        "tryToolLink": "Buka tool-nya di sini",
+        "searchPlaceholder": "Cari artikel...",
+        "noResultsFor": "Tidak ada artikel yang cocok dengan \"{query}\".",
+        "share": "Bagikan:",
+        "copyLink": "Salin tautan",
+        "linkCopied": "Tersalin!",
+        "relatedPostsTitle": "Artikel terkait",
+        "readingTime": "{minutes} menit baca"
     },
     "footer": {
         "tagline": "office utilities yang berjalan di browser Anda."

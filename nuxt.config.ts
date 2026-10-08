@@ -1,3 +1,5 @@
+import { defaultLocale, locales } from "./locales.config";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
@@ -7,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/robots",
     "nuxt-gtag",
+    "@nuxt/content",
   ],
 
   components: [{ path: "~/components", pathPrefix: false }],
@@ -41,11 +44,8 @@ export default defineNuxtConfig({
 
   i18n: {
     baseUrl: process.env.NUXT_SITE_URL || "https://domainanda.com",
-    locales: [
-      { code: "id", language: "id-ID", name: "Indonesia", file: "id.json" },
-      { code: "en", language: "en-US", name: "English", file: "en.json" },
-    ],
-    defaultLocale: "en",
+    locales,
+    defaultLocale,
     strategy: "prefix_except_default",
     langDir: "locales/",
     detectBrowserLanguage: {
