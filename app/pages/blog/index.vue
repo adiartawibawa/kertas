@@ -3,9 +3,28 @@ const { locale, t } = useI18n()
 const defaultCoverImage = '/og-default.png'
 const collection = computed(() => `blog_${locale.value}`)
 
+// Query ringan: tanpa body, dipakai untuk menampilkan card
 const { data: posts } = await useAsyncData(
     () => `blog-list-${locale.value}`,
-    () => queryCollection(collection.value).order('publishedAt', 'DESC').all(),
+    () =>
+        queryCollection(collection.value)
+            .select('path', 'title', 'description', 'publishedAt', 'coverImage')
+            .order('publishedAt', 'DESC')
+            .all(),
+    { watch: [locale] },
+)
+
+// Query terpisah: mengambil body hanya untuk dihitung, hasilnya saja yang disimpan
+const { data: readingMinutesByPath } = await useAsyncData(
+    () => `blog-reading-time-${locale.value}`,
+    async () => {
+        const docs = await queryCollection(collection.value).all()
+        const map: Record<string, number | null> = {}
+        for (const doc of docs) {
+            map[doc.path] = getReadingMinutes(doc.body)
+        }
+        return map
+    },
     { watch: [locale] },
 )
 
@@ -31,12 +50,11 @@ const filteredPosts = computed(() => {
     )
 })
 
-// Hero "artikel terbaru" cuma tampil saat tidak sedang mencari
 const featured = computed(() => (isSearching.value ? null : filteredPosts.value[0] ?? null))
 const gridSource = computed(() => (isSearching.value ? filteredPosts.value : filteredPosts.value.slice(1)))
 
 // --- Infinite scroll ---
-const pageSize = 3
+const pageSize = 9
 const visibleCount = ref(pageSize)
 
 watch([searchQuery, locale], () => {
@@ -107,9 +125,13 @@ useSeoMeta({
             <img :src="featured.coverImage || defaultCoverImage" alt="" width="1200" height="630"
                 class="aspect-[1200/630] w-full rounded-xl border border-slate-200 bg-slate-100 object-cover">
             <div>
-                <time :datetime="featured.publishedAt" class="text-sm text-ink-soft">
-                    {{ formatDate(featured.publishedAt) }}
-                </time>
+                <div class="flex flex-wrap items-center text-sm text-ink-soft">
+                    <time :datetime="featured.publishedAt">{{ formatDate(featured.publishedAt) }}</time>
+                    <template v-if="readingMinutesByPath?.[featured.path]">
+                        <span class="mx-1.5 text-slate-300" aria-hidden="true">·</span>
+                        <span>{{ t('blog.readingTime', { minutes: readingMinutesByPath[featured.path] }) }}</span>
+                    </template>
+                </div>
                 <h2 class="mt-2 text-balance text-2xl font-semibold leading-snug tracking-tight text-ink
                     transition-colors group-hover:text-accent-dark sm:text-3xl">
                     {{ featured.title }}
@@ -135,9 +157,13 @@ useSeoMeta({
                 <NuxtLink :to="post.path" class="group block">
                     <img :src="post.coverImage || defaultCoverImage" alt="" width="1200" height="630" loading="lazy"
                         class="aspect-[1200/630] w-full rounded-lg border border-slate-200 bg-slate-100 object-cover">
-                    <time :datetime="post.publishedAt" class="mt-4 block text-sm text-ink-soft">
-                        {{ formatDate(post.publishedAt) }}
-                    </time>
+                    <div class="mt-4 flex flex-wrap items-center text-sm text-ink-soft">
+                        <time :datetime="post.publishedAt">{{ formatDate(post.publishedAt) }}</time>
+                        <template v-if="readingMinutesByPath?.[post.path]">
+                            <span class="mx-1.5 text-slate-300" aria-hidden="true">·</span>
+                            <span>{{ t('blog.readingTime', { minutes: readingMinutesByPath[post.path] }) }}</span>
+                        </template>
+                    </div>
                     <h2
                         class="mt-1 text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-accent-dark">
                         {{ post.title }}

@@ -13,6 +13,8 @@ const { data: post } = await useAsyncData(
     { watch: [locale] },
 )
 
+const readingMinutes = computed(() => getReadingMinutes(post.value?.body))
+
 if (!post.value) {
     throw createError({ statusCode: 404, statusMessage: 'Not found', fatal: true })
 }
@@ -110,6 +112,47 @@ useSeoMeta({
     twitterDescription: () => post.value?.description,
     twitterImage: () => ogImage.value,
 })
+
+// --- JSON-LD: Article + Breadcrumb ---
+useHead(() => {
+    if (!post.value) return {}
+    const breadcrumbName = locale.value === 'id' ? 'Beranda' : 'Home'
+    return {
+        script: [
+            {
+                type: 'application/ld+json',
+                innerHTML: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'Article',
+                    headline: post.value.title,
+                    description: post.value.description,
+                    image: [ogImage.value],
+                    datePublished: post.value.publishedAt,
+                    dateModified: post.value.updatedAt || post.value.publishedAt,
+                    author: { '@type': 'Organization', name: 'Kertaas', url: siteUrl },
+                    publisher: {
+                        '@type': 'Organization',
+                        name: 'Kertaas',
+                        logo: { '@type': 'ImageObject', url: `${siteUrl}/kertas.png` },
+                    },
+                    mainEntityOfPage: { '@type': 'WebPage', '@id': `${siteUrl}${route.path}` },
+                }),
+            },
+            {
+                type: 'application/ld+json',
+                innerHTML: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'BreadcrumbList',
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: breadcrumbName, item: siteUrl },
+                        { '@type': 'ListItem', position: 2, name: t('blog.title'), item: `${siteUrl}${localePath('/blog')}` },
+                        { '@type': 'ListItem', position: 3, name: post.value.title, item: `${siteUrl}${route.path}` },
+                    ],
+                }),
+            },
+        ],
+    }
+})
 </script>
 
 <template>
@@ -133,6 +176,10 @@ useSeoMeta({
             </p>
             <div class="mt-5 flex flex-wrap items-center gap-x-3 text-sm text-ink-soft">
                 <time :datetime="post.publishedAt">{{ formatDate(post.publishedAt) }}</time>
+                <template v-if="readingMinutes">
+                    <span class="h-1 w-1 rounded-full bg-slate-300" aria-hidden="true" />
+                    <span>{{ t('blog.readingTime', { minutes: readingMinutes }) }}</span>
+                </template>
                 <span class="h-1 w-1 rounded-full bg-slate-300" aria-hidden="true" />
                 <span>Admin</span>
             </div>
@@ -140,18 +187,57 @@ useSeoMeta({
             <!-- Share -->
             <div class="mt-5 flex flex-wrap items-center gap-2">
                 <span class="text-sm text-ink-soft">{{ t('blog.share') }}</span>
+
                 <a v-for="link in shareLinks" :key="link.name" :href="link.href" target="_blank"
-                    rel="noopener noreferrer"
-                    class="rounded-full border border-slate-200 px-3 py-1 text-sm text-ink-soft transition-colors hover:border-accent hover:text-accent-dark">
-                    {{ link.name }}
+                    rel="noopener noreferrer" :aria-label="`${t('blog.share')} ${link.name}`"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-ink-soft transition-colors hover:border-accent hover:text-accent-dark">
+                    <!-- WhatsApp -->
+                    <svg v-if="link.name === 'WhatsApp'" viewBox="0 0 24 24" class="h-[18px] w-[18px]"
+                        fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.009-.371-.011-.57-.011-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        <path
+                            d="M12.004 2C6.486 2 2.01 6.476 2.01 11.994c0 1.993.586 3.847 1.595 5.407L2 22l4.727-1.588a9.953 9.953 0 0 0 5.277 1.49h.004c5.518 0 9.994-4.477 9.994-9.995C21.998 6.476 17.521 2 12.004 2Zm0 18.195h-.003a8.19 8.19 0 0 1-4.17-1.141l-.3-.178-3.1 1.042.996-3.03-.196-.312a8.172 8.172 0 0 1-1.254-4.382c0-4.527 3.684-8.21 8.212-8.21 2.193 0 4.254.854 5.804 2.406a8.153 8.153 0 0 1 2.404 5.806c0 4.528-3.684 8.212-8.212 8.212Z" />
+                    </svg>
+
+                    <!-- X -->
+                    <svg v-else-if="link.name === 'X'" viewBox="0 0 24 24" class="h-[15px] w-[15px]" fill="currentColor"
+                        aria-hidden="true">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+
+                    <!-- Facebook -->
+                    <svg v-else-if="link.name === 'Facebook'" viewBox="0 0 24 24" class="h-[18px] w-[18px]"
+                        fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.772-1.63 1.564v1.878h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94Z" />
+                    </svg>
+
+                    <!-- LinkedIn -->
+                    <svg v-else viewBox="0 0 24 24" class="h-[17px] w-[17px]" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.137 1.445-2.137 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.114 20.452H3.558V9h3.556v11.452Z" />
+                    </svg>
                 </a>
-                <button type="button" :class="[
-                    'rounded-full border px-3 py-1 text-sm transition-colors',
+
+                <!-- Salin tautan -->
+                <button type="button" :aria-label="justCopied ? t('blog.linkCopied') : t('blog.copyLink')" :class="[
+                    'inline-flex h-9 w-9 items-center justify-center rounded-full border transition-colors',
                     justCopied
                         ? 'border-accent text-accent-dark'
                         : 'border-slate-200 text-ink-soft hover:border-accent hover:text-accent-dark',
                 ]" @click="copyLink">
-                    {{ justCopied ? t('blog.linkCopied') : t('blog.copyLink') }}
+                    <svg v-if="!justCopied" viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.07 0l2.5-2.5a5 5 0 0 0-7.07-7.07L11 4.91" />
+                        <path d="M14 11a5 5 0 0 0-7.07 0l-2.5 2.5a5 5 0 0 0 7.07 7.07L13 19.09" />
+                    </svg>
+                    <svg v-else viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5" />
+                    </svg>
                 </button>
             </div>
         </header>

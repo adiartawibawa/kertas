@@ -37,7 +37,8 @@
         "share": "Bagikan:",
         "copyLink": "Salin tautan",
         "linkCopied": "Tersalin!",
-        "relatedPostsTitle": "Artikel terkait"
+        "relatedPostsTitle": "Artikel terkait",
+        "readingTime": "{minutes} menit baca"
     },
     "footer": {
         "tagline": "office utilities yang berjalan di browser Anda."

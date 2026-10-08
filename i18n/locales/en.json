@@ -37,7 +37,8 @@
         "share": "Share:",
         "copyLink": "Copy link",
         "linkCopied": "Copied!",
-        "relatedPostsTitle": "Related articles"
+        "relatedPostsTitle": "Related articles",
+        "readingTime": "{minutes} min read"
     },
     "footer": {
         "tagline": "office utilities that run in your browser."
