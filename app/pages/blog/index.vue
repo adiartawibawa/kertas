@@ -1,7 +1,8 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
 const defaultCoverImage = '/og-default.png'
-const collection = computed(() => `blog_${locale.value}`)
+type BlogCollection = 'blog_id' | 'blog_en'
+const collection = computed<BlogCollection>(() => `blog_${locale.value}` as BlogCollection)
 
 // Query ringan: tanpa body, dipakai untuk menampilkan card
 const { data: posts } = await useAsyncData(

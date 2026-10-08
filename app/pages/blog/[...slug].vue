@@ -1,7 +1,8 @@
 <script setup lang="ts">
+type BlogCollection = 'blog_id' | 'blog_en'
 const { locale, locales, t } = useI18n()
 const route = useRoute()
-const collection = computed(() => `blog_${locale.value}`)
+const collection = computed<BlogCollection>(() => `blog_${locale.value}` as BlogCollection)
 const localePath = useLocalePath()
 const siteUrl = useSiteConfig().url
 const blogTranslation = useBlogTranslation()
@@ -28,7 +29,9 @@ function formatDate(dateStr?: string) {
 
 async function findAlternatePath(translationKey: string, targetLocale: string) {
     if (targetLocale === locale.value) return route.path
-    const alt = await queryCollection(`blog_${targetLocale}`).where('translationKey', '=', translationKey).first()
+    const alt = await queryCollection(`blog_${targetLocale}` as BlogCollection)
+        .where('translationKey', '=', translationKey)
+        .first()
     return alt?.path ?? null
 }
 
@@ -128,7 +131,7 @@ useHead(() => {
                     description: post.value.description,
                     image: [ogImage.value],
                     datePublished: post.value.publishedAt,
-                    dateModified: post.value.updatedAt || post.value.publishedAt,
+                    dateModified: post.value.publishedAt,
                     author: { '@type': 'Organization', name: 'Kertaas', url: siteUrl },
                     publisher: {
                         '@type': 'Organization',
