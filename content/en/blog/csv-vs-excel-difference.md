@@ -64,7 +64,7 @@ Excel also fits when your data needs to live across several connected sheets, sa
 
 The two formats convert into each other, but the trip isn't symmetrical. Excel to CSV loses every color, formula, and chart, leaving only text and numbers. CSV to Excel loses nothing, since it's just filling an empty table, but the formatting still needs setting up from scratch if you want it to look polished.
 
-If you need to move between these formats, the guide on [how to convert CSV to Excel and back](/en/blog/how-to-convert-csv-to-excel) covers the steps in more detail, including what to check after converting.
+If you need to move between these formats, the guide on [how to convert CSV to Excel and back](/blog/how-to-convert-csv-to-excel) covers the steps in more detail, including what to check after converting.
 
 ## The Fast Way to Check CSV Content Without Switching Formats
 

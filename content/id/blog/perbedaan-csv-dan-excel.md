@@ -64,7 +64,7 @@ Excel juga jadi pilihan tepat kalau data Anda perlu disusun dalam beberapa sheet
 
 Kedua format ini bisa dikonversi satu sama lain, tapi arahnya tidak simetris. Excel ke CSV kehilangan semua warna, rumus, dan grafik, yang tersisa cuma teks dan angka. CSV ke Excel tidak kehilangan apa-apa, karena memang cuma mengisi data ke tabel kosong, tapi formatnya tetap perlu diatur ulang dari awal kalau Anda mau tampilan yang rapi.
 
-Kalau Anda perlu bolak-balik antara dua format ini, panduan [cara mengubah CSV ke Excel dan sebaliknya](/blog/cara-mengubah-csv-ke-excel) membahas langkahnya lebih detail, termasuk apa saja yang perlu dicek setelah konversi.
+Kalau Anda perlu bolak-balik antara dua format ini, panduan [cara mengubah CSV ke Excel dan sebaliknya](/id/blog/cara-mengubah-csv-ke-excel) membahas langkahnya lebih detail, termasuk apa saja yang perlu dicek setelah konversi.
 
 ## Cara Cepat Mengecek Isi CSV Tanpa Pindah Format
 
