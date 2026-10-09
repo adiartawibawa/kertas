@@ -54,7 +54,7 @@ const relatedTools = [
 ]
 
 const text = ref('')
-const { json, error, recordCount, columnCount } = useCsvToJson(text)
+const { options, json, error, recordCount, columnCount } = useCsvToJson(text)
 
 function copyResult() {
   if (import.meta.client && navigator.clipboard && json.value) {
@@ -141,6 +141,17 @@ useHead({
         <textarea :value="json" readonly rows="12"
           class="w-full resize-y rounded-md border border-slate-200 bg-slate-50 p-4 font-mono text-xs text-ink focus:outline-none" />
       </div>
+    </div>
+
+    <div class="mt-4 flex flex-wrap gap-5 text-sm text-ink">
+      <label class="flex items-center gap-2">
+        <input v-model="options.unflatten" type="checkbox" class="accent-accent" />
+        {{ tp('optUnflatten') }}
+      </label>
+      <label class="flex items-center gap-2">
+        <input v-model="options.convertTypes" type="checkbox" class="accent-accent" />
+        {{ tp('optConvertTypes') }}
+      </label>
     </div>
 
     <p v-if="error" class="mt-3 rounded-md border border-red-200 bg-red-50 px-4 py-2.5 text-sm text-red-700">

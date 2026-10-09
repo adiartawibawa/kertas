@@ -349,6 +349,8 @@
             "outputLabel": "JSON",
             "copyButton": "Copy JSON",
             "downloadButton": "Download .json",
+            "optUnflatten": "Kembalikan struktur nested",
+            "optConvertTypes": "Konversi angka, true/false, dan null",
             "featuresTitle": "Kenapa menggunakan CSV to JSON ini?",
             "features": [
                 {
