@@ -20,7 +20,8 @@ export function usePdfToText() {
     isProcessing.value = true;
 
     try {
-      const pdfjsLib = await import("pdfjs-dist/build/pdf.mjs");
+      const pdfjsLib = await import("pdfjs-dist");
+
       pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
 
       const buffer = await f.arrayBuffer();

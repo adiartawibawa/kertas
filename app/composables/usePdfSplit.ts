@@ -59,6 +59,7 @@ export function usePdfSplit() {
       const results: PdfSplitPart[] = [];
       for (let i = 0; i < groups.length; i++) {
         const indices = groups[i];
+        if (!indices) continue;
         const newDoc = await PDFDocument.create();
         const copiedPages = await newDoc.copyPages(sourceDoc, indices);
         copiedPages.forEach((p) => newDoc.addPage(p));

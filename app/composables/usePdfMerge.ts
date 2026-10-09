@@ -31,24 +31,26 @@ export function usePdfMerge() {
 
   function moveUp(id: string) {
     const index = files.value.findIndex((f) => f.id === id);
-    if (index > 0) {
-      const arr = [...files.value];
-      const tmp = arr[index - 1];
-      arr[index - 1] = arr[index];
-      arr[index] = tmp;
-      files.value = arr;
-    }
+    if (index <= 0) return;
+    const arr = [...files.value];
+    const prev = arr[index - 1];
+    const current = arr[index];
+    if (!prev || !current) return;
+    arr[index - 1] = current;
+    arr[index] = prev;
+    files.value = arr;
   }
 
   function moveDown(id: string) {
     const index = files.value.findIndex((f) => f.id === id);
-    if (index >= 0 && index < files.value.length - 1) {
-      const arr = [...files.value];
-      const tmp = arr[index + 1];
-      arr[index + 1] = arr[index];
-      arr[index] = tmp;
-      files.value = arr;
-    }
+    if (index < 0 || index >= files.value.length - 1) return;
+    const arr = [...files.value];
+    const current = arr[index];
+    const next = arr[index + 1];
+    if (!current || !next) return;
+    arr[index] = next;
+    arr[index + 1] = current;
+    files.value = arr;
   }
 
   async function downloadMerged(filename = "merged.pdf") {

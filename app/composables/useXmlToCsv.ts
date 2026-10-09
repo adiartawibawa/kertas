@@ -14,10 +14,12 @@ function elementToValue(el: Element): unknown {
 
   const obj: Record<string, unknown> = {};
   for (const [tag, els] of grouped) {
+    const first = els[0];
+    if (!first) continue;
     obj[tag] =
       els.length > 1
         ? els.map((e) => elementToValue(e))
-        : elementToValue(els[0]);
+        : elementToValue(first);
   }
   return obj;
 }

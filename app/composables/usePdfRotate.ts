@@ -49,6 +49,7 @@ export function usePdfRotate() {
 
       for (const i of targetIndices) {
         const page = pages[i];
+        if (!page) continue;
         const currentAngle = page.getRotation().angle;
         page.setRotation(degrees((currentAngle + angle.value) % 360));
       }
